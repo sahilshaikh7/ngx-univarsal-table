@@ -1,15 +1,130 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-  
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
-  
-    th {
-      background-color: #f4f4f4;
-    }
-  }
-  
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.intro {
+  max-width: 1280px;
+  margin: 1em auto;
+}
+
+.table-scroll {
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  height: 320px;
+  border-radius: 10px 0px 0 0;
+
+}
+
+.table-scroll table {
+  width: 100%;
+  min-width: 2280px;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+
+}
+
+.table-wrap {
+  position: relative;
+}
+
+.table-scroll th,
+.table-scroll td {
+  padding: 12px 10px;
+  border: 1px solid #EAEAF4;
+  background: #fff;
+  vertical-align: top;
+}
+
+.table-scroll thead th {
+  background-color: #eef7fd;
+  color: #1A1B35;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/* safari and ios need the tfoot itself to be position:sticky also */
+.table-scroll tfoot,
+.table-scroll tfoot th,
+.table-scroll tfoot td {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background: #666;
+  color: #fff;
+  z-index: 4;
+}
+
+thead th:first-child,
+tfoot th:first-child {
+  z-index: 5;
+}
+
+.table-resizable.resizing,
+.table-resizable th::before {
+  cursor: col-resize;
+  user-select: none;
+}
+
+.table-resizable th {
+  position: relative;
+  width: 150px; /* Initial fixed width for all columns */
+  min-width: 50px; /* Ensures columns don't shrink too much */
+}
+
+.resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  background-color: transparent;
+}
+
+th:hover .resize-handle {
+  background-color: darkgray;
+}
+
+.table-resizable {
+  table-layout: auto; /* Allows the table to expand based on content */
+}
+
+.table-scroll {
+  overflow-x: auto; /* Ensures the table will scroll horizontally when it grows */
+}
+.table-resizable th:last-of-type::after {
+  display: none;
+}
+.table-resizable td {
+  width: 150px; /* Initial fixed width for all columns */
+  min-width: 50px;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #EAEAF4;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #EAEAF4;
+  margin-top: 40px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #C7C8D7;
+}

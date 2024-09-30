@@ -1,16 +1,32 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>City</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let person of people">
-      <td>{{ person.name }}</td>
-      <td>{{ person.age }}</td>
-      <td>{{ person.city }}</td>
-    </tr>
-  </tbody>
-</table>
+<div id="table-scroll" class="table-scroll">
+  <table #mainTable id="main-table" class="table main-table table-resizable intro">
+    <thead>
+      <tr>
+        <th scope="col">Header 1 <div class="resize-handle"></div></th>
+        <th scope="col">Header 2 <div class="resize-handle"></div></th>
+        <th scope="col">Header 3 <div class="resize-handle"></div></th>
+        <th scope="col">Header 4 <div class="resize-handle"></div></th>
+        <th scope="col">Header 5 <div class="resize-handle"></div></th>
+        <th scope="col">Header 6 <div class="resize-handle"></div></th>
+        <th scope="col">Header 7 <div class="resize-handle"></div></th>
+        <th scope="col">Header 8 <div class="resize-handle"></div></th>
+        <th scope="col">Header 9 <div class="resize-handle"></div></th>
+        <th scope="col">Header 10 <div class="resize-handle"></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of buyersList">
+        <td>{{person.buyerId}}</td>
+        <td>{{person.categories}}  </td>
+        <td>{{person.city}} </td>
+        <td>{{person.disposition}}</td>
+        <td>{{person.executive}}</td>
+        <td>{{person.lastBidded}}</td>
+        <td>{{person.lastModified}}</td>
+        <td>{{person.stage}}</td>
+        <td>{{person.state}}</td>
+        <td>{{person.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

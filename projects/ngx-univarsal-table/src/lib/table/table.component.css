@@ -2,19 +2,13 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-.intro {
-  max-width: 1280px;
-  margin: 1em auto;
-}
-
 .table-scroll {
   position: relative;
   z-index: 1;
   overflow: auto;
-  height: 320px;
+  height: 220px;
   border-radius: 10px 0px 0 0;
-
+  border: 1px solid #EDEDF8;
 }
 
 .table-scroll table {
@@ -33,22 +27,23 @@ html {
 .table-scroll th,
 .table-scroll td {
   padding: 12px 10px;
-  border: 1px solid #EAEAF4;
   background: #fff;
   vertical-align: top;
 }
 
 .table-scroll thead th {
   background-color: #eef7fd;
+  border: 1px solid #EAEAF4;
   color: #1A1B35;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 16.8px;
   letter-spacing: 0.03em;
   text-align: left;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+
 }
 
 /* safari and ios need the tfoot itself to be position:sticky also */
@@ -77,7 +72,6 @@ tfoot th:first-child {
 .table-resizable th {
   position: relative;
   width: 150px; /* Initial fixed width for all columns */
-  min-width: 50px; /* Ensures columns don't shrink too much */
 }
 
 .resize-handle {
@@ -90,7 +84,7 @@ tfoot th:first-child {
   background-color: transparent;
 }
 
-th:hover .resize-handle {
+.resize-handle:hover {
   background-color: darkgray;
 }
 
@@ -106,10 +100,12 @@ th:hover .resize-handle {
 }
 .table-resizable td {
   width: 150px; /* Initial fixed width for all columns */
-  min-width: 50px;  
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border-bottom: 1px solid #EAEAF4;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 ::-webkit-scrollbar-track {

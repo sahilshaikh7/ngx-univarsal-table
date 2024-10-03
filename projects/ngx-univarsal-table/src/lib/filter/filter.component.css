@@ -1,0 +1,190 @@
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #EAEAF4;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #EAEAF4;
+    margin-top: 40px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #C7C8D7;
+}
+
+.arrow-rotate {
+    transition: transform 0.3s ease;
+}
+
+.arrow-rotate-true {
+    transform: rotate(180deg);
+}
+
+.arrow-rotate-false {
+    transform: rotate(0deg);
+}
+
+.filter-btn {
+    color: #1A1B35;
+    border-radius: 10px;
+    border-color: #C7C8D7;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 112px;
+    margin-bottom: 20px;
+}
+
+.filter-btn-active {
+    color: #003C9E;
+    border-color: #003C9E;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dialog-container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+.dialog-container input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    color-scheme: none;
+}
+
+.dialog-container .dialog-content {
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    z-index: 10;
+    width: 400px;
+    height: 320px;
+    box-shadow: 0px 4px 44px -1px #1018281F;
+}
+
+.dialog-container .dialog-content .dialog-body {
+    display: flex;
+    border-bottom: 1px solid #eaeaf4;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-list-container {
+    flex: 1;
+    overflow-y: auto;
+    border-right: 1px solid #eaeaf4;
+    height: 280px;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-list-container .filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-list-container .filter-list li {
+    padding: 20px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    cursor: pointer;
+    color: #6E7089;
+    border-bottom: 1px solid #eaeaf4;
+    position: relative;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-list-container .filter-list li.active {
+    color: #1A1B35;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-details-container {
+    flex: 2;
+    padding: 20px;
+    height: 190px;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-details-container .searchBar .search-input {
+    padding: 8px 20px 8px 37px;
+    position: relative;
+    border: 1px solid #6E7089;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #6E7089;
+    background-color: #fff;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-details-container .searchBar .search-icon {
+    position: absolute;
+    z-index: 99;
+    font-size: x-large;
+    color: #6E7089;
+    left: 10px;
+    top: 7px;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container {
+    height: 190px;
+    overflow-y: auto;
+    margin: 30px 0 20px 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .select-all-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px 15px 0;
+    border-bottom: 1px solid #eaeaf4;
+}
+
+.dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-bottom: 1px solid #eaeaf4;
+}
+.dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container:last-child {
+    border-bottom: none;
+}
+
+.dialog-container .dialog-content .dialog-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0;
+}
+
+.dialog-container .dialog-content .closed-filter {
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dot-selected-filter {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    background-color: #0050b7;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+}

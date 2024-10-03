@@ -1,0 +1,80 @@
+<div class="filter-btn" [ngClass]="{'filter-btn-active': filterPopup}" (click)="openFilterPopup()">
+    <span class="material-icons" style="font-size: 20px; margin-right: 10px;">filter_list</span>
+    Filters
+    <span class="material-icons arrow-rotate" [ngClass]="filterPopup ? 'arrow-rotate-true' : 'arrow-rotate-false'">
+        keyboard_arrow_down
+    </span>
+</div>
+
+<div class="dialog-container" [style.left]="leftPosition" *ngIf="filterPopup">
+    <div class="dialog-content">
+        <div class="dialog-body">
+            <div class="filter-list-container">
+                <ul class="filter-list">
+                    <li *ngFor="let item of filterData" (click)="addFiltered(item)"
+                        [class.active]="activeNavButton === item.text">
+                        {{ item.text }}
+                        <span class="dot-selected-filter"
+                            *ngIf="selectedFields && selectedFields[item.text]?.length > 0">
+                            {{ selectedFields[item.text]?.length }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-details-container">
+                <!-- Filter for dates -->
+                <!-- <div *ngIf="activeFilter?.text === 'Last Bid Date'" style="line-height: 40px;">
+            <div class="date-text">Last Bid Date:</div>
+            <div style="margin: 15px 0;">
+              <app-date [(model)]="dateRangeStartBid" [withTime]="true" [label]="'Start Bid Date'"></app-date>
+            </div>
+            <div>
+              <app-date [(model)]="dateRangeEndBid" [withTime]="true" [label]="'End Bid Date'"></app-date>
+            </div>
+          </div>
+  
+          <div *ngIf="activeFilter?.text === 'Last Modified'" style="line-height: 40px;">
+            <div class="date-text">Last Modified:</div>
+            <div style="margin: 15px 0;">
+              <app-date [(model)]="dateRangeStartModified" [withTime]="true" [label]="'Start Modified Date'"></app-date>
+            </div>
+            <div>
+              <app-date [(model)]="dateRangeEndModified" [withTime]="true" [label]="'End Modified Date'"></app-date>
+            </div>
+          </div>
+   -->
+                <div
+                    *ngIf="!activeFilter?.date && activeFilter?.text !== 'Last Bid Date' && activeFilter?.text !== 'Last Modified'">
+                    <!-- Search bar for filtering the list -->
+                    <div class="searchBar" style="position: relative;">
+                        <span class="material-icons search-icon">search</span>
+                        <input type="text" [(ngModel)]="search" placeholder="{{ searchedBy }}" class="search-input" />
+                    </div>
+
+                    <!-- Filtered list container with select all option -->
+                    <div class="filtered-list-container">
+                        <div class="select-all-container">
+                            <label for="select_all_checkbox">Select all ({{ filteredAndSearchedList.length }})</label>
+                            <input type="checkbox" id="select_all_checkbox" (change)="selectAllClicked()"
+                                [(ngModel)]="filteredValue[filterBy + '_select_all']" />
+                        </div>
+
+                        <div *ngFor="let item of filteredAndSearchedList; let index = index"
+                            class="filter-item-container">
+                            <label [for]="'id' + index">{{ item }}</label>
+                            <input type="checkbox" [id]="'id' + index" (change)="checkSelectAll(index)"
+                                [(ngModel)]="filteredValue[filterBy][filteredList.indexOf(item)].checked" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog-footer">
+            <span>{{ filterCount() }} filter applied</span>
+            <div class="primaryColor hand-cursor" (click)="clearAllFilter()">Clear all</div>
+            <div class="primaryColor hand-cursor" (click)="applyFilter()">Apply</div>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
 .table-scroll {
   position: relative;
   z-index: 1;
@@ -20,15 +21,15 @@ html {
 
 }
 
+
 .table-wrap {
   position: relative;
 }
 
 .table-scroll th,
 .table-scroll td {
-  padding: 12px 10px;
+  padding: 8px 10px;
   background: #fff;
-  vertical-align: top;
 }
 
 .table-scroll thead th {
@@ -46,7 +47,6 @@ html {
 
 }
 
-/* safari and ios need the tfoot itself to be position:sticky also */
 .table-scroll tfoot,
 .table-scroll tfoot th,
 .table-scroll tfoot td {
@@ -71,7 +71,7 @@ tfoot th:first-child {
 
 .table-resizable th {
   position: relative;
-  width: 150px; /* Initial fixed width for all columns */
+  width: 150px;
 }
 
 .resize-handle {
@@ -89,17 +89,19 @@ tfoot th:first-child {
 }
 
 .table-resizable {
-  table-layout: auto; /* Allows the table to expand based on content */
+  table-layout: auto;
 }
 
 .table-scroll {
-  overflow-x: auto; /* Ensures the table will scroll horizontally when it grows */
+  overflow-x: auto;
 }
+
 .table-resizable th:last-of-type::after {
   display: none;
 }
+
 .table-resizable td {
-  width: 150px; /* Initial fixed width for all columns */
+  width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -123,4 +125,81 @@ tfoot th:first-child {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #C7C8D7;
+}
+
+input[type=checkbox] {
+  position: relative !important;
+  appearance: none;
+  box-sizing: content-box;
+  overflow: hidden;
+  cursor: pointer;
+  &:before {
+    content: '';
+    display: block;
+    box-sizing: content-box;
+    width:  15px;
+    height:  15px;
+    border: 2px solid #A2A3B4;
+  }
+  
+  &:checked:before {
+    border-color: #003C9E;
+    background-color: #003C9E;
+  }
+  
+  &:disabled:before {
+    border-color: #A2A3B4;
+    background-color: #A2A3B4;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: content-box;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    background-color: #003C9E;
+    width:  16px;
+    height:  16px;
+    border-radius: 100vh;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+ 
+  &[type="checkbox"] {
+    &:before {
+      border-radius:  3px;
+    }
+
+    &:after {
+      width:  7px;
+      height:  16px;
+      border-radius: 0;
+      transform: translate(-50%, -85%) scale(0) rotate(45deg);
+      background-color: transparent;
+      box-shadow: 4px 4px 0px 0px #fff;
+    }
+
+    &:checked:after {
+      animation: toggleOnCheckbox 0.2s ease forwards;
+    }
+  }
+}
+
+@keyframes toggleOnCheckbox {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -85%) scale(0) rotate(45deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -85%) scale(0.9) rotate(45deg);
+  }
+  
+  100% {
+    transform: translate(-50%, -85%) scale(0.8) rotate(45deg);
+  }
 }

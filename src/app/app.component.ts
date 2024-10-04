@@ -8,7 +8,6 @@ interface Field {
   header: string;
   checked?: boolean;
   size: number;
-  key2?: string | null;
   date?: boolean | null;
 }
 @Component({

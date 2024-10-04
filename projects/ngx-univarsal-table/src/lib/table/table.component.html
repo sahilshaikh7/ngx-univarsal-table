@@ -1,37 +1,40 @@
-<div id="table-scroll" class="table-scroll">
-  <table #mainTable id="main-table" class="table table-resizable">
-    <thead>
-      <tr>
-        <th scope="col" *ngIf="showCheckBox" style="width: 15px;">
-          <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
-        </th>
-        <ng-container *ngFor="let header of gtColumnList">
-          <th scope="col" >
-            {{header.header}} <span class="resize-handle"></span>
+<div class="table-section">
+  <div id="table-scroll" class="table-scroll">
+    <table #mainTable id="main-table" class="table table-resizable">
+      <thead>
+        <tr>
+          <th scope="col" *ngIf="showCheckBox" style="width: 15px;">
+            <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
           </th>
-        </ng-container>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let row of rowData">
-        <td *ngIf="showCheckBox" style="width: 15px;">
-          <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
-        </td>
-        <ng-container *ngFor="let column of gtColumnList">
-          <td>
-            <span *ngIf="column.field2 && column.field1">
-              <span *ngIf="!row[column.field0]">-</span>
-              <span *ngIf="row[column.field0]">
-                {{row[column.field0][column.field1][column.field2]}}
-              </span>
-            </span>
-            <span *ngIf="column.field1 && !column.field2">
-              <span *ngIf="row[column.field0]">{{row[column.field0][column.field1]}}</span>
-            </span>
-            <span *ngIf="!column.field1">{{row[column.field]}}</span>
+          <ng-container *ngFor="let header of gtColumnList">
+            <th scope="col">
+              {{header.header}} <span class="resize-handle"></span>
+            </th>
+          </ng-container>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
+          <td *ngIf="showCheckBox" style="width: 15px;">
+            <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
-        </ng-container>
-      </tr>
-    </tbody>
-  </table>
+          <ng-container *ngFor="let column of gtColumnList">
+            <td>
+              <span *ngIf="column.field2 && column.field1">
+                <span *ngIf="!row[column.field0]">-</span>
+                <span *ngIf="row[column.field0]">
+                  {{row[column.field0][column.field1][column.field2]}}
+                </span>
+              </span>
+              <span *ngIf="column.field1 && !column.field2">
+                <span *ngIf="row[column.field0]">{{row[column.field0][column.field1]}}</span>
+              </span>
+              <span *ngIf="!column.field1">{{row[column.field]}}</span>
+            </td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>

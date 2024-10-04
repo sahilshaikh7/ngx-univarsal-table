@@ -60,6 +60,36 @@ export class BuyerService {
           dispositionStatus: 'Won',
           participation_status: 'Active',
           remarks: 'Some remark here',
+        },
+        {
+          id: 'ranju_nuox',
+          user: { name: 'Ranju' },
+          business: { name: 'Nuox Electronics' },
+          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
+          stage: 'Open',
+          dispositionStatus: 'Won',
+          participation_status: 'Active',
+          remarks: 'Some remark here',
+        },
+        {
+          id: 'sahil',
+          user: { name: 'Ranju' },
+          business: { name: 'Nuox Electronics' },
+          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
+          stage: 'Open',
+          dispositionStatus: 'Won',
+          participation_status: 'Active',
+          remarks: 'Some remark here',
+        },
+        {
+          id: 'sandeep',
+          user: { name: 'Ranju' },
+          business: { name: 'Nuox Electronics' },
+          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
+          stage: 'Open',
+          dispositionStatus: 'Won',
+          participation_status: 'Active',
+          remarks: 'Some remark here',
         }
       ];
 

@@ -1,25 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit, ElementRef, Renderer2, ViewChild ,EventEmitter, Input,  Output,SimpleChanges, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';  // Import FormsModule
+import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'lib-table',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,NgxPaginationModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
 export class TableComponent implements OnInit {
-  // @ViewChild('mainTable', { static: false }) mainTable!: ElementRef;
   @Input() gtColumnList: any[] = [];
   @Input() rowData: any[] = [];
+  @Input() itemPerPage: number = 10;
   @Input() showCheckBox: boolean = false;
   @Output() onChecked = new EventEmitter<any>();
   page:number=1;
 
   selectAll: boolean = false;
-  // currentHandle!: HTMLElement;
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
   ngOnInit(){
 
   }

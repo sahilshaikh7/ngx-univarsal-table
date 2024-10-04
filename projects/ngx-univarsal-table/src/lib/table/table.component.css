@@ -2,14 +2,15 @@ html {
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
+.table-section{
+  border-radius: 10px;
+  border: 1px solid #EDEDF8;
+}
 .table-scroll {
   position: relative;
   z-index: 1;
   overflow: auto;
-  height: 220px;
   border-radius: 10px 0px 0 0;
-  border: 1px solid #EDEDF8;
 }
 
 .table-scroll table {
@@ -37,7 +38,7 @@ html {
   border: 1px solid #EAEAF4;
   color: #1A1B35;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 16.8px;
   letter-spacing: 0.03em;
   text-align: left;
@@ -107,7 +108,6 @@ tfoot th:first-child {
   white-space: nowrap;
   border-bottom: 1px solid #EAEAF4;
   font-size: 14px;
-  font-weight: 500;
 }
 
 ::-webkit-scrollbar-track {
@@ -157,14 +157,14 @@ input[type=checkbox] {
     display: block;
     position: absolute;
     box-sizing: content-box;
-    top: 50%;
+    top: 53%;
     left: 50%;
-    transform-origin: 50% 50%;
+    transform-origin: 53% 50%;
     background-color: #003C9E;
     width:  16px;
     height:  16px;
     border-radius: 100vh;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-53%, -50%) scale(0);
   }
 
  
@@ -174,8 +174,8 @@ input[type=checkbox] {
     }
 
     &:after {
-      width:  7px;
-      height:  16px;
+      width:  10px;
+      height:  20px;
       border-radius: 0;
       transform: translate(-50%, -85%) scale(0) rotate(45deg);
       background-color: transparent;

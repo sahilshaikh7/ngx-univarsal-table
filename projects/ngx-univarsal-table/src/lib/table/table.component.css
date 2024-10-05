@@ -34,9 +34,7 @@ html {
 }
 
 .table-scroll thead th {
-  background-color: #eef7fd;
-  border: 1px solid #EAEAF4;
-  color: #1A1B35;
+  border: .5px solid #EAEAF4;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.8px;

@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'lib-filter',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.css'
 })
 export class FilterComponent {
+  @Input() mobileView: boolean = false;
   @Input() filterData: any[] = [];
-  @Input() leftPosition: string = '0px'; 
+  @Input() leftPosition: string = '0px';
   @Output() filterApplied = new EventEmitter<any>(); // Emit the filter data to parent
 
   filterPopup: boolean = false;

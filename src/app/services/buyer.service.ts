@@ -1,12 +1,27 @@
 import { Injectable } from '@angular/core';
-interface FilterData {
-  text: string;
-  list: string[]; 
-}
+
+import buyerList from '../json-dump/buyer-dummy.json';
+import { Field } from './Field';
+import { FilterData } from './FilterData';
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class BuyerService {
+
+  buyerTableFields: Field[] = [
+    { field: 'id', header: 'Buyer ID', size: 1.1, checked: false },
+    { field: 'user.name', header: 'Buyer Name', size: 1.3, checked: true },
+    { field: 'business.name', header: 'Organization Name', size: 1.2, checked: true },
+    { field: 'category_list', header: 'Array of Preferred Category Nodes', size: 2, checked: true },
+    { field: 'stage', header: 'Stage', size: 1, checked: true },
+    { field: 'dispositionStatus', header: 'Latest Disposition', size: 1.2, checked: true },
+    { field: 'participation_status', header: 'Buyer Status', size: 1.2, checked: true },
+    { field: 'remarks', header: 'Remark', size: 0.7, checked: true },
+  ];
+
+
   buyersList: any[] = [];
   filterManageData: FilterData[] = [
     { text: 'Participation Status', list: [] },
@@ -20,197 +35,11 @@ export class BuyerService {
   }
   getLocalBuyerList() {
     return new Promise(resolve => {
-      this.buyersList = [
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'abhishekvishwakarma09',
-          user: { name: 'Abhishek Vishwa' },
-          business: { name: 'Vishwa Enterprises' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Hot',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Another remark here',
-        },
-        {
-          id: 'abhishekvishwakarma09',
-          user: { name: 'Abhishek Vishwa' },
-          business: { name: 'Vishwa Enterprises' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Hot',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Yet another remark',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others','Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'ranju_nuox',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'sahil',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        },
-        {
-          id: 'sandeep',
-          user: { name: 'Ranju' },
-          business: { name: 'Nuox Electronics' },
-          category_list: ['Electronics and Appliances', 'Fashion and Style', 'IT', 'Others'],
-          stage: 'Open',
-          dispositionStatus: 'Won',
-          participation_status: 'Active',
-          remarks: 'Some remark here',
-        }
-      ];
-
+      this.buyersList = buyerList;
       resolve(this.buyersList);
     })
-
-
   }
+
   getFilterData() {
     this.filterManageData.forEach(filter => filter.list = []);
 

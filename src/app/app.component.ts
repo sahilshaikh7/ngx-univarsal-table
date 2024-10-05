@@ -16,9 +16,12 @@ import { EmpService } from './services/emp.service';
 export class AppComponent {
   title = 'table-library';
 
+  height = 500;
   filterData: any[];
   constructor(public buyerService: BuyerService, public empService: EmpService) {
+
     this.filterData = this.buyerService.filterManageData;
+    this.height = window.innerHeight - 140;
   }
   applyFilter(params: any) {
     console.log(params)

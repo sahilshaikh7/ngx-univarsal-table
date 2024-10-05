@@ -26,9 +26,9 @@
               <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
                 [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
               </div>
-              <div *ngIf="!column.field2 && column.field1" [ngClass]="{cssClass: column.utClass}"
+              <div *ngIf="!column.field2 && column.field1"  [ngClass]="column.utClass"
                 [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></div>
-              <div *ngIf="!column.field1" [ngClass]="{cssClass: column.utClass}"
+              <div *ngIf="!column.field1"  [ngClass]="column.utClass"
                 [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
               </div>
             </td>

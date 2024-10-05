@@ -3,8 +3,9 @@ export class Field {
     header: string;
 
     //Non Mandatory
-    checked?: boolean;
-    size?: number;
+    showColumn?: boolean = true;
+    sizeL?: number; // Landscape
+    sizeP?: number; // Portrait
     date?: boolean | null;
     cellRenderer?: any;
     editable?: boolean;

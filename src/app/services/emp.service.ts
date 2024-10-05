@@ -11,18 +11,19 @@ import { GenderRenderer } from './GenderRenderer';
 })
 export class EmpService {
   editable = true;
-  userTableFields: Field[] = [{ field: "user.url", header: "Profile", cellRenderer: GenderRenderer, size: 1, utClass:'bgPink' },
-  { field: "user.name", header: "Name", size: 2, editable: this.editable, cellRenderer: GenderRenderer },
-  { field: "user.gender", header: 'G', size: 3.5, cellRenderer: GenderRenderer, editable: this.editable },
-  { field: "user.dob", header: "A", cellRenderer: GenderRenderer, size: .5, editable: this.editable },
-  { field: "user.user_pd.marital", header: "M", cellRenderer: GenderRenderer, size: .5, editable: this.editable },
-  { field: "user.user_pd.blood", header: 'Blood', size: .5, editable: this.editable },
-  { field: "user.user_pd.gotra", header: 'Gotra', size: 1, editable: this.editable },
-  { field: "user.user_pd.education", header: 'Education', size: 1, editable: this.editable },
-  { field: "user.user_pd.occupation", header: 'Occ.', size: 1, editable: this.editable },
-  { field: "user.user_pd.profession", header: 'Prof.', size: 1, editable: this.editable },
-  { field: "user.user_pd.current_address2", header: 'Address', size: 1, editable: this.editable },
-  { field: "user.user_pd.origin_city", header: 'Origin', size: 1, editable: this.editable }
+  userTableFields: Field[] = [{ field: "user.url", header: "Profile", cellRenderer: GenderRenderer, sizeL: .5, sizeP: 2, utClass: 'bgPink' },
+  { field: "user.name", header: "Name", sizeL: 2.3, sizeP: 9, editable: this.editable, cellRenderer: GenderRenderer },
+  { field: "", header: '', sizeL: .2, sizeP: 1, cellRenderer: GenderRenderer },
+  { field: "user.user_pd.current_address2", header: 'Address', sizeL: 2, sizeP: 12, editable: this.editable },
+  { field: "user.user_pd.sub_community", header: 'Community', sizeL: 1, sizeP: 6, editable: this.editable },
+  { field: "user.user_pd.origin_city", header: 'Origin', sizeL: 1, sizeP: 6, editable: this.editable },
+  { field: "user.user_pd.education", header: 'Education', sizeL: 1, sizeP: 4, editable: this.editable },
+  { field: "user.user_pd.occupation", header: 'Occ.', sizeL: 1, sizeP: 4, editable: this.editable },
+  { field: "user.user_pd.profession", header: 'Prof.', sizeL: 1, sizeP: 4, editable: this.editable },
+  { field: "user.dob", header: "A", cellRenderer: GenderRenderer, sizeL: .5, sizeP: 3, editable: this.editable },
+  { field: "user.user_pd.blood", header: 'Blood', sizeL: .5, sizeP: 3, editable: this.editable },
+  { field: "user.user_pd.marital", header: "M", cellRenderer: GenderRenderer, sizeL: .5, sizeP: 3, editable: this.editable },
+  { field: "user.gender", header: 'G', sizeL: .5, sizeP: 3, cellRenderer: GenderRenderer, editable: this.editable },
   ]
 
 

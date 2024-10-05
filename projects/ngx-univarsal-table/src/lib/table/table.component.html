@@ -20,7 +20,7 @@
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
           <ng-container *ngFor="let column of gtColumnList">
-            <td *ngIf="column.cellRenderer">
+            <td *ngIf="column.cellRenderer" [width]="column.sizeL">
               <!-- {{row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer}} -->
               <!-- <div [innerHTML]="htmlContent | safeHtml"></div> -->
               <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"

@@ -4,7 +4,7 @@ export class Field {
 
     //Non Mandatory
     checked?: boolean;
-    size?: number; // Landscape
+    sizeL?: number; // Landscape
     sizeP?: number; // Portrait
     date?: boolean | null;
     cellRenderer?: any;

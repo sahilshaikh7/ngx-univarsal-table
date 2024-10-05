@@ -21,6 +21,7 @@ export class TableComponent implements OnInit {
   @Input() showCheckBox: boolean = false;
   @Input() headerColor = "#fff";
   @Input() headerBg = "#0092F7";
+  @Input() scrollable = true;
 
   @Output() onChecked = new EventEmitter<any>();
   page: number = 1;
@@ -36,7 +37,8 @@ export class TableComponent implements OnInit {
   }
   convertDot2Values() {
     for (let col of this.gtColumnList) {
-      col.size = col.checked == false ? 0 : col.size;
+      col.sizeL = col.showColumn == false ? 0 : col.sizeL;
+      col.sizeP = col.showColumn == false ? 0 : col.sizeP;
       if (col.field.includes('.')) {
         col.field.split('.').forEach((key: any, index: number) => {
           col['field' + index] = key;

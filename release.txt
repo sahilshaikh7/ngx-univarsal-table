@@ -1,0 +1,7 @@
+ng serve
+
+ng build ngx-univarsal-table --watch
+
+cd dist/ngx-univarsal-table
+
+npm publish --access public

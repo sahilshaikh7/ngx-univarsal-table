@@ -15,7 +15,7 @@ html {
 
 .table-scroll table {
   width: 100%;
-  min-width: 2280px;
+  min-width: 2180px;
   margin: auto;
   border-collapse: separate;
   border-spacing: 0;
@@ -29,7 +29,7 @@ html {
 
 .table-scroll th,
 .table-scroll td {
-  padding: 8px 10px;
+  padding: 12px 10px;
   background: #fff;
 }
 
@@ -102,12 +102,24 @@ tfoot th:first-child {
 }
 
 .table-resizable td {
-  width: 150px;
+  width: 350px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   border-bottom: 1px solid #EAEAF4;
   font-size: 14px;
+}
+td span {
+  display: block;
+  max-height: 3rem; /* Approx height of two lines based on font-size */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.5rem; /* Adjust based on your line-height */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }
 
 ::-webkit-scrollbar-track {

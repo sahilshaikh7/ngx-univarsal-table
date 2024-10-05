@@ -13,6 +13,7 @@ export class TableComponent implements OnInit {
   @Input() gtColumnList: any[] = [];
   @Input() rowData: any[] = [];
   @Input() itemPerPage: number = 10;
+  @Input() tableHeight: number = 150;
   @Input() showCheckBox: boolean = false;
   @Output() onChecked = new EventEmitter<any>();
   page:number=1;

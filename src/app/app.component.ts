@@ -6,7 +6,7 @@ import { FilterComponent } from '../../projects/ngx-univarsal-table/src/lib/filt
 interface Field {
   field: string;
   header: string;
-  checked?: boolean;
+  checked: boolean;
   size: number;
   date?: boolean | null;
 }
@@ -21,14 +21,14 @@ export class AppComponent {
   title = 'table-library';
 
   buyerTableFields: Field[] = [
-    { field: 'id', header: 'Buyer ID', size: 1.1 },
-    { field: 'user.name', header: 'Buyer Name', size: 1.3 },
-    { field: 'business.name', header: 'Organization Name', size: 1.2 },
-    { field: 'category_list', header: 'Array of Preferred Category Nodes', size: 2 },
-    { field: 'stage', header: 'Stage', size: 1 },
-    { field: 'dispositionStatus', header: 'Latest Disposition', size: 1.2 },
-    { field: 'participation_status', header: 'Buyer Status', size: 1.2 },
-    { field: 'remarks', header: 'Remark', size: 0.7 },
+    { field: 'id', header: 'Buyer ID', size: 1.1,checked:false },
+    { field: 'user.name', header: 'Buyer Name', size: 1.3 ,checked:true},
+    { field: 'business.name', header: 'Organization Name', size: 1.2 ,checked:true},
+    { field: 'category_list', header: 'Array of Preferred Category Nodes', size: 2 ,checked:true},
+    { field: 'stage', header: 'Stage', size: 1 ,checked:true},
+    { field: 'dispositionStatus', header: 'Latest Disposition', size: 1.2 ,checked:true},
+    { field: 'participation_status', header: 'Buyer Status', size: 1.2 ,checked:true},
+    { field: 'remarks', header: 'Remark', size: 0.7 ,checked:true},
   ];
   filterData: any[];
   constructor(public buyerService: BuyerService) {

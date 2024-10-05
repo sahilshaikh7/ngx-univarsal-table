@@ -1,5 +1,5 @@
 <div class="table-section">
-  <div id="table-scroll" class="table-scroll">
+  <div id="table-scroll" class="table-scroll"  [style.height]="tableHeight + 'px'">
     <table #mainTable id="main-table" class="table table-resizable">
       <thead>
         <tr>
@@ -29,7 +29,9 @@
               <span *ngIf="column.field1 && !column.field2">
                 <span *ngIf="row[column.field0]">{{row[column.field0][column.field1]}}</span>
               </span>
-              <span *ngIf="!column.field1">{{row[column.field]}}</span>
+              <span *ngIf="!column.field1">
+                <span>{{row[column.field]}}</span>
+              </span>
             </td>
           </ng-container>
         </tr>

@@ -23,30 +23,46 @@
             </div>
 
             <div class="filter-details-container">
-                <!-- Filter for dates -->
-                <!-- <div *ngIf="activeFilter?.text === 'Last Bid Date'" style="line-height: 40px;">
-            <div class="date-text">Last Bid Date:</div>
-            <div style="margin: 15px 0;">
-              <app-date [(model)]="dateRangeStartBid" [withTime]="true" [label]="'Start Bid Date'"></app-date>
-            </div>
-            <div>
-              <app-date [(model)]="dateRangeEndBid" [withTime]="true" [label]="'End Bid Date'"></app-date>
-            </div>
-          </div>
-  
-          <div *ngIf="activeFilter?.text === 'Last Modified'" style="line-height: 40px;">
-            <div class="date-text">Last Modified:</div>
-            <div style="margin: 15px 0;">
-              <app-date [(model)]="dateRangeStartModified" [withTime]="true" [label]="'Start Modified Date'"></app-date>
-            </div>
-            <div>
-              <app-date [(model)]="dateRangeEndModified" [withTime]="true" [label]="'End Modified Date'"></app-date>
-            </div>
-          </div>
-   -->
-                <div
-                    *ngIf="!activeFilter?.date && activeFilter?.text !== 'Last Bid Date' && activeFilter?.text !== 'Last Modified'">
-                    <!-- Search bar for filtering the list -->
+                <div *ngIf="activeFilter?.type === 'date'">
+                    <div>{{activeFilter.text}}</div>
+                    <div style="margin-top: 32px;">
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input 
+                                    [type]="startDateType" 
+                                    id="start-date" 
+                                    [(ngModel)]="dateRange[activeDateField].start" 
+                                    class="input-field"
+                                    (focus)="startDateType = 'date'; startDateFocused = true" 
+                                    (blur)="onStartDateBlur()"
+                                    (click)="openDatePicker('start-date')"  />
+                                <label 
+                                    [class.active]="startDateFocused || dateRange[activeDateField]?.start" 
+                                    for="start-date">Start Date</label>
+                                <span [class.calendar-icon]="!startDateFocused" (click)="openDatePicker('start-date')"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-container">
+                                <input 
+                                    [type]="endDateType" 
+                                    id="end-date"  
+                                    [(ngModel)]="dateRange[activeDateField].end" 
+                                    class="input-field"
+                                    (focus)="endDateType = 'date'; endDateFocused = true" 
+                                    (blur)="onEndDateBlur()"
+                                    (click)="openDatePicker('end-date')" />
+                                <label 
+                                    [class.active]="endDateFocused || dateRange[activeDateField]?.end" 
+                                    for="end-date">End Date</label>
+                                <span [class.calendar-icon]="!endDateFocused" (click)="openDatePicker('end-date')"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="activeFilter?.type !== 'date'">
                     <div class="searchBar" style="position: relative;">
                         <span class="material-icons search-icon">search</span>
                         <input type="text" [(ngModel)]="search" placeholder="{{ searchedBy }}" class="search-input" />
@@ -62,7 +78,7 @@
 
                         <div *ngFor="let item of filteredAndSearchedList; let index = index"
                             class="filter-item-container">
-                            <label [for]="'id' + index">{{ item }}</label>
+                            <label style="width: 80%;" [for]="'id' + index">{{ item }}</label>
                             <input type="checkbox" [id]="'id' + index" (change)="checkSelectAll(index)"
                                 [(ngModel)]="filteredValue[filterBy][filteredList.indexOf(item)].checked" />
                         </div>

@@ -58,8 +58,8 @@
 }
 
 .dialog-container input[type='checkbox'] {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     color-scheme: none;
 }
 
@@ -109,7 +109,7 @@
 
 .dialog-container .dialog-content .dialog-body .filter-details-container {
     flex: 2;
-    padding: 20px;
+    padding: 20px 10px 20px 20px;
     height: 190px;
 }
 
@@ -157,6 +157,7 @@
     padding: 15px 5px;
     border-bottom: 1px solid #eaeaf4;
 }
+
 .dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container:last-child {
     border-bottom: none;
 }
@@ -187,4 +188,74 @@
     font-size: 10px;
     line-height: 16px;
     text-align: center;
+}
+
+.form-group {
+    padding: 10px 0;
+  
+    .input-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+  
+    .input-field {
+      width: 85%;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      background-color: transparent;
+  
+      /* Show placeholder (dd-mm-yyyy) when no date is entered */
+      &::placeholder {
+        color: #999;
+      }
+  
+      &:focus {
+        border-color: #1A1B35;
+      }
+    }
+  
+    label {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      font-size: 18px;
+      color: #999;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      transform: translateY(-50%);
+  
+      /* Move label up when input is focused or has a value */
+      &.active {
+        top: -15px;
+        font-size: 15px;
+        color: #1A1B35;
+      }
+    }
+    .calendar-icon {
+        position: absolute;
+        right: 25px; 
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px; 
+        height: 24px;
+        background-image: url(http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Calendar-icon.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer; 
+
+        &:hover {
+            opacity: 0.8; 
+        }
+    }
+  }
+::-webkit-calendar-picker-indicator {
+    background-image: url(http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Calendar-icon.png);
+    background-position: center;
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    color: rgba(204, 204, 204, 0);
 }

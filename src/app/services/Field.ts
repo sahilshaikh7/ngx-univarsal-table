@@ -1,12 +1,17 @@
 export class Field {
     field: string;
     header: string;
+    size: number; // Landscape
 
     //Non Mandatory
-    checked?: boolean;
-    sizeL?: number; // Landscape
     sizeP?: number; // Portrait
-    date?: boolean | null;
+    showColumn?: boolean;
+    fieldType?:string = 'string';
+    searchable?: boolean;
+    filterList?:string[];
+    filterRangeMin?:any;
+    filterRangeMax?:any;
+    sorting?: boolean = true;
     cellRenderer?: any;
     editable?: boolean;
     utClass?: string

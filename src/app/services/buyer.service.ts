@@ -11,23 +11,18 @@ import { FilterData } from './FilterData';
 export class BuyerService {
 
   buyerTableFields: Field[] = [
-    { field: 'id', header: 'Buyer ID', size: 1.1, checked: false },
-    { field: 'user.name', header: 'Buyer Name', size: 1.3, checked: true },
-    { field: 'business.name', header: 'Organization Name', size: 1.2, checked: true },
-    { field: 'category_list', header: 'Array of Preferred Category Nodes', size: 2, checked: true },
-    { field: 'stage', header: 'Stage', size: 1, checked: true },
-    { field: 'dispositionStatus', header: 'Latest Disposition', size: 1.2, checked: true },
-    { field: 'participation_status', header: 'Buyer Status', size: 1.2, checked: true },
-    { field: 'remarks', header: 'Remark', size: 0.7, checked: true },
+    { field: 'id', header: 'Buyer ID', size:1, sizeP:1},
+    { field: 'user.name', header: 'Buyer Name', size:1, sizeP:1 ,searchable:true},
+    { field: 'business.name', header: 'Organization Name', size:1, sizeP:1 },
+    { field: 'category_list', header: 'Array of Preferred Category Nodes', size:1, sizeP:1 },
+    { field: 'stage', header: 'Stage', size:1, sizeP:1 ,filterList:[]},
+    { field: 'dispositionStatus', header: 'Latest Disposition', size:1, sizeP:1,filterList:[] },
+    { field: 'participation_status', header: 'Buyer Status', size:1, sizeP:1 ,filterList:[]},
+    { field: 'remarks', header: 'Remark', size:1, sizeP:1 },
   ];
 
 
   buyersList: any[] = [];
-  filterManageData: FilterData[] = [
-    { text: 'Participation Status', list: [] },
-    { text: 'Stage', list: [] },
-    { text: 'Disposition', list: [] },
-  ];
   constructor() {
     this.getLocalBuyerList().then(() => {
       this.getFilterData();
@@ -41,21 +36,21 @@ export class BuyerService {
   }
 
   getFilterData() {
-    this.filterManageData.forEach(filter => filter.list = []);
+    this.buyerTableFields.forEach(filter => filter.filterList = []);
 
     for (let buyer of this.buyersList) {
       buyer.checked = false;
 
-      if (buyer.participation_status && !this.filterManageData[0].list.includes(buyer.participation_status)) {
-        this.filterManageData[0].list.push(buyer.participation_status);
+      if (buyer.participation_status && !this.buyerTableFields[6].filterList.includes(buyer.participation_status)) {
+        this.buyerTableFields[6].filterList.push(buyer.participation_status);
       }
 
-      if (buyer.stage && !this.filterManageData[1].list.includes(buyer.stage)) {
-        this.filterManageData[1].list.push(buyer.stage);
+      if (buyer.stage && !this.buyerTableFields[4].filterList.includes(buyer.stage)) {
+        this.buyerTableFields[4].filterList.push(buyer.stage);
       }
 
-      if (buyer.dispositionStatus && !this.filterManageData[2].list.includes(buyer.dispositionStatus)) {
-        this.filterManageData[2].list.push(buyer.dispositionStatus);
+      if (buyer.dispositionStatus && !this.buyerTableFields[5].filterList.includes(buyer.dispositionStatus)) {
+        this.buyerTableFields[5].filterList.push(buyer.dispositionStatus);
       }
     }
   }

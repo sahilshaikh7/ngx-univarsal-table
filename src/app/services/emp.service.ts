@@ -11,32 +11,36 @@ import { GenderRenderer } from './GenderRenderer';
 })
 export class EmpService {
   editable = true;
-  userTableFields: Field[] = [{ field: "user.url", header: "Profile", cellRenderer: GenderRenderer, sizeL: .5, sizeP: 2, utClass: 'bgPink' },
-  { field: "user.name", header: "Name", sizeL: 2.3, sizeP: 9, editable: this.editable, cellRenderer: GenderRenderer },
-  { field: "", header: '', sizeL: .2, sizeP: 1, cellRenderer: GenderRenderer },
-  { field: "user.user_pd.current_address2", header: 'Address', sizeL: 2, sizeP: 12, editable: this.editable },
-  { field: "user.user_pd.sub_community", header: 'Community', sizeL: 1, sizeP: 6, editable: this.editable },
-  { field: "user.user_pd.origin_city", header: 'Origin', sizeL: 1, sizeP: 6, editable: this.editable },
-  { field: "user.user_pd.education", header: 'Education', sizeL: 1, sizeP: 4, editable: this.editable },
-  { field: "user.user_pd.occupation", header: 'Occ.', sizeL: 1, sizeP: 4, editable: this.editable },
-  { field: "user.user_pd.profession", header: 'Prof.', sizeL: 1, sizeP: 4, editable: this.editable },
-  { field: "user.dob", header: "A", cellRenderer: GenderRenderer, sizeL: .5, sizeP: 3, editable: this.editable },
-  { field: "user.user_pd.blood", header: 'Blood', sizeL: .5, sizeP: 3, editable: this.editable },
-  { field: "user.user_pd.marital", header: "M", cellRenderer: GenderRenderer, sizeL: .5, sizeP: 3, editable: this.editable },
-  { field: "user.gender", header: 'G', sizeL: .5, sizeP: 3, cellRenderer: GenderRenderer, editable: this.editable },
+  userTableFields: Field[] = [{ field: "user.url", header: "Profile", cellRenderer: GenderRenderer, size: .5, sizeP: 2, utClass: 'bgPink' },
+  { field: "user.name", header: "Name", size: 2.3, sizeP: 9, editable: this.editable, cellRenderer: GenderRenderer },
+  { field: "", header: '', size: .2, sizeP: 1, cellRenderer: GenderRenderer },
+  { field: "user.user_pd.current_address2", header: 'Address', size: 2, sizeP: 12, editable: this.editable },
+  { field: "user.user_pd.sub_community", header: 'Community', size: 1, sizeP: 6, editable: this.editable },
+  { field: "user.user_pd.origin_city", header: 'Origin', size: 1, sizeP: 6, editable: this.editable },
+  { field: "user.user_pd.education", header: 'Education', size: 1, sizeP: 4, editable: this.editable },
+  { field: "user.user_pd.occupation", header: 'Occ.', size: 1, sizeP: 4, editable: this.editable },
+  { field: "user.user_pd.profession", header: 'Prof.', size: 1, sizeP: 4, editable: this.editable },
+  { field: "user.dob", header: "A", cellRenderer: GenderRenderer, size: .5, sizeP: 3, editable: this.editable },
+  { field: "user.user_pd.blood", header: 'Blood', size: .5, sizeP: 3, editable: this.editable },
+  { field: "user.user_pd.marital", header: "M", cellRenderer: GenderRenderer, size: .5, sizeP: 3, editable: this.editable },
+  { field: "user.gender", header: 'G', size: .5, sizeP: 3, cellRenderer: GenderRenderer, editable: this.editable },
   ]
 
 
   userList: any[] = userJsonDump;
-  filterManageData: FilterData[] = [
-    { text: 'Participation Status', list: [] },
-    { text: 'Stage', list: [] },
-    { text: 'Disposition', list: [] },
+  filterData: FilterData[] = [
+    { text: 'Address', list: [], field:'user.user_pd.current_address2'},
+    { text: 'Community', list: [],field:'user.user_pd.sub_community' },
+    { text: 'Education', list: [],field:'user.user_pd.education' },
+    { text: 'Last Modified?', list: [] , type:'date',field:'created_at'},
+    { text: 'Created At?', list: [] , type:'date',field:'created_at'},
   ];
   constructor() {
-
+    this.getLocalUserList().then(() => {
+      this.getFilterData();
+    });
   }
-  getLocaluserList() {
+  getLocalUserList() {
     return new Promise(resolve => {
       this.userList = userJsonDump;
       resolve(this.userList);
@@ -44,21 +48,21 @@ export class EmpService {
   }
 
   getFilterData() {
-    this.filterManageData.forEach(filter => filter.list = []);
+    this.filterData.forEach(filter => filter.list = []);
 
     for (let user of this.userList) {
       user.checked = false;
 
-      if (user.participation_status && !this.filterManageData[0].list.includes(user.participation_status)) {
-        this.filterManageData[0].list.push(user.participation_status);
+      if (user.user.user_pd.current_address2 && !this.filterData[0].list.includes(user.user.user_pd.current_address2)) {
+        this.filterData[0].list.push(user.user.user_pd.current_address2);
       }
 
-      if (user.stage && !this.filterManageData[1].list.includes(user.stage)) {
-        this.filterManageData[1].list.push(user.stage);
+      if (user.user.user_pd.sub_community && !this.filterData[1].list.includes(user.user.user_pd.sub_community)) {
+        this.filterData[1].list.push(user.user.user_pd.sub_community);
       }
 
-      if (user.dispositionStatus && !this.filterManageData[2].list.includes(user.dispositionStatus)) {
-        this.filterManageData[2].list.push(user.dispositionStatus);
+      if (user.user.user_pd.education && !this.filterData[2].list.includes(user.user.user_pd.education)) {
+        this.filterData[2].list.push(user.user.user_pd.education);
       }
     }
   }

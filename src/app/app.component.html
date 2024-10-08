@@ -1,7 +1,8 @@
-<lib-filter [mobileView]="true" [filterData]="buyerService.buyerTableFields" (filterApplied)="applyFilter($event)"></lib-filter>
+<lib-filter [mobileView]="true" [filterData]="buyerService.buyerTableFields" (filterApplied)="applyFilter($event)" ></lib-filter>
 <lib-table [headerBg]="'#826149'" [scrollable]="false" [headerColor]="'#fff'"
     [gtColumnList]="buyerService.buyerTableFields" [rowData]="buyerService.buyersList" [showCheckBox]="false"
-    [itemPerPage]="15" [tableHeight]="height"></lib-table>
+    [itemPerPage]="15" [tableHeight]="height" [selfApplied]="true"
+    (onSortChanged)="onSortChanged($event)"></lib-table>
 
 
 <!-- <lib-filter [mobileView]="true" [filterData]="filterData" (filterApplied)="applyFilter($event)"></lib-filter>

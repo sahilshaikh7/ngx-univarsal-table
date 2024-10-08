@@ -25,4 +25,7 @@ export class AppComponent {
   applyFilter(params: any) {
     console.log(params)
   }
+  onSortChanged(sortData) {
+    console.log("Sort data:", sortData);
+  }
 }

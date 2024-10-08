@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import buyerList from '../json-dump/buyer-dummy.json';
 import { Field } from './Field';
-import { FilterData } from './FilterData';
 
 
 @Injectable({
@@ -11,14 +10,15 @@ import { FilterData } from './FilterData';
 export class BuyerService {
 
   buyerTableFields: Field[] = [
-    { field: 'id', header: 'Buyer ID', size:1, sizeP:1},
-    { field: 'user.name', header: 'Buyer Name', size:1, sizeP:1 ,searchable:true},
+    { field: 'id', header: 'Buyer ID', size:1, sizeP:1,sorting:true},
+    { field: 'user.name', header: 'Buyer Name', size:1, sizeP:1 ,searchable:true,sorting:true},
     { field: 'business.name', header: 'Organization Name', size:1, sizeP:1 },
     { field: 'category_list', header: 'Array of Preferred Category Nodes', size:1, sizeP:1 },
-    { field: 'stage', header: 'Stage', size:1, sizeP:1 ,filterList:[]},
+    { field: 'stage', header: 'Stage', size:1, sizeP:1 ,filterList:[],sorting:true},
     { field: 'dispositionStatus', header: 'Latest Disposition', size:1, sizeP:1,filterList:[] },
     { field: 'participation_status', header: 'Buyer Status', size:1, sizeP:1 ,filterList:[]},
     { field: 'remarks', header: 'Remark', size:1, sizeP:1 },
+    { field: 'created_at', header: 'Created At', size:1, sizeP:1, fieldType:'date' ,filterList:[], sorting:true},
   ];
 
 
@@ -36,7 +36,6 @@ export class BuyerService {
   }
 
   getFilterData() {
-    this.buyerTableFields.forEach(filter => filter.filterList = []);
 
     for (let buyer of this.buyersList) {
       buyer.checked = false;

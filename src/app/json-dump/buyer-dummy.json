@@ -1,348 +1,632 @@
 [
     {
-        "id": "ranju_nuox",
+        "id": 1,
         "user": {
-            "name": "Ranju"
+            "name": "John Doe"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Acme Corporation"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Electronics",
+            "Furniture"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Lead",
+        "dispositionStatus": "Contacted",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "First-time buyer",
+        "created_at": {
+            "seconds": 1633072800,
+            "nanoseconds": 123456789
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 2,
         "user": {
-            "name": "Ranju"
+            "name": "Jane Smith"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Global Ventures"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Apparel",
+            "Sports"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Qualified",
+        "dispositionStatus": "In progress",
+        "participation_status": "Pending",
+        "remarks": "Follow-up required",
+        "created_at": {
+            "seconds": 1633072900,
+            "nanoseconds": 987654321
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 3,
         "user": {
-            "name": "Ranju"
+            "name": "David Brown"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Innovatech Ltd"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Healthcare",
+            "Biotech"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Proposal",
+        "dispositionStatus": "Proposal Sent",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "Proposal under review",
+        "created_at": {
+            "seconds": 1633073000,
+            "nanoseconds": 345678901
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 4,
         "user": {
-            "name": "Ranju"
+            "name": "Sarah Johnson"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Prime Solutions"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Automotive",
+            "Industrial"
         ],
-        "stage": "Open",
+        "stage": "Closed",
         "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "participation_status": "Completed",
+        "remarks": "Successful buyer",
+        "created_at": {
+            "seconds": 1633073100,
+            "nanoseconds": 123987456
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 5,
         "user": {
-            "name": "Ranju"
+            "name": "Michael Lee"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "NextGen Enterprises"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Food",
+            "Beverages"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Negotiation",
+        "dispositionStatus": "Negotiating",
+        "participation_status": "Pending",
+        "remarks": "Price negotiation ongoing",
+        "created_at": {
+            "seconds": 1633073200,
+            "nanoseconds": 654321789
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 6,
         "user": {
-            "name": "Ranju"
+            "name": "Emily Davis"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "TechBridge LLC"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
             "IT",
-            "Others"
+            "Software"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Lead",
+        "dispositionStatus": "Contacted",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "Interested in software solutions",
+        "created_at": {
+            "seconds": 1633073300,
+            "nanoseconds": 876543210
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 7,
         "user": {
-            "name": "Ranju"
+            "name": "Robert Wilson"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Green Earth Co"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Renewables",
+            "Energy"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Proposal",
+        "dispositionStatus": "Proposal Sent",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "Proposal sent for review",
+        "created_at": {
+            "seconds": 1633073400,
+            "nanoseconds": 998765432
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 8,
         "user": {
-            "name": "Ranju"
+            "name": "Laura Clark"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "HealthFirst Inc"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Pharmaceuticals",
+            "Healthcare"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Qualified",
+        "dispositionStatus": "In progress",
+        "participation_status": "Pending",
+        "remarks": "Needs follow-up",
+        "created_at": {
+            "seconds": 1633073500,
+            "nanoseconds": 234567890
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 9,
         "user": {
-            "name": "Ranju"
+            "name": "James Miller"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "AlphaTech"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "AI",
+            "Machine Learning"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Closed",
+        "dispositionStatus": "Lost",
+        "participation_status": "Inactive",
+        "remarks": "Lost to competitor",
+        "created_at": {
+            "seconds": 1633073600,
+            "nanoseconds": 192837465
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 10,
         "user": {
-            "name": "Ranju"
+            "name": "Anna Baker"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Quantum Solutions"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Electronics",
+            "Semiconductors"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Negotiation",
+        "dispositionStatus": "Negotiating",
+        "participation_status": "Pending",
+        "remarks": "Negotiating terms",
+        "created_at": {
+            "seconds": 1633073700,
+            "nanoseconds": 273645918
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 1,
         "user": {
-            "name": "Ranju"
+            "name": "John Doe"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Acme Corporation"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Electronics",
+            "Furniture"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Lead",
+        "dispositionStatus": "Contacted",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "First-time buyer",
+        "created_at": {
+            "seconds": 1633072800,
+            "nanoseconds": 123456789
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 2,
         "user": {
-            "name": "Ranju"
+            "name": "Jane Smith"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Global Ventures"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Apparel",
+            "Sports"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Qualified",
+        "dispositionStatus": "In progress",
+        "participation_status": "Pending",
+        "remarks": "Follow-up required",
+        "created_at": {
+            "seconds": 1633072900,
+            "nanoseconds": 987654321
+        }
     },
     {
-        "id": "abhishekvishwakarma09",
+        "id": 3,
         "user": {
-            "name": "Abhishek Vishwa"
+            "name": "David Brown"
         },
         "business": {
-            "name": "Vishwa Enterprises"
+            "name": "Innovatech Ltd"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Healthcare",
+            "Biotech"
         ],
-        "stage": "Hot",
-        "dispositionStatus": "Won",
+        "stage": "Proposal",
+        "dispositionStatus": "Proposal Sent",
         "participation_status": "Active",
-        "remarks": "Another remark here"
+        "remarks": "Proposal under review",
+        "created_at": {
+            "seconds": 1633073000,
+            "nanoseconds": 345678901
+        }
     },
     {
-        "id": "abhishekvishwakarma09",
+        "id": 4,
         "user": {
-            "name": "Abhishek Vishwa"
+            "name": "Sarah Johnson"
         },
         "business": {
-            "name": "Vishwa Enterprises"
+            "name": "Prime Solutions"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Automotive",
+            "Industrial"
         ],
-        "stage": "Hot",
+        "stage": "Closed",
         "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Yet another remark"
+        "participation_status": "Completed",
+        "remarks": "Successful buyer",
+        "created_at": {
+            "seconds": 1633073100,
+            "nanoseconds": 123987456
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 5,
         "user": {
-            "name": "Ranju"
+            "name": "Michael Lee"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "NextGen Enterprises"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others",
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Food",
+            "Beverages"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
-        "participation_status": "Active",
-        "remarks": "Some remark here"
+        "stage": "Negotiation",
+        "dispositionStatus": "Negotiating",
+        "participation_status": "Pending",
+        "remarks": "Price negotiation ongoing",
+        "created_at": {
+            "seconds": 1633073200,
+            "nanoseconds": 654321789
+        }
     },
     {
-        "id": "ranju_nuox",
+        "id": 6,
         "user": {
-            "name": "Ranju"
+            "name": "Emily Davis"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "TechBridge LLC"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
             "IT",
-            "Others"
+            "Software"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Lead",
+        "dispositionStatus": "Contacted",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "Interested in software solutions",
+        "created_at": {
+            "seconds": 1633073300,
+            "nanoseconds": 876543210
+        }
     },
     {
-        "id": "sahil",
+        "id": 7,
         "user": {
-            "name": "Ranju"
+            "name": "Robert Wilson"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "Green Earth Co"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Renewables",
+            "Energy"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Proposal",
+        "dispositionStatus": "Proposal Sent",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "Proposal sent for review",
+        "created_at": {
+            "seconds": 1633073400,
+            "nanoseconds": 998765432
+        }
     },
     {
-        "id": "sandeep",
+        "id": 8,
         "user": {
-            "name": "Ranju"
+            "name": "Laura Clark"
         },
         "business": {
-            "name": "Nuox Electronics"
+            "name": "HealthFirst Inc"
         },
         "category_list": [
-            "Electronics and Appliances",
-            "Fashion and Style",
-            "IT",
-            "Others"
+            "Pharmaceuticals",
+            "Healthcare"
         ],
-        "stage": "Open",
-        "dispositionStatus": "Won",
+        "stage": "Qualified",
+        "dispositionStatus": "In progress",
+        "participation_status": "Pending",
+        "remarks": "Needs follow-up",
+        "created_at": {
+            "seconds": 1633073500,
+            "nanoseconds": 234567890
+        }
+    },
+    {
+        "id": 9,
+        "user": {
+            "name": "James Miller"
+        },
+        "business": {
+            "name": "AlphaTech"
+        },
+        "category_list": [
+            "AI",
+            "Machine Learning"
+        ],
+        "stage": "Closed",
+        "dispositionStatus": "Lost",
+        "participation_status": "Inactive",
+        "remarks": "Lost to competitor",
+        "created_at": {
+            "seconds": 1633073600,
+            "nanoseconds": 192837465
+        }
+    },
+    {
+        "id": 10,
+        "user": {
+            "name": "Anna Baker"
+        },
+        "business": {
+            "name": "Quantum Solutions"
+        },
+        "category_list": [
+            "Electronics",
+            "Semiconductors"
+        ],
+        "stage": "Negotiation",
+        "dispositionStatus": "Negotiating",
+        "participation_status": "Pending",
+        "remarks": "Negotiating terms",
+        "created_at": {
+            "seconds": 1633073700,
+            "nanoseconds": 273645918
+        }
+    },
+    {
+        "id": 1,
+        "user": {
+            "name": "John Doe"
+        },
+        "business": {
+            "name": "Acme Corporation"
+        },
+        "category_list": [
+            "Electronics",
+            "Furniture"
+        ],
+        "stage": "Lead",
+        "dispositionStatus": "Contacted",
         "participation_status": "Active",
-        "remarks": "Some remark here"
+        "remarks": "First-time buyer",
+        "created_at": {
+            "seconds": 1633072800,
+            "nanoseconds": 123456789
+        }
+    },
+    {
+        "id": 2,
+        "user": {
+            "name": "Jane Smith"
+        },
+        "business": {
+            "name": "Global Ventures"
+        },
+        "category_list": [
+            "Apparel",
+            "Sports"
+        ],
+        "stage": "Qualified",
+        "dispositionStatus": "In progress",
+        "participation_status": "Pending",
+        "remarks": "Follow-up required",
+        "created_at": {
+            "seconds": 1627776000,
+            "nanoseconds": 987654321
+        }
+    },
+    {
+        "id": 3,
+        "user": {
+            "name": "David Brown"
+        },
+        "business": {
+            "name": "Innovatech Ltd"
+        },
+        "category_list": [
+            "Healthcare",
+            "Biotech"
+        ],
+        "stage": "Proposal",
+        "dispositionStatus": "Proposal Sent",
+        "participation_status": "Active",
+        "remarks": "Proposal under review",
+        "created_at": {
+            "seconds": 1633073000,
+            "nanoseconds": 345678901
+        }
+    },
+    {
+        "id": 4,
+        "user": {
+            "name": "Sarah Johnson"
+        },
+        "business": {
+            "name": "Prime Solutions"
+        },
+        "category_list": [
+            "Automotive",
+            "Industrial"
+        ],
+        "stage": "Closed",
+        "dispositionStatus": "Won",
+        "participation_status": "Completed",
+        "remarks": "Successful buyer",
+        "created_at": {
+            "seconds": 1633073100,
+            "nanoseconds": 123987456
+        }
+    },
+    {
+        "id": 5,
+        "user": {
+            "name": "Michael Lee"
+        },
+        "business": {
+            "name": "NextGen Enterprises"
+        },
+        "category_list": [
+            "Food",
+            "Beverages"
+        ],
+        "stage": "Negotiation",
+        "dispositionStatus": "Negotiating",
+        "participation_status": "Pending",
+        "remarks": "Price negotiation ongoing",
+        "created_at": {
+            "seconds": 1633073200,
+            "nanoseconds": 654321789
+        }
+    },
+    {
+        "id": 6,
+        "user": {
+            "name": "Emily Davis"
+        },
+        "business": {
+            "name": "TechBridge LLC"
+        },
+        "category_list": [
+            "IT",
+            "Software"
+        ],
+        "stage": "Lead",
+        "dispositionStatus": "Contacted",
+        "participation_status": "Active",
+        "remarks": "Interested in software solutions",
+        "created_at": {
+            "seconds": 1633073300,
+            "nanoseconds": 876543210
+        }
+    },
+    {
+        "id": 7,
+        "user": {
+            "name": "Robert Wilson"
+        },
+        "business": {
+            "name": "Green Earth Co"
+        },
+        "category_list": [
+            "Renewables",
+            "Energy"
+        ],
+        "stage": "Proposal",
+        "dispositionStatus": "Proposal Sent",
+        "participation_status": "Active",
+        "remarks": "Proposal sent for review",
+        "created_at": {
+            "seconds": 1633073400,
+            "nanoseconds": 998765432
+        }
+    },
+    {
+        "id": 8,
+        "user": {
+            "name": "Laura Clark"
+        },
+        "business": {
+            "name": "HealthFirst Inc"
+        },
+        "category_list": [
+            "Pharmaceuticals",
+            "Healthcare"
+        ],
+        "stage": "Qualified",
+        "dispositionStatus": "In progress",
+        "participation_status": "Pending",
+        "remarks": "Needs follow-up",
+        "created_at": {
+            "seconds": 1633073500,
+            "nanoseconds": 234567890
+        }
+    },
+    {
+        "id": 9,
+        "user": {
+            "name": "James Miller"
+        },
+        "business": {
+            "name": "AlphaTech"
+        },
+        "category_list": [
+            "AI",
+            "Machine Learning"
+        ],
+        "stage": "Closed",
+        "dispositionStatus": "Lost",
+        "participation_status": "Inactive",
+        "remarks": "Lost to competitor",
+        "created_at": {
+            "seconds": 1633073600,
+            "nanoseconds": 192837465
+        }
+    },
+    {
+        "id": 10,
+        "user": {
+            "name": "Anna Baker"
+        },
+        "business": {
+            "name": "Quantum Solutions"
+        },
+        "category_list": [
+            "Electronics",
+            "Semiconductors"
+        ],
+        "stage": "Negotiation",
+        "dispositionStatus": "Negotiating",
+        "participation_status": "Pending",
+        "remarks": "Negotiating terms",
+        "created_at": {
+            "seconds": 1633073700,
+            "nanoseconds": 273645918
+        }
     }
 ]

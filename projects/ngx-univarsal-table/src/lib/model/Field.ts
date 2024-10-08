@@ -1,19 +1,22 @@
 export class Field {
     field: string;
     header: string;
+    size: number; // Landscape
 
     //Non Mandatory
-    showColumn?: boolean = true;
-    sizeL?: number; // Landscape
     sizeP?: number; // Portrait
-    date?: boolean | null;
+    showColumn?: boolean;
+    fieldType?:string = 'string';
+    searchable?: boolean;
+    filterList?:string[];
+    filterRangeMin?:any;
+    filterRangeMax?:any;
+    sorting?: boolean = true;
     cellRenderer?: any;
     editable?: boolean;
-
+    
     field0?: string;
     field1?: string;
     field2?: string;
-
     utClass?: string
-
 }

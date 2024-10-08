@@ -5,6 +5,7 @@ html {
 .table-section{
   border-radius: 10px;
   border: 1px solid #EDEDF8;
+  background-color:#fff;
 }
 .table-scroll {
   position: relative;
@@ -212,4 +213,33 @@ input[type=checkbox] {
   100% {
     transform: translate(-50%, -85%) scale(0.8) rotate(45deg);
   }
+}
+.headerSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.activeSort{
+  background-color: #a0a3d11f;
+  color: #009ce8;
+  border-radius: 5px;
+}
+/* Hover effect for sorting icons */
+th.sortable:hover .sorting-icons {
+  visibility: visible;
+}
+
+/* Sorting icons that are visible when sorted */
+th.sorting-active .sorting-icons {
+  visibility: visible;
+}
+
+.sorting-icons {
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* Styling for sorting arrows */
+.sorting-icons span {
+  font-size: 18px;
 }

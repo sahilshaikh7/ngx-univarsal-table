@@ -154,7 +154,7 @@
 .dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container {
     display: flex;
     justify-content: space-between;
-    padding: 15px 5px;
+    padding: 12px 5px;
     border-bottom: 1px solid #eaeaf4;
 }
 

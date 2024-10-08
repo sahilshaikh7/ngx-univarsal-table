@@ -36,32 +36,33 @@ export class FilterComponent {
 
   ngOnInit() {
   }
-  
+
 
   openFilterPopup() {
     if (this.filterOneTime) {
       this.openFilterOneTime();
       this.filteredValue = {};
-      this.filterData.filter(x=> x.filterList);
+
+      this.filterData = this.filterData.filter(filter => filter.filterList);
+
       this.filterData.forEach(filter => {
-        if(filter.filterList?.length > 0){   
+        if (filter.filterList?.length > 0) {
           this.filteredValue[filter.header] = (filter.filterList || []).map((item: any) => ({
             ...item,
-            checked: false 
+            checked: false
           }));
         }
-        this.filteredValue[`${filter.header}_select_all`] = false; // Initialize select all checkbox
+        this.filteredValue[`${filter.header}_select_all`] = false;
       });
     }
-    this.filterPopup = !this.filterPopup;
+
     if (this.filterData.length > 0) {
-      this.filteredList = this.filterData[0].filterList;  // Initialize filteredList with the first filter's list
+      this.filteredList = this.filterData[0].filterList;
       this.filterBy = this.activeNavButton = this.filterData[0].header;
     }
+
+    this.filterPopup = !this.filterPopup;
     this.searchedBy = `Search by ${this.filterData[0]?.header || 'default'}`;
-    console.log(this.filteredValue)
-    console.log(this.filteredList)
-    console.log(this.filterData)
   }
   openFilterOneTime() {
     if (this.filterOneTime) {
@@ -71,14 +72,19 @@ export class FilterComponent {
   }
   clearAllFilter() {
     this.selectedFields = {};
-    this.dateRange = {};
+    if (this.activeDateField && this.dateRange[this.activeDateField]) {
+      this.startDateType = 'text'; 
+      this.endDateType = 'text'; 
+      this.dateRange[this.activeDateField].start = '';
+      this.dateRange[this.activeDateField].end = '';
+    }
     Object.keys(this.filteredValue).forEach(key => {
       if (Array.isArray(this.filteredValue[key])) {
         this.filteredValue[key].forEach(item => {
           item.checked = false;
         });
       } else if (typeof this.filteredValue[key] === 'boolean') {
-        this.filteredValue[key] = false; // Reset the 'select all' checkbox
+        this.filteredValue[key] = false; 
       }
     });
 
@@ -88,13 +94,16 @@ export class FilterComponent {
   }
 
   addFiltered(item: any) {
-    this.activeFilter = item;
-    this.filteredList = item.filterList;  // Set filteredList based on selected filter
-    this.activeNavButton = item.header;
-    this.filterBy = item.header;
-    this.searchedBy = `Search by ${this.filterBy}`;
-    if (item.type == 'date') {
-      this.setActiveDateField(item.header); // Set the active date field when adding a date filter
+    if (item.filterList) {
+      this.activeFilter = item;
+      this.filteredList = item.filterList;  
+      this.activeNavButton = item.header;
+      this.filterBy = item.header;
+      this.searchedBy = `Search by ${this.filterBy}`;
+      
+      if (item.fieldType === 'date') {
+        this.setActiveDateField(item.field); 
+      }
     }
   }
   setActiveDateField(field: string) {
@@ -109,7 +118,7 @@ export class FilterComponent {
   filterCount() {
     let count = 0;
     this.filterData.forEach(item => {
-      if (item.type === 'date') {
+      if (item.fieldType === 'date') {
         if (this.dateRange[item.field]?.start && this.dateRange[item.field]?.end) {
           count += 1; // Count if the date range is set
         }
@@ -163,8 +172,7 @@ export class FilterComponent {
         params[item.header] = [];
       }
 
-      // Handling the date filter for each field independently
-      if (item.type === 'date' && this.dateRange[item.field]?.start && this.dateRange[item.field]?.end) {
+      if (item.fieldType === 'date' && this.dateRange[item.field]?.start && this.dateRange[item.field]?.end) {
         params[item.header] = [
           new Date(this.dateRange[item.field].start),
           new Date(this.dateRange[item.field].end),
@@ -182,26 +190,28 @@ export class FilterComponent {
     this.filterApplied.emit(params);
     this.filterPopup = false;
   }
-  onStartDateBlur() {
-    this.startDateFocused = !this.dateRange[this.activeDateField]?.start;
-    if (!this.dateRange[this.activeDateField]?.start) {
-      this.startDateType = 'text';
-    }
-  }
-
-  onEndDateBlur() {
-    this.endDateFocused = !this.dateRange[this.activeDateField]?.end;
-    if (!this.dateRange[this.activeDateField]?.end) {
-      this.endDateType = 'text';
-    }
-  }
   onStartDateFocus() {
-    this.startDateType = 'date'; // Change input type to 'date' for correct input
+    this.startDateType = 'date';  
+    this.startDateFocused = true;  
   }
-
-  // Handle focus on end date input for the active date field
+  
+  onStartDateBlur() {
+    this.startDateFocused = false;  
+    if (!this.dateRange[this.activeDateField]?.start) {
+      this.startDateType = 'text'; 
+    }
+  }
+  
   onEndDateFocus() {
-    this.endDateType = 'date'; // Change input type to 'date' for correct input
+    this.endDateType = 'date';  
+    this.endDateFocused = true;  
+  }
+  
+  onEndDateBlur() {
+    this.endDateFocused = false;  
+    if (!this.dateRange[this.activeDateField]?.end) {
+      this.endDateType = 'text'; 
+    }
   }
   openDatePicker(inputId: string) {
     const inputElement = document.getElementById(inputId) as HTMLInputElement;

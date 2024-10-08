@@ -3,32 +3,40 @@
     <table #mainTable id="main-table" class="table table-resizable">
       <thead>
         <tr>
-          <th scope="col" *ngIf="showCheckBox" style="width: 15px;"
-            [ngStyle]="{'color': headerColor,'background': headerBg}">
+          <th *ngIf="showCheckBox" style="width: 15px;" [ngStyle]="{'color': headerColor,'background': headerBg}">
             <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
           </th>
           <ng-container *ngFor="let header of gtColumnList">
-            <th scope="col" [ngStyle]="{'color': headerColor,'background': headerBg}">
-              {{header.header}} <span class="resize-handle"></span>
+            <th scope="col" [ngStyle]="{'color': headerColor,'background': headerBg}"
+              [class.sortable]="header.sorting"
+              [class.sorting-active]="sortField === header.field">
+              <div class="headerSection" >
+                {{ header.header }}
+                <!-- Sorting Icons -->
+                <span *ngIf="header.sorting" class="sorting-icons" (click)="header.sorting ? onSort(header.field) : null" >
+                  <span  class="material-icons activeSort" *ngIf="sortField === header.field && !sortDirection">arrow_downward</span>
+                  <span class="material-icons activeSort" *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
+                  <span  class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
+                </span>
+              </div>
             </th>
           </ng-container>
         </tr>
       </thead>
+
       <tbody>
         <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
           <td *ngIf="showCheckBox" style="width: 15px;">
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
           <ng-container *ngFor="let column of gtColumnList">
-            <td *ngIf="column.cellRenderer" [width]="column.sizeL">
-              <!-- {{row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer}} -->
-              <!-- <div [innerHTML]="htmlContent | safeHtml"></div> -->
+            <td *ngIf="column.cellRenderer">
               <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
                 [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
               </div>
-              <div *ngIf="!column.field2 && column.field1"  [ngClass]="column.utClass"
+              <div *ngIf="!column.field2 && column.field1" [ngClass]="column.utClass"
                 [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></div>
-              <div *ngIf="!column.field1"  [ngClass]="column.utClass"
+              <div *ngIf="!column.field1" [ngClass]="column.utClass"
                 [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
               </div>
             </td>
@@ -36,14 +44,14 @@
               <span *ngIf="column.field2 && column.field1">
                 <span *ngIf="!row[column.field0]">-</span>
                 <span *ngIf="row[column.field0]">
-                  {{row[column.field0][column.field1][column.field2]}}
+                  {{row[column.field0][column.field1][column.field2] | universal}}
                 </span>
               </span>
               <span *ngIf="column.field1 && !column.field2">
-                <span *ngIf="row[column.field0]">{{row[column.field0][column.field1]}}</span>
+                <span *ngIf="row[column.field0]">{{row[column.field0][column.field1] | universal}}</span>
               </span>
               <span *ngIf="!column.field1">
-                <span>{{row[column.field]}}</span>
+                <span>{{row[column.field] | universal}}</span>
               </span>
             </td>
           </ng-container>

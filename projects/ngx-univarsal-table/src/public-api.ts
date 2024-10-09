@@ -6,3 +6,4 @@ export * from './lib/ngx-univarsal-table.service';
 export * from './lib/ngx-univarsal-table.component';
 export * from './lib/table/table.component';
 export * from './lib/filter/filter.component';
+export * from './lib/universal-table/universal-table.component';

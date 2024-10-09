@@ -29,16 +29,15 @@
                         <div class="form-group">
                             <div class="input-container">
                                 <input 
-                                    [type]="startDateType" 
+                                    [type]="'date'" 
                                     id="start-date" 
                                     [(ngModel)]="dateRange[activeDateField].start" 
                                     class="input-field"
                                     (focus)="onStartDateFocus()" 
-                                    (blur)="onStartDateBlur()"
-                                    (click)="openDatePicker('start-date')" />
+                                    (blur)="onStartDateBlur()">
                                 <label 
                                     [class.active]="startDateFocused || dateRange[activeDateField]?.start" 
-                                    for="start-date">Start Date</label>
+                                    for="start-date">From Date</label>
                                 <span [class.calendar-icon]="!startDateFocused" (click)="openDatePicker('start-date')"></span>
                             </div>
                         </div>
@@ -46,16 +45,15 @@
                         <div class="form-group">
                             <div class="input-container">
                                 <input 
-                                    [type]="endDateType" 
+                                    [type]="'date'" 
                                     id="end-date"  
                                     [(ngModel)]="dateRange[activeDateField].end" 
                                     class="input-field"
                                     (focus)="onEndDateFocus()" 
-                                    (blur)="onEndDateBlur()"
-                                    (click)="openDatePicker('end-date')" />
+                                    (blur)="onEndDateBlur()">
                                 <label 
                                     [class.active]="endDateFocused || dateRange[activeDateField]?.end" 
-                                    for="end-date">End Date</label>
+                                    for="end-date">To Date</label>
                                 <span [class.calendar-icon]="!endDateFocused" (click)="openDatePicker('end-date')"></span>
                             </div>
                         </div>
@@ -66,7 +64,7 @@
                 <div *ngIf="activeFilter?.fieldType !== 'date'">
                     <div class="searchBar" style="position: relative;">
                         <span class="material-icons search-icon">search</span>
-                        <input type="text" [(ngModel)]="search" placeholder="{{ searchedBy }}" class="search-input" />
+                        <input type="text" [(ngModel)]="search" placeholder="{{ searchedBy }}" class="search-input"  />
                     </div>
 
                     <!-- Filtered list container with select all option -->
@@ -90,8 +88,8 @@
 
         <div class="dialog-footer">
             <span>{{ filterCount() }} filter applied</span>
-            <div class="primaryColor hand-cursor" (click)="clearAllFilter()">Clear all</div>
-            <div class="primaryColor hand-cursor" (click)="applyFilter()">Apply</div>
+            <div style="color: #1d88fb; cursor: pointer;" (click)="clearAllFilter()">Clear all</div>
+            <div style="color: #1d88fb; cursor: pointer;" (click)="applyFilter()">Apply</div>
         </div>
     </div>
 </div>

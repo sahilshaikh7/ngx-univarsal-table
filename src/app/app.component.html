@@ -1,9 +1,24 @@
-<lib-filter [mobileView]="true" [filterData]="buyerService.buyerTableFields" (filterApplied)="applyFilter($event)" ></lib-filter>
+<!-- <lib-filter [mobileView]="true" [filterData]="buyerService.buyerTableFields" (filterApplied)="applyFilter($event)" ></lib-filter>
 <lib-table [headerBg]="'#826149'" [scrollable]="false" [headerColor]="'#fff'"
     [gtColumnList]="buyerService.buyerTableFields" [rowData]="buyerService.buyersList" [showCheckBox]="false"
     [itemPerPage]="15" [tableHeight]="height" [dataRenderingLocal]="false"
-    (onSortChanged)="onSortChanged($event)"></lib-table>
+    (onSortChanged)="onSortChanged($event)"></lib-table> -->
 
+<lib-universal-table 
+    [mobileView]="true"
+    [filterData]="buyerService.buyerTableFields"
+    [rowData]="buyerService.buyersList"
+    [headerBg]="'#826149'"
+    [headerColor]="'#fff'"
+    [showCheckBox]="false"
+    [itemPerPage]="15"
+    [tableHeight]="height"
+    [scrollable]="false"
+    [gtColumnList]="buyerService.buyerTableFields"
+    [dataRenderingLocal]="false"
+    (filterApplied)="applyFilter($event)"
+    (onSortChanged)="onSortChanged($event)">
+</lib-universal-table>
 
 <!-- <lib-filter [mobileView]="true" [filterData]="filterData" (filterApplied)="applyFilter($event)"></lib-filter>
 <lib-table [headerBg]="'#826149'" [scrollable]="false" [headerColor]="'#fff'"

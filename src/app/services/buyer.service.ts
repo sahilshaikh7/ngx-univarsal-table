@@ -19,6 +19,7 @@ export class BuyerService {
     { field: 'participation_status', header: 'Buyer Status', size:1, sizeP:1 ,filterList:[]},
     { field: 'remarks', header: 'Remark', size:1, sizeP:1 },
     { field: 'created_at', header: 'Created At', size:1, sizeP:1, fieldType:'date' ,filterList:[], sorting:true},
+    { field: 'updated_at', header: 'Updated At', size:1, sizeP:1, fieldType:'date' ,filterList:[], sorting:true},
   ];
 
 

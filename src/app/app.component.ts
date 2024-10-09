@@ -5,11 +5,12 @@ import { FilterComponent } from '../../projects/ngx-univarsal-table/src/lib/filt
 import { TableComponent } from '../../projects/ngx-univarsal-table/src/lib/table/table.component';
 import { BuyerService } from './services/buyer.service';
 import { EmpService } from './services/emp.service';
+import { UniversalTableComponent } from 'projects/ngx-univarsal-table/src/public-api';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TableComponent, FilterComponent],
+  imports: [RouterOutlet, TableComponent, FilterComponent,UniversalTableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -28,4 +29,5 @@ export class AppComponent {
   onSortChanged(sortData) {
     console.log("Sort data:", sortData);
   }
+ 
 }

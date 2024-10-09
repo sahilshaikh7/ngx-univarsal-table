@@ -1,0 +1,18 @@
+<lib-filter 
+  [mobileView]="mobileView" 
+  [filterData]="filterData" 
+  (filterApplied)="applyFilter($event)">
+</lib-filter>
+
+<lib-table 
+  [headerBg]="headerBg" 
+  [scrollable]="scrollable" 
+  [headerColor]="headerColor" 
+  [gtColumnList]="gtColumnList" 
+  [rowData]="rowData" 
+  [showCheckBox]="showCheckBox" 
+  [itemPerPage]="itemPerPage" 
+  [tableHeight]="tableHeight" 
+  [dataRenderingLocal]="dataRenderingLocal" 
+  (onSortChanged)="sortChanged($event)">
+</lib-table>

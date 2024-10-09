@@ -23,7 +23,7 @@ export class TableComponent implements OnInit {
   @Input() headerColor = "#fff";
   @Input() headerBg = "#0092F7";
   @Input() scrollable = true;
-  @Input() selfApplied: boolean = true; // New input for controlling sorting
+  @Input() dataRenderingLocal: boolean = true; // New input for controlling sorting
 
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
@@ -69,7 +69,7 @@ export class TableComponent implements OnInit {
       this.sortDirection = true;
     }
     
-    if (this.selfApplied) {
+    if (this.dataRenderingLocal) {
       this.sorting(this.rowData, this.sortField, this.sortDirection);
     } else {
       this.onSortChanged.emit({ field: this.sortField, direction: this.sortDirection });

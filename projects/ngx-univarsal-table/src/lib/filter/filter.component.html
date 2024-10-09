@@ -1,4 +1,5 @@
-<div class="filter-btn" [ngClass]="{'filter-btn-active': filterPopup}" (click)="openFilterPopup()">
+    
+    <div class="filter-btn" [ngClass]="{'filter-btn-active': filterPopup}" (click)="filterPopup = !filterPopup">
     <span class="material-icons" style="font-size: 20px; margin-right: 10px;">filter_list</span>
     Filters
     <span class="material-icons arrow-rotate" [ngClass]="filterPopup ? 'arrow-rotate-true' : 'arrow-rotate-false'">
@@ -11,75 +12,73 @@
         <div class="dialog-body">
             <div class="filter-list-container">
                 <ul class="filter-list">
-                    <li *ngFor="let item of filterData" (click)="addFiltered(item)"
-                        [class.active]="activeNavButton === item.header">
-                        {{ item.header }}
-                        <span class="dot-selected-filter"
-                            *ngIf="selectedFields && selectedFields[item.header]?.length > 0">
-                            {{ selectedFields[item.header]?.length }}
-                        </span>
-                    </li>
+                    <span *ngFor="let item of columnList">
+                        <li *ngIf="item.filterList && item.filterList.length > 0" (click)="addFiltered(item)" [class.active]="activeNavButton === item.header">
+                            {{ item.header }}
+                            <span class="dot-selected-filter"
+                                *ngIf="selectedFields && selectedFields[item.header]?.length > 0">
+                                {{ selectedFields[item.header]?.length }}
+                            </span>
+                        </li>
+                    </span>
                 </ul>
             </div>
 
             <div class="filter-details-container">
-                <div *ngIf="activeFilter?.fieldType === 'date'">
-                    <div>{{activeFilter.header}}</div>
-                    <div style="margin-top: 32px;">
-                        <div class="form-group">
-                            <div class="input-container">
-                                <input 
-                                    [type]="'date'" 
-                                    id="start-date" 
-                                    [(ngModel)]="dateRange[activeDateField].start" 
-                                    class="input-field"
-                                    (focus)="onStartDateFocus()" 
-                                    (blur)="onStartDateBlur()">
-                                <label 
-                                    [class.active]="startDateFocused || dateRange[activeDateField]?.start" 
-                                    for="start-date">From Date</label>
-                                <span [class.calendar-icon]="!startDateFocused" (click)="openDatePicker('start-date')"></span>
+                <div *ngFor="let col of columnList">
+                    <div *ngIf="col.selectedFilter">
+                        <div *ngIf="col?.fieldType === 'date'">
+                            <div>{{activeFilter.header}}</div>
+                            <div style="margin-top: 32px;">
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <input [type]="'date'" id="start-date"
+                                            [(ngModel)]="dateRange[activeDateField].start" class="input-field"
+                                            (focus)="onStartDateFocus()" (blur)="onStartDateBlur()">
+                                        <label [class.active]="startDateFocused || dateRange[activeDateField]?.start"
+                                            for="start-date">From Date</label>
+                                        <span [class.calendar-icon]="!startDateFocused"
+                                            (click)="openDatePicker('start-date')"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <input [type]="'date'" id="end-date"
+                                            [(ngModel)]="dateRange[activeDateField].end" class="input-field"
+                                            (focus)="onEndDateFocus()" (blur)="onEndDateBlur()">
+                                        <label [class.active]="endDateFocused || dateRange[activeDateField]?.end"
+                                            for="end-date">To Date</label>
+                                        <span [class.calendar-icon]="!endDateFocused"
+                                            (click)="openDatePicker('end-date')"></span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <div class="input-container">
-                                <input 
-                                    [type]="'date'" 
-                                    id="end-date"  
-                                    [(ngModel)]="dateRange[activeDateField].end" 
-                                    class="input-field"
-                                    (focus)="onEndDateFocus()" 
-                                    (blur)="onEndDateBlur()">
-                                <label 
-                                    [class.active]="endDateFocused || dateRange[activeDateField]?.end" 
-                                    for="end-date">To Date</label>
-                                <span [class.calendar-icon]="!endDateFocused" (click)="openDatePicker('end-date')"></span>
+
+                        <div *ngIf="col?.fieldType !== 'date'">
+                            <div class="searchBar" style="position: relative;">
+                                <span class="material-icons search-icon">search</span>
+                                <input type="text" [(ngModel)]="search" placeholder="Search By {{ col.header}}"
+                                    class="search-input" />
                             </div>
-                        </div>
-                        
-                    </div>
-                </div>
 
-                <div *ngIf="activeFilter?.fieldType !== 'date'">
-                    <div class="searchBar" style="position: relative;">
-                        <span class="material-icons search-icon">search</span>
-                        <input type="text" [(ngModel)]="search" placeholder="{{ searchedBy }}" class="search-input"  />
-                    </div>
+                            <!-- Filtered list container with select all option -->
+                            <div class="filtered-list-container">
+                                <div class="select-all-container">
+                                    <label for="select_all_checkbox">Select all ({{ col.filterList.length }})</label>
+                                    <input type="checkbox" id="select_all_checkbox"
+                                        (change)="selectAllClicked(col,  $event)" />
+                                </div>
 
-                    <!-- Filtered list container with select all option -->
-                    <div class="filtered-list-container">
-                        <div class="select-all-container">
-                            <label for="select_all_checkbox">Select all ({{ filteredAndSearchedList.length }})</label>
-                            <input type="checkbox" id="select_all_checkbox" (change)="selectAllClicked()"
-                                [(ngModel)]="filteredValue[filterBy + '_select_all']" />
-                        </div>
-
-                        <div *ngFor="let item of filteredAndSearchedList; let index = index"
-                            class="filter-item-container">
-                            <label style="width: 80%;" [for]="'id' + index">{{ item }}</label>
-                            <input type="checkbox" [id]="'id' + index" (change)="checkSelectAll(index)"
-                                [(ngModel)]="filteredValue[filterBy][filteredList.indexOf(item)].checked" />
+                                <div *ngFor="let item of col.selectedFilterList let index = index" >
+                                    <div *ngIf="!this.search || item.item.toLowerCase().includes(this.search.toLowerCase())" class="filter-item-container">
+                                        <label style="width: 80%;" [for]="'id' + index">{{ item.item }}</label>
+                                        <input type="checkbox" [id]="'id' + index" [(ngModel)]="item.checked" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

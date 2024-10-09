@@ -1,18 +1,32 @@
-<lib-filter 
-  [mobileView]="mobileView" 
-  [filterData]="filterData" 
-  (filterApplied)="applyFilter($event)">
-</lib-filter>
+<div class="universal-table-section">
+    <div class="upper-section">
+        <div style="display: flex;">
+            <div class="search-bar">
+                <select name="buyer" id="buyer">
+                    <option value="buyerId">Buyer ID</option>
+                    <option value="buyerName">Buyer Name</option>
+                </select>
+                <span class="material-icons search-icon">search</span>
+                <input type="search" placeholder="Search" class="search">
+            </div>
+            <div class="filter-section">
+                <lib-filter [mobileView]="mobileView" [columnList]="gtColumnList"
+                    (filterApplied)="applyFilter($event)"></lib-filter>
+            </div>
+        </div>
+        <div>
+            <div class="total-count">
 
-<lib-table 
-  [headerBg]="headerBg" 
-  [scrollable]="scrollable" 
-  [headerColor]="headerColor" 
-  [gtColumnList]="gtColumnList" 
-  [rowData]="rowData" 
-  [showCheckBox]="showCheckBox" 
-  [itemPerPage]="itemPerPage" 
-  [tableHeight]="tableHeight" 
-  [dataRenderingLocal]="dataRenderingLocal" 
-  (onSortChanged)="sortChanged($event)">
-</lib-table>
+            </div>
+            <div class="button-section">
+
+            </div>
+        </div>
+    </div>
+    <div class="table-section">
+        <lib-table [headerBg]="headerBg" [scrollable]="scrollable" [headerColor]="headerColor"
+            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox" [itemPerPage]="itemPerPage"
+            [tableHeight]="tableHeight" [dataRenderingLocal]="dataRenderingLocal" (onSortChanged)="sortChanged($event)">
+        </lib-table>
+    </div>
+</div>

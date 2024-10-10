@@ -10,8 +10,8 @@
                 <input type="search" placeholder="Search" class="search">
             </div>
             <div class="filter-section">
-                <lib-filter [mobileView]="mobileView" [columnList]="gtColumnList"
-                    (filterApplied)="applyFilter($event)"></lib-filter>
+                <lib-filter [mobileView]="mobileView" [columnList]="gtColumnList" [leftPosition]="leftPosition"
+                    (filterApplied)="applyFilter($event)" ></lib-filter>
             </div>
         </div>
         <div>

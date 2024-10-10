@@ -13,18 +13,13 @@ export class FilterComponent {
   @Input() mobileView: boolean = false;
   @Input() columnList: any[] = [];
   @Input() leftPosition: string = '0px';
-  @Output() filterApplied = new EventEmitter<any>(); // Emit the filter data to parent
+  @Output() filterApplied = new EventEmitter<any>();
 
   filterPopup: boolean = false;
   selectedFields: any = {};
-  filteredValue: any = {};
-  activeFilter: any;
-  activeNavButton: string = '';
-  filterBy: string = '';
-  filteredList: any[] = [];
   search: string = '';
+  activeNavButton: string = '';
   filterOneTime: boolean = true;
-  searchedBy = '';
   // Modified to track date ranges per field
   dateRange: { [key: string]: { start: string; end: string } } = {};
   activeDateField: string = '';
@@ -35,30 +30,39 @@ export class FilterComponent {
   constructor() { }
 
   ngOnInit() {
-    
+
   }
   ngOnChanges(changes: SimpleChanges): void {
-    let selectFirstOne = false;
-    console.log(this.columnList)
-    this.columnList.forEach(col => {
-      if (col.filterList && col.filterList.length > 0) {
-        col.selectedFilterList = [];
-        if (!selectFirstOne) {
-          selectFirstOne = true;
-          col.selectedFilter = true;
-        }else{
+
+
+  }
+  openFilter() {
+    if (this.filterOneTime) {
+      this.filterOneTime = false;
+      let selectFirstOne = false;
+      console.log(this.columnList)
+      this.columnList.forEach(col => {
+        if (col.filterList && col.filterList.length > 0) {
+          col.selectedFilterList = [];
+          if (!selectFirstOne) {
+            this.activeNavButton = col.header;
+            selectFirstOne = true;
+            col.selectedFilter = true;
+          } else {
+            col.selectedFilter = false;
+          }
+          col.filterList.forEach(item => {
+            col.selectedFilterList.push({ item: item, checked: false })
+
+          });
+        }
+        if (col.fieldType == 'date') {
           col.selectedFilter = false;
         }
-        col.filterList.forEach(item => {
-          col.selectedFilterList.push({ item: item, checked: false })
-
-        });
-      }
-    });
-    console.log(this.columnList)
-    
+      });
+    }
+    this.filterPopup = !this.filterPopup
   }
-
 
 
   clearAllFilter() {
@@ -69,18 +73,12 @@ export class FilterComponent {
       this.dateRange[this.activeDateField].start = '';
       this.dateRange[this.activeDateField].end = '';
     }
-    Object.keys(this.filteredValue).forEach(key => {
-      if (Array.isArray(this.filteredValue[key])) {
-        this.filteredValue[key].forEach(item => {
-          item.checked = false;
-        });
-      } else if (typeof this.filteredValue[key] === 'boolean') {
-        this.filteredValue[key] = false;
-      }
+    this.columnList.forEach(col => {
+      col.filteredValue = [];
+      col.selectedFilterList?.forEach((item: any) => {
+        item.checked = false;
+      });
     });
-
-    this.filteredValue[`${this.filterBy}_select_all`] = false;
-
     this.search = '';
   }
 
@@ -88,7 +86,9 @@ export class FilterComponent {
     this.columnList.forEach(col => {
       col.selectedFilter = false;
     });
+    this.activeNavButton = selectedColumn.header;
     selectedColumn.selectedFilter = true;
+    console.log(this.activeNavButton)
   }
   setActiveDateField(field: string) {
     console.log(field)
@@ -98,7 +98,6 @@ export class FilterComponent {
     }
   }
 
-
   filterCount() {
     let count = 0;
     this.columnList.forEach(item => {
@@ -107,7 +106,7 @@ export class FilterComponent {
           count += 1; // Count if the date range is set
         }
       } else {
-        this.filteredValue[item.header]?.forEach((type: any) => {
+        item.selectedFilterList?.forEach((type: any) => {
           count += type.checked ? 1 : 0;
         });
       }
@@ -115,37 +114,13 @@ export class FilterComponent {
     return count;
   }
 
-
-
-  // Select all items
   selectAllClicked(col, event: any) {
-    console.log(event)
     col.selectedFilterList.forEach(element => {
       element.checked = event.target.checked;
     });
   }
 
-  // Check if all items are selected
-  checkSelectAll(clicked_index: number) {
-    let temp = 0;
-    const clickedItem = this.filteredValue[this.filterBy]?.[clicked_index];
-    if (clickedItem) {
-      const clicked_value = !clickedItem.checked;
-
-      this.filteredValue[this.filterBy].forEach((item: { checked: any; }, index: number) => {
-        if (index !== clicked_index) {
-          temp += item.checked ? 1 : 0;
-        } else {
-          temp += clicked_value ? 1 : 0;
-        }
-      });
-
-      this.filteredValue[`${this.filterBy}_select_all`] = temp === this.filteredValue[this.filterBy].length;
-    }
-  }
-
   applyFilter() {
-
     this.columnList.forEach(item => {
       item.filteredValue = item.filteredValue ?? [];
       if (item.fieldType === 'date' && this.dateRange[item.field]?.start && this.dateRange[item.field]?.end) {
@@ -153,16 +128,19 @@ export class FilterComponent {
           new Date(this.dateRange[item.field].start),
           new Date(this.dateRange[item.field].end),
         ]);
-      } else {
-        for (let i = 0; i < item.filterList.length; i++) {
-          if (this.filteredValue[item.header][i].checked) {
-            item.filteredValue.push(item.filterList[i]);
+      } else if (item.selectedFilterList && item.selectedFilterList.length > 0) {
+        if (this.selectedFields[item.header]?.length == 0) {
+          this.selectedFields[item.header] = [];
+        }
+        this.selectedFields[item.header] = [];
+        for (let value of item.selectedFilterList) {
+          if (value.checked) {
+            item.filteredValue.push(value.item);
+            this.selectedFields[item.header].push(value.item);
           }
         }
       }
     });
-
-    this.selectedFields = this.columnList;
     this.filterApplied.emit(this.columnList);
     this.filterPopup = false;
   }

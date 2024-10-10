@@ -1,5 +1,4 @@
-    
-    <div class="filter-btn" [ngClass]="{'filter-btn-active': filterPopup}" (click)="filterPopup = !filterPopup">
+<div class="filter-btn" [ngClass]="{'filter-btn-active': filterPopup}" (click)="openFilter()">
     <span class="material-icons" style="font-size: 20px; margin-right: 10px;">filter_list</span>
     Filters
     <span class="material-icons arrow-rotate" [ngClass]="filterPopup ? 'arrow-rotate-true' : 'arrow-rotate-false'">
@@ -13,7 +12,8 @@
             <div class="filter-list-container">
                 <ul class="filter-list">
                     <span *ngFor="let item of columnList">
-                        <li *ngIf="item.filterList && item.filterList.length > 0" (click)="addFiltered(item)" [class.active]="activeNavButton === item.header">
+                        <li *ngIf="item.filterList && item.filterList.length > 0" (click)="addFiltered(item)"
+                            [class.active]="activeNavButton === item.header">
                             {{ item.header }}
                             <span class="dot-selected-filter"
                                 *ngIf="selectedFields && selectedFields[item.header]?.length > 0">
@@ -28,7 +28,7 @@
                 <div *ngFor="let col of columnList">
                     <div *ngIf="col.selectedFilter">
                         <div *ngIf="col?.fieldType === 'date'">
-                            <div>{{activeFilter.header}}</div>
+                            <div>{{col.header}}</div>
                             <div style="margin-top: 32px;">
                                 <div class="form-group">
                                     <div class="input-container">
@@ -72,8 +72,10 @@
                                         (change)="selectAllClicked(col,  $event)" />
                                 </div>
 
-                                <div *ngFor="let item of col.selectedFilterList let index = index" >
-                                    <div *ngIf="!this.search || item.item.toLowerCase().includes(this.search.toLowerCase())" class="filter-item-container">
+                                <div *ngFor="let item of col.selectedFilterList let index = index"
+                                    class="filter-item-container">
+                                    <div style="display: flex; justify-content: space-between;"
+                                        *ngIf="!this.search || item.item.toLowerCase().includes(this.search.toLowerCase())">
                                         <label style="width: 80%;" [for]="'id' + index">{{ item.item }}</label>
                                         <input type="checkbox" [id]="'id' + index" [(ngModel)]="item.checked" />
                                     </div>

@@ -63,3 +63,6 @@ select option {
 .search-bar select::-ms-expand {
     display: none;
 }
+.filter-section{
+    position: relative;
+}

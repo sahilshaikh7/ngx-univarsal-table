@@ -12,7 +12,7 @@
             <div class="filter-list-container">
                 <ul class="filter-list">
                     <span *ngFor="let item of columnList">
-                        <li *ngIf="item.filterList && item.filterList.length > 0" (click)="addFiltered(item)"
+                        <li *ngIf="item.filterList" (click)="addFiltered(item)"
                             [class.active]="activeNavButton === item.header">
                             {{ item.header }}
                             <span class="dot-selected-filter"

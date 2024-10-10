@@ -40,7 +40,6 @@ export class FilterComponent {
     if (this.filterOneTime) {
       this.filterOneTime = false;
       let selectFirstOne = false;
-      console.log(this.columnList)
       this.columnList.forEach(col => {
         if (col.filterList && col.filterList.length > 0) {
           col.selectedFilterList = [];
@@ -88,10 +87,11 @@ export class FilterComponent {
     });
     this.activeNavButton = selectedColumn.header;
     selectedColumn.selectedFilter = true;
-    console.log(this.activeNavButton)
+    if (selectedColumn.fieldType === 'date') {
+      this.setActiveDateField(selectedColumn.field);
+    }
   }
   setActiveDateField(field: string) {
-    console.log(field)
     this.activeDateField = field;
     if (!this.dateRange[field]) {
       this.dateRange[field] = { start: '', end: '' };
@@ -123,16 +123,18 @@ export class FilterComponent {
   applyFilter() {
     this.columnList.forEach(item => {
       item.filteredValue = item.filteredValue ?? [];
-      if (item.fieldType === 'date' && this.dateRange[item.field]?.start && this.dateRange[item.field]?.end) {
-        item.filteredValue.push([
-          new Date(this.dateRange[item.field].start),
-          new Date(this.dateRange[item.field].end),
-        ]);
-      } else if (item.selectedFilterList && item.selectedFilterList.length > 0) {
-        if (this.selectedFields[item.header]?.length == 0) {
-          this.selectedFields[item.header] = [];
-        }
+      if (this.selectedFields[item.header]?.length == 0) {
         this.selectedFields[item.header] = [];
+      }
+      this.selectedFields[item.header] = [];
+      if (item.fieldType === 'date' && this.dateRange[item.field]?.start && this.dateRange[item.field]?.end) {
+        const dateObject = {
+          fromDate: new Date(this.dateRange[item.field].start),
+          toDate: new Date(this.dateRange[item.field].end)
+        };
+        item.filteredValue.push(dateObject);
+        this.selectedFields[item.header].push(dateObject);
+      } else if (item.selectedFilterList && item.selectedFilterList.length > 0) {
         for (let value of item.selectedFilterList) {
           if (value.checked) {
             item.filteredValue.push(value.item);

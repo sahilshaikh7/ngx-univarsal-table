@@ -15,7 +15,7 @@ export class BuyerService {
     { field: 'user.name', header: 'Buyer Name', size:1, sizeP:1 ,searchable:true,sorting:true},
     { field: 'business.name', header: 'Organization Name', size:1, sizeP:1 },
     { field: 'category_list', header: 'Array of Preferred Category Nodes', size:1, sizeP:1 },
-    { field: 'stage', header: 'Stage', size:1, sizeP:1 ,filterList:this.masterStageList,sorting:true},
+    { field: 'stage', header: 'Stage', size:1, sizeP:1 ,filterList:this.masterStageList,sorting:true,searchable:true},
     { field: 'dispositionStatus', header: 'Latest Disposition', size:1, sizeP:1,filterList:[] },
     { field: 'participation_status', header: 'Buyer Status', size:1, sizeP:1 ,filterList:this.masterParticipationList},
     { field: 'remarks', header: 'Remark', size:1, sizeP:1 },

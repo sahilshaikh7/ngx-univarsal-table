@@ -7,16 +7,17 @@
 <lib-universal-table 
     [mobileView]="true"
     [rowData]="buyerService.buyersList"
-    [headerBg]="'#826149'"
-    [headerColor]="'#fff'"
-    [showCheckBox]="false"
+    [headerBg]="'#e1eefa'"
+    [headerColor]="'#1A1B35'"
+    [showCheckBox]="true"
     [itemPerPage]="15"
     [tableHeight]="height"
     [scrollable]="false"
     [gtColumnList]="buyerService.buyerTableFields"
-    [dataRenderingLocal]="false"
+    [dataRenderingLocal]="true"
     (filterApplied)="applyFilter($event)"
-    (onSortChanged)="onSortChanged($event)">
+    (onSortChanged)="onSortChanged($event)"
+    (onSearched)="onSearched($event)">
 </lib-universal-table>
 
 <!-- <lib-filter [mobileView]="true" [filterData]="filterData" (filterApplied)="applyFilter($event)"></lib-filter>

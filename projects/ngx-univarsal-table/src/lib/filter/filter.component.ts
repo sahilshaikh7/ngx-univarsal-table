@@ -13,7 +13,7 @@ export class FilterComponent {
   @Input() mobileView: boolean = false;
   @Input() columnList: any[] = [];
   @Input() leftPosition: string = '0px';
-  @Output() filterApplied = new EventEmitter<any>();
+  @Output() filterApplied = new EventEmitter<boolean>();
 
   filterPopup: boolean = false;
   selectedFields: any = {};
@@ -122,7 +122,7 @@ export class FilterComponent {
 
   applyFilter() {
     this.columnList.forEach(item => {
-      item.filteredValue = item.filteredValue ?? [];
+      item.selectedFilterList = item.selectedFilterList ?? [];
       if (this.selectedFields[item.header]?.length == 0) {
         this.selectedFields[item.header] = [];
       }
@@ -132,18 +132,17 @@ export class FilterComponent {
           fromDate: new Date(this.dateRange[item.field].start),
           toDate: new Date(this.dateRange[item.field].end)
         };
-        item.filteredValue.push(dateObject);
+        item.selectedFilterList.push(dateObject);
         this.selectedFields[item.header].push(dateObject);
       } else if (item.selectedFilterList && item.selectedFilterList.length > 0) {
         for (let value of item.selectedFilterList) {
           if (value.checked) {
-            item.filteredValue.push(value.item);
             this.selectedFields[item.header].push(value.item);
           }
         }
       }
     });
-    this.filterApplied.emit(this.columnList);
+    this.filterApplied.emit(true);
     this.filterPopup = false;
   }
   onStartDateFocus() {

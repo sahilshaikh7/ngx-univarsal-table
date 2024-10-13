@@ -2,21 +2,36 @@
     <div class="upper-section">
         <div style="display: flex;">
             <div class="search-bar">
-                <select name="buyer" id="buyer">
-                    <option value="buyerId">Buyer ID</option>
-                    <option value="buyerName">Buyer Name</option>
-                </select>
-                <span class="material-icons search-icon">search</span>
-                <input type="search" placeholder="Search" class="search">
+                <div class="select-section" (click)="dropdownOpen = !dropdownOpen" [ngClass]="{'open': dropdownOpen}">
+                    <div class="selected-option">{{ selectedFieldHeader }}</div>
+                    <span class="material-icons select-icon">keyboard_arrow_down</span>
+                    <div class="dropdown-options">
+                        <div *ngFor="let column of gtColumnList">
+                            <div class="dropdown-option" *ngIf="column.searchable" [ngClass]="{'selected': column.header === selectedFieldHeader}"
+                                (click)="selectField(column)">
+                                <span style="width: 95%;">{{ column.header }}</span>
+                                <span class="material-icons right-arrow"
+                                    *ngIf="column.header === selectedFieldHeader">check_small</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-section">
+                    <span class="material-icons search-icon">search</span>
+                    <input type="search" placeholder="Search" class="search" [(ngModel)]="search"
+                        (input)="applySearch()" [disabled]="!selectedFieldHeader">
+                </div>
             </div>
+
             <div class="filter-section">
                 <lib-filter [mobileView]="mobileView" [columnList]="gtColumnList" [leftPosition]="leftPosition"
-                    (filterApplied)="applyFilter($event)" ></lib-filter>
+                    (filterApplied)="applyFilter($event)"></lib-filter>
             </div>
         </div>
         <div>
             <div class="total-count">
-
+                <h6><span style="color: blue;">{{filteredRowData.length }} / </span>{{rowData.length}}</h6>
+                <span>Total Items</span>
             </div>
             <div class="button-section">
 
@@ -25,8 +40,9 @@
     </div>
     <div class="table-section">
         <lib-table [headerBg]="headerBg" [scrollable]="scrollable" [headerColor]="headerColor"
-            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox" [itemPerPage]="itemPerPage"
-            [tableHeight]="tableHeight" [dataRenderingLocal]="dataRenderingLocal" (onSortChanged)="sortChanged($event)">
+            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox"
+            [itemPerPage]="itemPerPage" [tableHeight]="tableHeight" [dataRenderingLocal]="dataRenderingLocal"
+            (onSortChanged)="sortChanged($event)">
         </lib-table>
     </div>
 </div>

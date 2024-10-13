@@ -32,7 +32,7 @@
     border-color: #C7C8D7;
     border-style: solid;
     border-width: 1px;
-    padding: 10px 5px;
+    padding: 8px 5px;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.6px;
@@ -41,7 +41,7 @@
     justify-content: center;
     cursor: pointer;
     width: 112px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .filter-btn-active {
@@ -53,7 +53,6 @@
 
 .dialog-container {
     position: absolute;
-    top: 60px;
     left: 0;
 }
 

@@ -29,5 +29,7 @@ export class AppComponent {
   onSortChanged(sortData) {
     console.log("Sort data:", sortData);
   }
- 
+  onSearched(searchData) {
+    console.log("Sort data:", searchData);
+  }
 }

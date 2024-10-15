@@ -1,46 +1,42 @@
 <div class="table-section">
-  <div id="table-scroll" class="table-scroll" [style.height]="tableHeight + 'px'">
+  <div id="table-scroll" class="table-scroll" [style.height]="tableHeight + 'px'" style="overflow-x: auto;">
     <table #mainTable id="main-table" class="table table-resizable">
-      <thead>
+      <thead class="fixed-header">
         <tr>
-          <th *ngIf="showCheckBox" style="width: 15px;" [ngStyle]="{'color': headerColor,'background': headerBg}">
+          <th *ngIf="showCheckBox" style="width: 25px;" [ngStyle]="{'color': headerColor, 'background': headerBg}">
             <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
           </th>
-          <ng-container *ngFor="let header of gtColumnList">
-            <th scope="col" [ngStyle]="{'color': headerColor,'background': headerBg}"
-              [class.sortable]="header.sorting"
-              [class.sorting-active]="sortField === header.field">
-              <div class="headerSection" >
+          <ng-container *ngFor="let header of gtColumnList; let i = index">
+            <th scope="col" [ngStyle]="{
+                'color': headerColor,
+                'background': headerBg,
+                'width': header.size + 'px',
+                'min-width': header.size + 'px'
+              }" class="resizable-column">
+              <div class="headerSection">
                 {{ header.header }}
-                <!-- Sorting Icons -->
-                <span *ngIf="header.sorting" class="sorting-icons" (click)="header.sorting ? onSort(header.field) : null" >
-                  <span  class="material-icons activeSort" *ngIf="sortField === header.field && !sortDirection">arrow_downward</span>
-                  <span class="material-icons activeSort" *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
-                  <span  class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
+                <span *ngIf="header.sorting" class="sorting-icons"
+                  (click)="header.sorting ? onSort(header.field) : null">
+                  <span class="material-icons activeSort"
+                    *ngIf="sortField === header.field && !sortDirection">arrow_downward</span>
+                  <span class="material-icons activeSort"
+                    *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
+                  <span class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
                 </span>
               </div>
+              <!-- Resize handle -->
+              <span class="resize-handle" (mousedown)="startResizeColumn($event, i)"></span>
             </th>
           </ng-container>
         </tr>
       </thead>
-
       <tbody>
         <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
-          <td *ngIf="showCheckBox" style="width: 15px;">
+          <td *ngIf="showCheckBox" style="width: 25px;">
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
           <ng-container *ngFor="let column of gtColumnList">
-            <td *ngIf="column.cellRenderer">
-              <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
-                [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
-              </div>
-              <div *ngIf="!column.field2 && column.field1" [ngClass]="column.utClass"
-                [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></div>
-              <div *ngIf="!column.field1" [ngClass]="column.utClass"
-                [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
-              </div>
-            </td>
-            <td *ngIf="!column.cellRenderer">
+            <td [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
               <span *ngIf="column.field2 && column.field1">
                 <span *ngIf="!row[column.field0]">-</span>
                 <span *ngIf="row[column.field0]">

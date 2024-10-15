@@ -32,6 +32,9 @@ export class TableComponent implements OnInit {
   sortDirection: boolean = false;
   selectAll: boolean = false;
 
+  resizingColumnIndex: number | null = null;
+  initialX: number = 0;
+  initialWidth: number = 0;
   constructor() { }
   ngOnInit() {
 
@@ -72,7 +75,37 @@ export class TableComponent implements OnInit {
     this.onSortChanged.emit({ field: this.sortField, direction: this.sortDirection });
   }
 
+  startResizeColumn(event: MouseEvent, columnIndex: number): void {
+    this.resizingColumnIndex = columnIndex;
+    this.initialX = event.pageX;
+    this.initialWidth = this.gtColumnList[columnIndex].size;
 
+    // Add listeners for mouse move and mouse up for resizing
+    window.addEventListener('mousemove', this.onMouseMove);
+    window.addEventListener('mouseup', this.onMouseUp);
+  }
+
+  onMouseMove = (moveEvent: MouseEvent): void => {
+    if (this.resizingColumnIndex !== null) {
+      const deltaX = moveEvent.pageX - this.initialX;
+      const newWidth = this.initialWidth + deltaX;
+
+      // Ensure a minimum width to prevent columns from shrinking too much
+      if (newWidth > 50) {
+        this.gtColumnList[this.resizingColumnIndex].size = newWidth;
+      }
+
+      // Prevent text selection during resize
+      moveEvent.preventDefault();
+    }
+  };
+
+  onMouseUp = (): void => {
+    // Remove event listeners once resizing is done
+    this.resizingColumnIndex = null;
+    window.removeEventListener('mousemove', this.onMouseMove);
+    window.removeEventListener('mouseup', this.onMouseUp);
+  };
  
   
 

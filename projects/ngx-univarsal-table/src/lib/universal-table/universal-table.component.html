@@ -2,20 +2,22 @@
     <div class="upper-section">
         <div style="display: flex;">
             <div class="search-bar">
-                <div class="select-section" (click)="dropdownOpen = !dropdownOpen" [ngClass]="{'open': dropdownOpen}">
+                <div class="select-section" (click)="openDropDown()" [ngClass]="{'open': dropdownOpen}">
                     <div class="selected-option">{{ selectedFieldHeader }}</div>
                     <span class="material-icons select-icon">keyboard_arrow_down</span>
                     <div class="dropdown-options">
-                        <div *ngFor="let column of gtColumnList">
-                            <div class="dropdown-option" *ngIf="column.searchable" [ngClass]="{'selected': column.header === selectedFieldHeader}"
-                                (click)="selectField(column)">
-                                <span style="width: 95%;">{{ column.header }}</span>
-                                <span class="material-icons right-arrow"
-                                    *ngIf="column.header === selectedFieldHeader">check_small</span>
-                            </div>
+                      <div *ngFor="let column of gtColumnList">
+                        <div class="dropdown-option" 
+                             *ngIf="column.searchable" 
+                             [ngClass]="{'selected': column.header === selectedFieldHeader}"
+                             (click)="selectField(column, $event)">
+                          <span style="width: 95%;">{{ column.header }}</span>
+                          <span class="material-icons right-arrow" *ngIf="column.header === selectedFieldHeader">check_small</span>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
                 <div class="search-section">
                     <span class="material-icons search-icon">search</span>
                     <input type="search" placeholder="Search" class="search" [(ngModel)]="search"

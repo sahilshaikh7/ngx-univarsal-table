@@ -46,38 +46,42 @@ export class UniversalTableComponent {
     this.filteredRowData = [...this.rowData];
 
   }
- async applyFilter(event: any) {
+  async applyFilter(event: any) {
     console.log('Filter applied', event);
     console.log('gtColumn', this.gtColumnList);
     if (this.dataRenderingLocal) {
-      this.filteredRowData = await this.filterService.rendering( this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
+      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject, this.gtColumnList, this.rowData);
     } else {
       this.filterApplied.emit(this.gtColumnList);
     }
 
   }
 
-async  sortChanged(event: any) {
+  async sortChanged(event: any) {
     console.log('Sort changed', event);
     this.sortingObject = event;
     if (this.dataRenderingLocal) {
-      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
+      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject, this.gtColumnList, this.rowData);
     } else {
       this.onSortChanged.emit(event);
     }
   }
-async  applySearch(): Promise<void> {
+  async applySearch(): Promise<void> {
     if (this.dataRenderingLocal) {
-      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
+      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject, this.gtColumnList, this.rowData);
     } else {
       this.onSearched.emit({ field: this.selectedFieldHeader, search: this.search });
     }
   }
-  selectField(col: any) {
-    this.dropdownOpen = false;
+  selectField(col: any, event: Event) {
+    event.stopPropagation(); // Prevent the click event from propagating to the parent element
+    this.dropdownOpen = false; // Close the dropdown after selecting an option
     this.selectedFieldHeader = col.header;
     this.selectedField = col.field;
-    console.log(this.dropdownOpen)
+  }
+  
+  openDropDown() {
+    this.dropdownOpen = !this.dropdownOpen; // Toggle the dropdown open state
   }
 
 }

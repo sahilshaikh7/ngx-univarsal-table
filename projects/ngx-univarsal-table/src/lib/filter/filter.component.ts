@@ -32,10 +32,6 @@ export class FilterComponent {
   ngOnInit() {
 
   }
-  ngOnChanges(changes: SimpleChanges): void {
-
-
-  }
   openFilter() {
     if (this.filterOneTime) {
       this.filterOneTime = false;
@@ -73,10 +69,14 @@ export class FilterComponent {
       this.dateRange[this.activeDateField].end = '';
     }
     this.columnList.forEach(col => {
-      col.filteredValue = [];
-      col.selectedFilterList?.forEach((item: any) => {
-        item.checked = false;
-      });
+      if(col.fieldType === 'date'){
+        col.selectedFilterList = [];
+      }else{
+        col.selectedFilterList?.forEach((item: any) => {
+          item.checked = false;
+        });
+      }
+     
     });
     this.search = '';
   }

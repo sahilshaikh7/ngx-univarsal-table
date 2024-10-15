@@ -1,632 +1,5450 @@
 [
     {
-        "id": 1,
-        "user": {
-            "name": "John Doe"
-        },
-        "business": {
-            "name": "Acme Corporation"
-        },
-        "category_list": [
-            "Electronics",
-            "Furniture"
+        "id": "\tarshadkhan",
+        "status_code": "3",
+        "grade_pref": [
+            ""
         ],
-        "stage": "Lead",
-        "dispositionStatus": "Contacted",
-        "participation_status": "Active",
-        "remarks": "First-time buyer",
-        "created_at": {
-            "seconds": 1633072800,
-            "nanoseconds": 123456789
-        }
-    },
-    {
-        "id": 2,
-        "user": {
-            "name": "Jane Smith"
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "",
+            "pin_code": ""
         },
-        "business": {
-            "name": "Global Ventures"
+        "created_at": {
+            "_seconds": 1692268225,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "19665",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": "0, 0, 0, AURAI BHADOHI, MOHAMMADPUR PIROPUR, Bhadohi, Uttar Pradesh, 221306",
+            "city": "Sant Ravidas Nagar",
+            "pin_code": "221306",
+            "state": "Uttar Pradesh"
         },
         "category_list": [
+            "",
             "Apparel",
-            "Sports"
+            "Others"
         ],
-        "stage": "Qualified",
-        "dispositionStatus": "In progress",
-        "participation_status": "Pending",
-        "remarks": "Follow-up required",
-        "created_at": {
-            "seconds": 1633072900,
-            "nanoseconds": 987654321
-        }
-    },
-    {
-        "id": 3,
-        "user": {
-            "name": "David Brown"
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "0, 0, 0, AURAI BHADOHI, MOHAMMADPUR PIROPUR, Bhadohi, Uttar Pradesh, 221306",
+            "city": "Sant Ravidas Nagar",
+            "pin_code": "221306",
+            "state": "Uttar Pradesh"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "0, 0, 0, AURAI BHADOHI, MOHAMMADPUR PIROPUR, Bhadohi, Uttar Pradesh, 221306",
+            "city": "Sant Ravidas Nagar",
+            "pin_code": "221306",
+            "state": "Uttar Pradesh"
         },
         "business": {
-            "name": "Innovatech Ltd"
+            "name": null,
+            "gstin": "09ANPPN6797B1ZC",
+            "pan_card": "ANPPN6797B"
         },
-        "category_list": [
-            "Healthcare",
-            "Biotech"
+        "Demand Executive - Payment Collection": [
+            "Not Set"
         ],
-        "stage": "Proposal",
-        "dispositionStatus": "Proposal Sent",
-        "participation_status": "Active",
-        "remarks": "Proposal under review",
-        "created_at": {
-            "seconds": 1633073000,
-            "nanoseconds": 345678901
-        }
-    },
-    {
-        "id": 4,
-        "user": {
-            "name": "Sarah Johnson"
-        },
-        "business": {
-            "name": "Prime Solutions"
-        },
-        "category_list": [
-            "Automotive",
-            "Industrial"
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
         ],
-        "stage": "Closed",
-        "dispositionStatus": "Won",
         "participation_status": "Completed",
-        "remarks": "Successful buyer",
-        "created_at": {
-            "seconds": 1633073100,
-            "nanoseconds": 123987456
+        "completed_at": {
+            "_seconds": 1692268225,
+            "_nanoseconds": 0
+        },
+        "user_id": "15118",
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "9461239034",
+            "name": "Arshad",
+            "last_name": "Khan",
+            "email": "arshadkhanpiyaropur@gmail.com"
+        },
+        "username": "\tarshadkhan",
+        "ebLot": [],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 912000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 912000000
         }
     },
     {
-        "id": 5,
-        "user": {
-            "name": "Michael Lee"
-        },
+        "id": " MASKE",
+        "status_code": "1",
         "business": {
-            "name": "NextGen Enterprises"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1673439423,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "15883",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "11414",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9588673695",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": " MASKE",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757359,
+            "_nanoseconds": 571000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757359,
+            "_nanoseconds": 571000000
+        }
+    },
+    {
+        "id": " SADAPHULE ",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1678944189,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "16758",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12239",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7666783131",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": " SADAPHULE ",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 642000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 642000000
+        }
+    },
+    {
+        "id": " coolheights",
+        "status_code": "3",
+        "grade_pref": [
+            ""
+        ],
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": " B 57, VIKAS  COLONY, BAG  DILKHUSHA, RAISEN  ROAD, BHOPAL, ( MP ) PIN NO-462023",
+            "city": "Bhopal",
+            "pin_code": "462023",
+            "state": "Madhya Pradesh"
+        },
+        "created_at": {
+            "_seconds": 1644559170,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "11395",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": " B 57, VIKAS  COLONY, BAG  DILKHUSHA, RAISEN  ROAD, BHOPAL, ( MP ) PIN NO-462023",
+            "city": "Bhopal",
+            "pin_code": "462023",
+            "state": "Madhya Pradesh"
         },
         "category_list": [
-            "Food",
-            "Beverages"
+            "",
+            "Others"
         ],
-        "stage": "Negotiation",
-        "dispositionStatus": "Negotiating",
-        "participation_status": "Pending",
-        "remarks": "Price negotiation ongoing",
-        "created_at": {
-            "seconds": 1633073200,
-            "nanoseconds": 654321789
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": " B 57, VIKAS  COLONY, BAG  DILKHUSHA, RAISEN  ROAD, BHOPAL, ( MP ) PIN NO-462023",
+            "city": "Bhopal",
+            "pin_code": "462023",
+            "state": "Madhya Pradesh"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": " B 57, VIKAS  COLONY, BAG  DILKHUSHA, RAISEN  ROAD, BHOPAL, ( MP ) PIN NO-462023",
+            "city": "Bhopal",
+            "pin_code": "462023",
+            "state": "Madhya Pradesh"
+        },
+        "business": {
+            "name": null,
+            "gstin": "23JMWPK0982A1ZU",
+            "pan_card": "JMWPK0982A"
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 1644559217,
+            "_nanoseconds": 0
+        },
+        "user_id": "7097",
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "8878989894",
+            "name": "  Adil Khan",
+            "last_name": "Khan\t",
+            "email": "adilkhan8878@gmail.com"
+        },
+        "username": " coolheights",
+        "ebLot": [],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "sakshis@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 915000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 915000000
         }
     },
     {
-        "id": 6,
+        "id": " haris",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1685565781,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "17888",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "13338",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
         "user": {
-            "name": "Emily Davis"
+            "validated": true,
+            "mobile": "6384729496",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": " haris",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 644000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 644000000
+        }
+    },
+    {
+        "id": " lens",
+        "status_code": "3",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": "AAFCK4119A"
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 1,
+        "ho": {
+            "country": "India",
+            "address": "bangalore",
+            "city": "Bangalore",
+            "pin_code": "560010",
+            "state": "Karnataka"
+        },
+        "created_at": {
+            "_seconds": 1486379568,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 1,
+        "buyer_id": "1379",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": "29911279281",
+        "billing": {
+            "country": "India",
+            "address": "bangalore",
+            "city": "Bangalore",
+            "pin_code": "560010",
+            "state": "Karnataka"
+        },
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "bangalore",
+            "city": "Bangalore",
+            "pin_code": "560010",
+            "state": "Karnataka"
+        },
+        "user_id": "994",
+        "last_bid_date": {
+            "_seconds": 1486598400,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "bangalore",
+            "city": "Bangalore",
+            "pin_code": "560010",
+            "state": "Karnataka"
+        },
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "8799002211",
+            "name": "Knowledge",
+            "last_name": "Lens",
+            "email": "lensknowledge.6@yopmail.com"
+        },
+        "username": " lens",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 644000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 644000000
+        }
+    },
+    {
+        "id": " raosan_ali",
+        "status_code": "3",
+        "grade_pref": [
+            ""
+        ],
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "",
+            "pin_code": ""
+        },
+        "created_at": {
+            "_seconds": 1660202976,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "12715",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": "\"Vill.kansra, po.Anulia, ps.Amta Dist-Howrah Pin-711401\"",
+            "city": "Howrah",
+            "pin_code": "711401",
+            "state": "West Bengal"
+        },
+        "category_list": [
+            "",
+            "Home Appliances"
+        ],
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "\"Vill.kansra, po.Anulia, ps.Amta Dist-Howrah Pin-711401\"",
+            "city": "Howrah",
+            "pin_code": "711401",
+            "state": "West Bengal"
+        },
+        "company": {
+            "country": "India",
+            "address": "\"Vill.kansra, po.Anulia, ps.Amta Dist-Howrah Pin-711401\"",
+            "city": "Howrah",
+            "pin_code": "711401",
+            "state": "West Bengal"
         },
         "business": {
-            "name": "TechBridge LLC"
+            "name": null,
+            "gstin": "19BDKPA1532R2Z8",
+            "pan_card": "BDKPA1532R"
         },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "user_id": "8366",
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "9836094177",
+            "name": "SK RAOSAN",
+            "last_name": "ALI",
+            "email": "arsteelfumiture1@gmail.com"
+        },
+        "username": " raosan_ali",
+        "ebLot": [],
+        "total_lots_won": 2,
+        "total_bid_cycles": 16,
+        "last_bid_date": {
+            "_seconds": 1699315200,
+            "_nanoseconds": 0
+        },
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "kabitad@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 925000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 925000000
+        }
+    },
+    {
+        "id": " sama",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1686303337,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "18255",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "13699",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8273665270",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": " sama",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 655000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 655000000
+        }
+    },
+    {
+        "id": " sidewalk",
+        "status_code": "3",
+        "grade_pref": [
+            ""
+        ],
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "",
+            "pin_code": ""
+        },
+        "created_at": {
+            "_seconds": 1698899471,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "20630",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": "21/A, PATEL MANSION, LAMINGTON ROAD, GRANT ROAD, Mumbai, Maharashtra, 400007",
+            "city": "Mumbai",
+            "pin_code": "400007",
+            "state": "Maharashtra"
+        },
+        "category_list": [
+            "",
+            "IT",
+            "Others"
+        ],
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "21/A, PATEL MANSION, LAMINGTON ROAD, GRANT ROAD, Mumbai, Maharashtra, 400007",
+            "city": "Mumbai",
+            "pin_code": "400007",
+            "state": "Maharashtra"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "21/A, PATEL MANSION, LAMINGTON ROAD, GRANT ROAD, Mumbai, Maharashtra, 400007",
+            "city": "Mumbai",
+            "pin_code": "400007",
+            "state": "Maharashtra"
+        },
+        "business": {
+            "name": null,
+            "gstin": "27AHBPJ7399F1Z1",
+            "pan_card": "AHBPJ7399F"
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 1698899471,
+            "_nanoseconds": 0
+        },
+        "user_id": "16054",
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "9892119979",
+            "name": "AMIT JAIN",
+            "last_name": "J",
+            "email": "sidewalksystem@yahoo.com"
+        },
+        "username": " sidewalk",
+        "ebLot": [],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 926000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 926000000
+        }
+    },
+    {
+        "id": " siva ",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1662041314,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "13073",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "8719",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9652938884",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": " siva ",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 659000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 659000000
+        }
+    },
+    {
+        "id": " skenterprises",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "",
+            "pin_code": ""
+        },
+        "buyer_id": "20744",
+        "tin_number": "",
+        "category_list": [
+            "",
+            "Electronic & Appliance",
+            "Home Appliances",
+            "Others"
+        ],
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "shop no loyalka estate,opp roshan compound,asalpha ghatkopar west, mumbai maharashtra pincode - 400084",
+            "city": "Mumbai",
+            "pin_code": "400084",
+            "state": "Maharashtra"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "shop no loyalka estate,opp roshan compound,asalpha ghatkopar west, mumbai maharashtra pincode - 400084",
+            "city": "Mumbai",
+            "pin_code": "400084",
+            "state": "Maharashtra"
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "user_id": "16158",
+        "reseller_status": "Complete",
+        "username": " skenterprises",
+        "ebLot": [],
+        "max_lot_value": 0,
+        "formUpdateCount": 1,
+        "grade_pref": [
+            "Brand New",
+            "Open Box",
+            "Very Good",
+            "Good",
+            "Acceptable"
+        ],
+        "sub_status": "InComplete",
+        "business": {
+            "gstin": "",
+            "attachment_list": [
+                {}
+            ],
+            "name": "",
+            "pan_card": ""
+        },
+        "fse_status": "Not Validated",
+        "Regional Head": [],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "billing": {
+            "country": "India",
+            "address": "shop no loyalka estate,opp roshan compound,asalpha ghatkopar west, mumbai maharashtra pincode - 400084",
+            "pin_code": "400084",
+            "state": "Maharashtra",
+            "city": "Mumbai City"
+        },
+        "pageValidation": "",
+        "createdFrom": "Demand",
+        "preferred_location_list": [
+            "West",
+            "Maharashtra",
+            "Mumbai City"
+        ],
+        "bb_exposure_limit": 0,
+        "business_id": "",
+        "user": {
+            "validated": true,
+            "mobile": "9172441482",
+            "name": "ABDUL",
+            "last_name": "REHMAN",
+            "email": "skenterprises2102@gmail.com",
+            "pageValidation": {}
+        },
+        "Floor Manager": [],
+        "min_lot_value": 0,
+        "error": null,
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 1700288368,
+            "_nanoseconds": 221000000
+        },
+        "created_at": {
+            "_seconds": 1700288368,
+            "_nanoseconds": 51000000
+        },
+        "execFound": true,
+        "numberFound": true,
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 927000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 927000000
+        }
+    },
+    {
+        "id": "20com",
+        "buyer_id": "7329",
+        "username": "20com",
+        "checked": false,
+        "Floor Manager": [
+            "nithyashreed@blubirch.com"
+        ],
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "29000000001",
+        "completed_at": {
+            "_seconds": 1532077268,
+            "_nanoseconds": 0
+        },
+        "cst_number": "29000000001",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "lkq;qwl",
+            "city": "Chandigarh",
+            "pin_code": "133001",
+            "state": "Punjab"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "grade_pref": [
+            "New",
+            "Open Box"
+        ],
+        "business": {
+            "gstin": "04AASPJ0740N2ZH",
+            "pan_card": "AASPJ0740N",
+            "name": "20 Computer Ware House"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 690000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [
+            "IT"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "7329",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "name": "Pankaj",
+            "last_name": "Jain",
+            "email": "20cwh2009@gmail.com",
+            "mobile": 9316061681
+        },
+        "min_lot_value": 0,
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 929000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 928000000
+        }
+    },
+    {
+        "id": "2sinfo",
+        "grade_pref": [
+            ""
+        ],
+        "buyer_id": "11528",
+        "username": "2sinfo",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1647065850,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": " NO,8.9. CROSS , WILSON  GARDEN, BANGALORE, URBAN,KARNATAKA. PIN NO- 560027",
+            "city": "Bangalore",
+            "pin_code": "560027",
+            "state": "Karnataka"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "29AAACZ3865D1Z4",
+            "pan_card": "AAACZ3865D",
+            "name": "2 S Infotech Private Limited."
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 885000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [
+            "Electronic & Appliance",
+            "Fashion & Style",
+            "IT"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "11528",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "email": "krishnasakshin@gmail.com",
+            "mobile": 9448080805,
+            "name": "Krishna",
+            "last_name": "Sakshin"
+        },
+        "min_lot_value": 0,
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 932000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 932000000
+        }
+    },
+    {
+        "id": "32bit",
+        "grade_pref": [
+            ""
+        ],
+        "buyer_id": "10982",
+        "username": "32bit",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1646977960,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "\tFLAT B-803, OCEANUS FREESIA ENCLAVE, OPP CENTRAL MALL, BELLANDUR, BANGALORE, Bengaluru Urban, Karnataka, 560103",
+            "city": "Bangalore",
+            "pin_code": "560103",
+            "state": "Karnataka"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "29AARHA6852K1ZM",
+            "pan_card": "AARHA6852K",
+            "name": "32 Bit Labs"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 885000000
+        },
+        "max_exposure_limit": 0,
+        "billing": {},
+        "category_list": [
+            "Electronic & Appliance"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "10982",
+        "user": {
+            "validated": true,
+            "email": "abhishek@toqri.com",
+            "mobile": 9924540656,
+            "name": "Abhishek",
+            "last_name": "Kumar"
+        },
+        "min_lot_value": 0,
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "suhass@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 932000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 932000000
+        }
+    },
+    {
+        "id": "3gmob",
+        "buyer_id": "9606",
+        "username": "3gmob",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1569492754,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "Near Town hall Vijay Diwas Chowk Shaniwar peth Karad",
+            "city": "Savner",
+            "pin_code": "415110",
+            "state": "Maharashtra"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "grade_pref": [
+            "Good",
+            "Very Good",
+            "Acceptable",
+            "New",
+            "Open Box"
+        ],
+        "business": {
+            "gstin": "",
+            "pan_card": "EACPM8875D",
+            "name": "3 G Mobile Shopee"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 868000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [
+            "Electronic & Appliance",
+            "IT"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "9606",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "email": "salmanmomin001@gmail.com",
+            "mobile": 9860603587,
+            "name": "Salman",
+            "last_name": "Mohamad Momin"
+        },
+        "min_lot_value": 0,
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 933000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 933000000
+        }
+    },
+    {
+        "id": "4GWORLD",
+        "status_code": "3",
+        "grade_pref": [
+            ""
+        ],
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "",
+            "pin_code": ""
+        },
+        "created_at": {
+            "_seconds": 1694509822,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "20133",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": "T.C. 28/1539-2, Thakaraparambu Road, Pazhavangadi, Thiruvananthapuram, Kerala, 695023",
+            "city": "Thiruvananthapuram",
+            "pin_code": "695023",
+            "state": "Kerala"
+        },
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "T.C. 28/1539-2, Thakaraparambu Road, Pazhavangadi, Thiruvananthapuram, Kerala, 695023",
+            "city": "Thiruvananthapuram",
+            "pin_code": "695023",
+            "state": "Kerala"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "T.C. 28/1539-2, Thakaraparambu Road, Pazhavangadi, Thiruvananthapuram, Kerala, 695023",
+            "city": "Thiruvananthapuram",
+            "pin_code": "695023",
+            "state": "Kerala"
+        },
+        "business": {
+            "name": null,
+            "gstin": "32ANFPR4132G1ZA",
+            "pan_card": "ANFPR4132G"
+        },
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 1694509885,
+            "_nanoseconds": 0
+        },
+        "user_id": "15576",
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "9020040029",
+            "name": "Rajasekaran Nair",
+            "last_name": "Rahul",
+            "email": "aadhirahul@gmail.com"
+        },
+        "username": "4GWORLD",
+        "ebLot": [],
+        "category_list": [
+            "Electronics and Appliances"
+        ],
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 933000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 933000000
+        }
+    },
+    {
+        "id": "4Gcommunications",
+        "category_list": [
+            "Electronic & Appliances",
+            "IT"
+        ],
+        "grade_pref": [],
+        "buyer_id": "4240",
+        "username": "4Gcommunications",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 14,
+        "total_lots_won": 6,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1501632000,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 1518825600,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "Kochi",
+            "city": "Kochi",
+            "pin_code": "682001",
+            "state": "Kerala"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "32BXZPS6063A1Z6",
+            "pan_card": "BXZPS6063A",
+            "name": "4 G Communication"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 843000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "4240",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "name": "Shabeeb",
+            "last_name": "Communications",
+            "email": "shabeebp7@gmail.com",
+            "mobile": 9895200906
+        },
+        "min_lot_value": 0,
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 939000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 939000000
+        }
+    },
+    {
+        "id": "4gmobi",
+        "category_list": [
+            "Electronic & Appliances"
+        ],
+        "grade_pref": [],
+        "buyer_id": "1828",
+        "username": "4gmobi",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "29931257251",
+        "completed_at": {
+            "_seconds": 1488412800,
+            "_nanoseconds": 0
+        },
+        "cst_number": "29931257251",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "sgdfh",
+            "city": "Bangalore",
+            "pin_code": "560078",
+            "state": "Karnataka"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": null,
+            "pan_card": "CDNPM1772R",
+            "name": "4 G Mobile World"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 821000000
+        },
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "1828",
+        "user": {
+            "validated": true,
+            "email": "mosinmosi@yahoo.com",
+            "mobile": 7411102211,
+            "name": "Mosin",
+            "last_name": "Mallat"
+        },
+        "min_lot_value": 0,
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "vijayalakshmin@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 939000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 939000000
+        }
+    },
+    {
+        "id": "7star",
+        "grade_pref": [
+            ""
+        ],
+        "buyer_id": "10127",
+        "username": "7star",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1578300567,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "N.S.Road, Chinsurah ",
+            "city": "Hooghly",
+            "pin_code": "712101",
+            "state": "West Bengal"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "19BETPL5375N1ZF",
+            "pan_card": "BETPL5375N",
+            "name": "7 Star"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 702000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "10127",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "name": "Sajal",
+            "last_name": "Kundu",
+            "email": "sajalkundu21@gmail.com",
+            "mobile": 8013925216
+        },
+        "min_lot_value": 0,
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 939000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 939000000
+        }
+    },
+    {
+        "id": "99deals",
         "category_list": [
             "IT",
-            "Software"
+            "Others"
         ],
-        "stage": "Lead",
-        "dispositionStatus": "Contacted",
-        "participation_status": "Active",
-        "remarks": "Interested in software solutions",
+        "grade_pref": [],
+        "buyer_id": "3645",
+        "username": "99deals",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 1,
+        "total_lots_won": 0,
+        "tin_number": "27320903521",
+        "completed_at": {
+            "_seconds": 1498176000,
+            "_nanoseconds": 0
+        },
+        "cst_number": "27320903521",
+        "last_bid_date": {
+            "_seconds": 1520294400,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "fgalk",
+            "city": "Mumbai",
+            "pin_code": "400007",
+            "state": "Maharashtra"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": null,
+            "pan_card": "DUMMY1111A",
+            "name": "99 Deals.In"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
         "created_at": {
-            "seconds": 1633073300,
-            "nanoseconds": 876543210
+            "_seconds": 1698401983,
+            "_nanoseconds": 839000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "3645",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "name": "Bharat",
+            "last_name": "Mehta",
+            "email": "bharatmehta44@gmail.com",
+            "mobile": 9820389904
+        },
+        "min_lot_value": 0,
+        "ebLot": [
+            "114606",
+            "114608",
+            "114615",
+            "114621",
+            "114623",
+            "114628",
+            "114671",
+            "114673",
+            "114675",
+            "114679",
+            "114683",
+            "114725",
+            "114736",
+            "114737",
+            "114747",
+            "114752",
+            "114753",
+            "114814",
+            "114817",
+            "114819",
+            "114836",
+            "114837",
+            "114843",
+            "114845",
+            "114874",
+            "114883",
+            "114911",
+            "114914",
+            "114916",
+            "114919",
+            "114923",
+            "115016",
+            "115017",
+            "115019",
+            "115021",
+            "115036",
+            "115038",
+            "115041",
+            "115045",
+            "115054",
+            "115058",
+            "115064",
+            "115065",
+            "115075",
+            "115097",
+            "115116",
+            "115146",
+            "115209",
+            "115213",
+            "115267",
+            "115342",
+            "115374",
+            "115398",
+            "115405",
+            "115468",
+            "115475",
+            "115483",
+            "115500",
+            "115503",
+            "115513",
+            "115523",
+            "115363",
+            "115379",
+            "115589",
+            "115745",
+            "115749",
+            "115785",
+            "115786",
+            "115842",
+            "115998",
+            "116105",
+            "116120",
+            "116121",
+            "116220",
+            "116221",
+            "116305",
+            "116425",
+            "116426",
+            "116429",
+            "116370",
+            "116608",
+            "116663",
+            "116664",
+            "116725",
+            "116753",
+            "116762",
+            "116774",
+            "116779",
+            "116957",
+            "116961",
+            "117010",
+            "117012",
+            "117025",
+            "118267",
+            "119050",
+            "119488",
+            "119516",
+            "119971",
+            "119848",
+            "119984",
+            "119847",
+            "120073",
+            "120077",
+            "120558",
+            "120560",
+            "120575",
+            "120518",
+            "121423",
+            "121462",
+            "121496",
+            "121646",
+            "121666",
+            "122828",
+            "123045",
+            "123528",
+            "123677",
+            "124038",
+            "124044",
+            "124092",
+            "124203",
+            "124496",
+            "125038",
+            "9",
+            "125262",
+            "125475",
+            "125501",
+            "125509",
+            "125687",
+            "125688",
+            "125762",
+            "125913",
+            "125914",
+            "125915",
+            "125953",
+            "126081",
+            "126168",
+            "126173",
+            "126192",
+            "126258",
+            "126372",
+            "126404",
+            "126422",
+            "126538",
+            "126539",
+            "126564",
+            "126568",
+            "126606",
+            "126624",
+            "126745",
+            "126947",
+            "126952",
+            "126993",
+            "126994",
+            "127007",
+            "127341",
+            "127348",
+            "127379",
+            "127828",
+            "127953",
+            "128069",
+            "128070",
+            "128071",
+            "128468",
+            "128904",
+            "128993",
+            "128994",
+            "129368",
+            "129369",
+            "129370",
+            "129371",
+            "129380",
+            "129426",
+            "129461",
+            "129929",
+            "129998",
+            "130206",
+            "130223",
+            "130364",
+            "130525",
+            "130603",
+            "131008",
+            "131977",
+            "132724",
+            "133873",
+            "136079",
+            "136097",
+            "136170",
+            "136428"
+        ],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 940000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 940000000
         }
     },
     {
-        "id": 7,
-        "user": {
-            "name": "Robert Wilson"
+        "id": "A2zenterprises",
+        "buyer_id": "10987",
+        "username": "A2zenterprises",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 1,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1622003723,
+            "_nanoseconds": 0
         },
-        "business": {
-            "name": "Green Earth Co"
+        "cst_number": "29AXVPA1081H",
+        "company": {
+            "country": "India",
+            "address": "BHEL Layout, no. 44, 3rd main, Krishnappa garden, Bannerghatta road cross Jayanagar, Karnataka - 560029",
+            "city": "Bangalore",
+            "pin_code": "560029",
+            "state": "Karnataka"
         },
-        "category_list": [
-            "Renewables",
-            "Energy"
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "grade_pref": [
+            "Good",
+            "Very Good",
+            "Not Tested",
+            "Defective"
         ],
-        "stage": "Proposal",
-        "dispositionStatus": "Proposal Sent",
-        "participation_status": "Active",
-        "remarks": "Proposal sent for review",
+        "business": {
+            "gstin": "29BSSPM1149K1Z2",
+            "pan_card": "BSSPM1149K",
+            "name": "A2z Enterprises"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
         "created_at": {
-            "seconds": 1633073400,
-            "nanoseconds": 998765432
+            "_seconds": 1698401983,
+            "_nanoseconds": 878000000
+        },
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [
+            "IT"
+        ],
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "10987",
+        "user": {
+            "validated": true,
+            "last_name": "Mubarak",
+            "email": "a2zenterprises84@gmail.com",
+            "mobile": 8660189499,
+            "name": "Shaik"
+        },
+        "min_lot_value": 0,
+        "bidded": [
+            "v1_139747"
+        ],
+        "last_bid_date": {
+            "_seconds": 1712180171,
+            "_nanoseconds": 291000000
+        },
+        "last_view": {
+            "_seconds": 1713378308,
+            "_nanoseconds": 570501000
+        },
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monalisadas@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "participation_status": "In Active",
+        "updated_at": {
+            "_seconds": 1717439404,
+            "_nanoseconds": 780000000
+        },
+        "updatedAt": {
+            "_seconds": 1717439404,
+            "_nanoseconds": 780000000
         }
     },
     {
-        "id": 8,
-        "user": {
-            "name": "Laura Clark"
-        },
+        "id": "AAAA",
+        "status_code": "1",
         "business": {
-            "name": "HealthFirst Inc"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
         },
-        "category_list": [
-            "Pharmaceuticals",
-            "Healthcare"
+        "Demand Executive - Payment Collection": [
+            "Not Set"
         ],
-        "stage": "Qualified",
-        "dispositionStatus": "In progress",
-        "participation_status": "Pending",
-        "remarks": "Needs follow-up",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
         "created_at": {
-            "seconds": 1633073500,
-            "nanoseconds": 234567890
+            "_seconds": 1680066924,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "16917",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12391",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8108669983",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AAAA",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 660000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 660000000
         }
     },
     {
-        "id": 9,
-        "user": {
-            "name": "James Miller"
-        },
-        "business": {
-            "name": "AlphaTech"
-        },
-        "category_list": [
-            "AI",
-            "Machine Learning"
+        "id": "AABIDHUSAIN_",
+        "grade_pref": [
+            ""
         ],
-        "stage": "Closed",
-        "dispositionStatus": "Lost",
-        "participation_status": "Inactive",
-        "remarks": "Lost to competitor",
+        "buyer_id": "14885",
+        "username": "AABIDHUSAIN_",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1669981938,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "Sur No. 72, Plot No. 08, Al Asbab Park, B/H Ambar Tower, 100Ft Road, Makarba, Sarkhej Road, Ahmedabad, Ahmedabad, Gujarat, 380055",
+            "city": "Ahmedabad",
+            "pin_code": "380055",
+            "state": "Gujarat"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "24ACKPL1599H1ZC",
+            "pan_card": "ACKPL1599H",
+            "name": "Sahara Refrigeration"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
         "created_at": {
-            "seconds": 1633073600,
-            "nanoseconds": 192837465
+            "_seconds": 1698401983,
+            "_nanoseconds": 901000000
+        },
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [
+            "Home Appliances"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "14885",
+        "user": {
+            "validated": true,
+            "name": "Aabid",
+            "last_name": "Husain",
+            "email": "aabidusainhar01@gmail.com",
+            "mobile": 9723837782
+        },
+        "min_lot_value": 0,
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 942000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 942000000
         }
     },
     {
-        "id": 10,
-        "user": {
-            "name": "Anna Baker"
-        },
+        "id": "AADVIK",
+        "status_code": "1",
         "business": {
-            "name": "Quantum Solutions"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
         },
-        "category_list": [
-            "Electronics",
-            "Semiconductors"
+        "Demand Executive - Payment Collection": [
+            "Not Set"
         ],
-        "stage": "Negotiation",
-        "dispositionStatus": "Negotiating",
-        "participation_status": "Pending",
-        "remarks": "Negotiating terms",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
         "created_at": {
-            "seconds": 1633073700,
-            "nanoseconds": 273645918
+            "_seconds": 1665839918,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "13727",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9361",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7976228237",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AADVIK",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 660000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 660000000
         }
     },
     {
-        "id": 1,
-        "user": {
-            "name": "John Doe"
-        },
+        "id": "AAMIRANSARI",
+        "status_code": "1",
         "business": {
-            "name": "Acme Corporation"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
         },
-        "category_list": [
-            "Electronics",
-            "Furniture"
+        "Demand Executive - Payment Collection": [
+            "Not Set"
         ],
-        "stage": "Lead",
-        "dispositionStatus": "Contacted",
-        "participation_status": "Active",
-        "remarks": "First-time buyer",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
         "created_at": {
-            "seconds": 1633072800,
-            "nanoseconds": 123456789
+            "_seconds": 1682575312,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "17301",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12769",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7417142120",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AAMIRANSARI",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 660000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 660000000
         }
     },
     {
-        "id": 2,
-        "user": {
-            "name": "Jane Smith"
-        },
-        "business": {
-            "name": "Global Ventures"
-        },
-        "category_list": [
-            "Apparel",
-            "Sports"
+        "id": "AASAINDIA",
+        "status_code": "3",
+        "grade_pref": [
+            ""
         ],
-        "stage": "Qualified",
-        "dispositionStatus": "In progress",
-        "participation_status": "Pending",
-        "remarks": "Follow-up required",
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "",
+            "pin_code": ""
+        },
         "created_at": {
-            "seconds": 1633072900,
-            "nanoseconds": 987654321
-        }
-    },
-    {
-        "id": 3,
-        "user": {
-            "name": "David Brown"
+            "_seconds": 1693964131,
+            "_nanoseconds": 0
         },
-        "business": {
-            "name": "Innovatech Ltd"
-        },
-        "category_list": [
-            "Healthcare",
-            "Biotech"
-        ],
-        "stage": "Proposal",
-        "dispositionStatus": "Proposal Sent",
-        "participation_status": "Active",
-        "remarks": "Proposal under review",
-        "created_at": {
-            "seconds": 1633073000,
-            "nanoseconds": 345678901
-        }
-    },
-    {
-        "id": 4,
-        "user": {
-            "name": "Sarah Johnson"
-        },
-        "business": {
-            "name": "Prime Solutions"
+        "buyer_id": "20064",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": "VILL PO - BAMANGACHI, SMRITI MAHAL, BAMANGACHI, Bamangachi, South Twenty Four Parganas, West Bengal, 700145",
+            "city": "South 24 Parganas",
+            "pin_code": "700145",
+            "state": "West Bengal"
         },
         "category_list": [
-            "Automotive",
-            "Industrial"
+            "",
+            "Electronic & Appliance",
+            "Kitchen Appliances",
+            "Others"
         ],
-        "stage": "Closed",
-        "dispositionStatus": "Won",
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "VILL PO - BAMANGACHI, SMRITI MAHAL, BAMANGACHI, Bamangachi, South Twenty Four Parganas, West Bengal, 700145",
+            "city": "South 24 Parganas",
+            "pin_code": "700145",
+            "state": "West Bengal"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "VILL PO - BAMANGACHI, SMRITI MAHAL, BAMANGACHI, Bamangachi, South Twenty Four Parganas, West Bengal, 700145",
+            "city": "South 24 Parganas",
+            "pin_code": "700145",
+            "state": "West Bengal"
+        },
+        "business": {
+            "name": null,
+            "gstin": "19AMSPD5274F1ZQ",
+            "pan_card": "AMSPD5274F"
+        },
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
         "participation_status": "Completed",
-        "remarks": "Successful buyer",
-        "created_at": {
-            "seconds": 1633073100,
-            "nanoseconds": 123987456
-        }
-    },
-    {
-        "id": 5,
+        "completed_at": {
+            "_seconds": 1694084389,
+            "_nanoseconds": 0
+        },
+        "user_id": "15508",
+        "reseller_status": "Complete",
         "user": {
-            "name": "Michael Lee"
+            "validated": true,
+            "mobile": "9831049305",
+            "name": "ALOKE KUMAR",
+            "last_name": "DHARA",
+            "email": "info@aasaindia.in"
         },
-        "business": {
-            "name": "NextGen Enterprises"
-        },
-        "category_list": [
-            "Food",
-            "Beverages"
+        "username": "AASAINDIA",
+        "ebLot": [],
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
         ],
-        "stage": "Negotiation",
-        "dispositionStatus": "Negotiating",
-        "participation_status": "Pending",
-        "remarks": "Price negotiation ongoing",
-        "created_at": {
-            "seconds": 1633073200,
-            "nanoseconds": 654321789
-        }
-    },
-    {
-        "id": 6,
-        "user": {
-            "name": "Emily Davis"
-        },
-        "business": {
-            "name": "TechBridge LLC"
-        },
-        "category_list": [
-            "IT",
-            "Software"
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
         ],
-        "stage": "Lead",
-        "dispositionStatus": "Contacted",
-        "participation_status": "Active",
-        "remarks": "Interested in software solutions",
-        "created_at": {
-            "seconds": 1633073300,
-            "nanoseconds": 876543210
-        }
-    },
-    {
-        "id": 7,
-        "user": {
-            "name": "Robert Wilson"
-        },
-        "business": {
-            "name": "Green Earth Co"
-        },
-        "category_list": [
-            "Renewables",
-            "Energy"
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
         ],
-        "stage": "Proposal",
-        "dispositionStatus": "Proposal Sent",
-        "participation_status": "Active",
-        "remarks": "Proposal sent for review",
-        "created_at": {
-            "seconds": 1633073400,
-            "nanoseconds": 998765432
-        }
-    },
-    {
-        "id": 8,
-        "user": {
-            "name": "Laura Clark"
-        },
-        "business": {
-            "name": "HealthFirst Inc"
-        },
-        "category_list": [
-            "Pharmaceuticals",
-            "Healthcare"
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
         ],
-        "stage": "Qualified",
-        "dispositionStatus": "In progress",
-        "participation_status": "Pending",
-        "remarks": "Needs follow-up",
-        "created_at": {
-            "seconds": 1633073500,
-            "nanoseconds": 234567890
+        "updated_at": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 943000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030747,
+            "_nanoseconds": 943000000
         }
     },
     {
-        "id": 9,
-        "user": {
-            "name": "James Miller"
-        },
+        "id": "ABCEDEF",
+        "status_code": "1",
         "business": {
-            "name": "AlphaTech"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
         },
-        "category_list": [
-            "AI",
-            "Machine Learning"
+        "Demand Executive - Payment Collection": [
+            "Not Set"
         ],
-        "stage": "Closed",
-        "dispositionStatus": "Lost",
-        "participation_status": "Inactive",
-        "remarks": "Lost to competitor",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
         "created_at": {
-            "seconds": 1633073600,
-            "nanoseconds": 192837465
-        }
-    },
-    {
-        "id": 10,
-        "user": {
-            "name": "Anna Baker"
+            "_seconds": 1685944979,
+            "_nanoseconds": 0
         },
-        "business": {
-            "name": "Quantum Solutions"
-        },
-        "category_list": [
-            "Electronics",
-            "Semiconductors"
+        "total_lots_won": 0,
+        "buyer_id": "18131",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
         ],
-        "stage": "Negotiation",
-        "dispositionStatus": "Negotiating",
-        "participation_status": "Pending",
-        "remarks": "Negotiating terms",
-        "created_at": {
-            "seconds": 1633073700,
-            "nanoseconds": 273645918
-        }
-    },
-    {
-        "id": 1,
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "13581",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
         "user": {
-            "name": "John Doe"
+            "validated": true,
+            "mobile": "7402211133",
+            "name": null,
+            "last_name": null,
+            "email": null
         },
-        "business": {
-            "name": "Acme Corporation"
-        },
-        "category_list": [
-            "Electronics",
-            "Furniture"
+        "username": "ABCEDEF",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
         ],
-        "stage": "Lead",
-        "dispositionStatus": "Contacted",
-        "participation_status": "Active",
-        "remarks": "First-time buyer",
-        "created_at": {
-            "seconds": 1633072800,
-            "nanoseconds": 123456789
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 661000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 661000000
         }
     },
     {
-        "id": 2,
-        "user": {
-            "name": "Jane Smith"
+        "id": "ABC_",
+        "status_code": "1",
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "buyer_id": "19629",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
         },
+        "user_id": "15082",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "reseller_status": "New",
+        "username": "ABC_",
         "business": {
-            "name": "Global Ventures"
+            "name": "",
+            "gstin": "",
+            "pan_card": ""
+        },
+        "user": {
+            "validated": true,
+            "mobile": "9541286817",
+            "name": "",
+            "last_name": "",
+            "email": ""
+        },
+        "formUpdateCount": 2,
+        "portal_status": "UnBlocked",
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1692092768,
+            "_nanoseconds": 592000000
+        },
+        "company": {
+            "address": "",
+            "pin_code": "",
+            "country": "India",
+            "city": null,
+            "state": null
+        },
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": "",
+            "city": null,
+            "state": null
+        },
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 661000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 661000000
+        }
+    },
+    {
+        "id": "ABDUL",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1670742418,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "15072",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "10644",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7397327143",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ABDUL",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 662000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 662000000
+        }
+    },
+    {
+        "id": "ABDULKALAM",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1688288942,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "18730",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "14174",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8341166483",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ABDULKALAM",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 662000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 662000000
+        }
+    },
+    {
+        "id": "ABDULRAZAK_",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1665222276,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "13600",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9235",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9742888168",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ABDULRAZAK_",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        }
+    },
+    {
+        "id": "ABDULmobiles",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1681887420,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "17198",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12667",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9542989645",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ABDULmobiles",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        }
+    },
+    {
+        "id": "ABHAY",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1692628967,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "19751",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "15200",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7093035171",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ABHAY",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        }
+    },
+    {
+        "id": "ABHI",
+        "grade_pref": [
+            ""
+        ],
+        "buyer_id": "12413",
+        "username": "ABHI",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "168, PANCHGANGA CO-OP.HSG.SOC, NAIDU COLONY, PANT NAGAR, GHATKOPAR EAST, MUMBAI, Mumbai Suburban, Maharashtra,400075",
+            "city": "Mumbai",
+            "pin_code": "400075",
+            "state": "Maharashtra"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "",
+            "pan_card": "AAQFN2942N",
+            "name": "Night Howlers"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 889000000
+        },
+        "max_exposure_limit": 0,
+        "billing": {},
+        "category_list": [
+            "Others"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "12413",
+        "user": {
+            "validated": true,
+            "email": "abhishekpandheri@gmail.com",
+            "mobile": 8879605526,
+            "name": "Abhishek",
+            "last_name": "Rajendra Pendhari"
+        },
+        "min_lot_value": 0,
+        "last_view": {
+            "_seconds": 1706597401,
+            "_nanoseconds": 257887000
+        },
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "umeshkumar@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 137000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 137000000
+        }
+    },
+    {
+        "id": "ABHISHEK ",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1671345620,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "15242",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "10804",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9945866821",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ABHISHEK ",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 663000000
+        }
+    },
+    {
+        "id": "ABIZAR",
+        "status_code": "1",
+        "portal_status": "UnBlocked",
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1687757603,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "18641",
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "city": "Surendranagar",
+            "pin_code": "363001",
+            "state": "Gujarat"
         },
         "category_list": [
+            "Electronic & Appliance",
+            "Video or PC Game Accessories",
+            "Home Appliances",
+            "Fashion & Style",
+            "Office Items",
+            "Musical Instrument",
+            "Kitchen Appliances",
             "Apparel",
-            "Sports"
-        ],
-        "stage": "Qualified",
-        "dispositionStatus": "In progress",
-        "participation_status": "Pending",
-        "remarks": "Follow-up required",
-        "created_at": {
-            "seconds": 1627776000,
-            "nanoseconds": 987654321
-        }
-    },
-    {
-        "id": 3,
-        "user": {
-            "name": "David Brown"
-        },
-        "business": {
-            "name": "Innovatech Ltd"
-        },
-        "category_list": [
-            "Healthcare",
-            "Biotech"
-        ],
-        "stage": "Proposal",
-        "dispositionStatus": "Proposal Sent",
-        "participation_status": "Active",
-        "remarks": "Proposal under review",
-        "created_at": {
-            "seconds": 1633073000,
-            "nanoseconds": 345678901
-        }
-    },
-    {
-        "id": 4,
-        "user": {
-            "name": "Sarah Johnson"
-        },
-        "business": {
-            "name": "Prime Solutions"
-        },
-        "category_list": [
-            "Automotive",
-            "Industrial"
-        ],
-        "stage": "Closed",
-        "dispositionStatus": "Won",
-        "participation_status": "Completed",
-        "remarks": "Successful buyer",
-        "created_at": {
-            "seconds": 1633073100,
-            "nanoseconds": 123987456
-        }
-    },
-    {
-        "id": 5,
-        "user": {
-            "name": "Michael Lee"
-        },
-        "business": {
-            "name": "NextGen Enterprises"
-        },
-        "category_list": [
-            "Food",
-            "Beverages"
-        ],
-        "stage": "Negotiation",
-        "dispositionStatus": "Negotiating",
-        "participation_status": "Pending",
-        "remarks": "Price negotiation ongoing",
-        "created_at": {
-            "seconds": 1633073200,
-            "nanoseconds": 654321789
-        }
-    },
-    {
-        "id": 6,
-        "user": {
-            "name": "Emily Davis"
-        },
-        "business": {
-            "name": "TechBridge LLC"
-        },
-        "category_list": [
+            "Shoes",
+            "Furniture",
             "IT",
-            "Software"
+            "Others"
         ],
-        "stage": "Lead",
-        "dispositionStatus": "Contacted",
-        "participation_status": "Active",
-        "remarks": "Interested in software solutions",
-        "created_at": {
-            "seconds": 1633073300,
-            "nanoseconds": 876543210
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "",
+            "city": "Surendranagar",
+            "pin_code": "363001",
+            "state": "Gujarat"
+        },
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "user_id": "14085",
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7698053777",
+            "name": "ABIZER ",
+            "last_name": "KACHWALA ",
+            "email": "abizerkach4@gmail.com"
+        },
+        "username": "ABIZAR",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
         }
     },
     {
-        "id": 7,
-        "user": {
-            "name": "Robert Wilson"
-        },
-        "business": {
-            "name": "Green Earth Co"
-        },
-        "category_list": [
-            "Renewables",
-            "Energy"
+        "id": "ABUH",
+        "grade_pref": [
+            ""
         ],
-        "stage": "Proposal",
-        "dispositionStatus": "Proposal Sent",
-        "participation_status": "Active",
-        "remarks": "Proposal sent for review",
+        "buyer_id": "15849",
+        "username": "ABUH",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1673847488,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "14-7-119, Mandi Bazar, Warangal, Warangal Urban, Telangana",
+            "city": "Warangal",
+            "pin_code": "506002",
+            "state": "Telangana"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "36BFBPS7858R2ZA",
+            "pan_card": "BFBPS7858R",
+            "name": "Arshed Traders"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "max_exposure_limit": 0,
+        "billing": {},
+        "category_list": [],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "15849",
+        "user": {
+            "validated": true,
+            "email": "abuhamaid68@gmail.com",
+            "mobile": 7097807643,
+            "name": "Arshad",
+            "last_name": "Ahmed Saudagar"
+        },
+        "min_lot_value": 0,
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "Demand Executive - Start Bidding": [
+            "suhass@blubirch.com"
+        ],
         "created_at": {
-            "seconds": 1633073400,
-            "nanoseconds": 998765432
+            "_seconds": 1698401983,
+            "_nanoseconds": 0
+        },
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 138000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 138000000
         }
     },
     {
-        "id": 8,
-        "user": {
-            "name": "Laura Clark"
-        },
-        "business": {
-            "name": "HealthFirst Inc"
-        },
-        "category_list": [
-            "Pharmaceuticals",
-            "Healthcare"
+        "id": "ACSSOLUTIONS",
+        "grade_pref": [
+            ""
         ],
-        "stage": "Qualified",
-        "dispositionStatus": "In progress",
-        "participation_status": "Pending",
-        "remarks": "Needs follow-up",
+        "buyer_id": "13812",
+        "username": "ACSSOLUTIONS",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "CHIANGASAHI, CHIANGASAHI, BANAPUR, KHURDA, KHURDA, Khordha, Odisha",
+            "city": "Bhubaneswar",
+            "pin_code": "752031",
+            "state": "Odisha"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "21CTCPP6830J1ZO",
+            "pan_card": "CTCPP6830J",
+            "name": "Acs Solutions"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
         "created_at": {
-            "seconds": 1633073500,
-            "nanoseconds": 234567890
+            "_seconds": 1698401983,
+            "_nanoseconds": 908000000
+        },
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [
+            "IT"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "13812",
+        "user": {
+            "validated": true,
+            "name": "Ansuman",
+            "last_name": "Parida",
+            "email": "info.acsolutions@gmail.com",
+            "mobile": 9036490335
+        },
+        "min_lot_value": 0,
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 139000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 139000000
         }
     },
     {
-        "id": 9,
-        "user": {
-            "name": "James Miller"
-        },
+        "id": "ADAVPrasad",
+        "status_code": "1",
         "business": {
-            "name": "AlphaTech"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
         },
-        "category_list": [
-            "AI",
-            "Machine Learning"
+        "Demand Executive - Payment Collection": [
+            "Not Set"
         ],
-        "stage": "Closed",
-        "dispositionStatus": "Lost",
-        "participation_status": "Inactive",
-        "remarks": "Lost to competitor",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
         "created_at": {
-            "seconds": 1633073600,
-            "nanoseconds": 192837465
+            "_seconds": 1661434281,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "12932",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "8584",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9948371739",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ADAVPrasad",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
         }
     },
     {
-        "id": 10,
-        "user": {
-            "name": "Anna Baker"
-        },
+        "id": "ADBA",
+        "status_code": "1",
         "business": {
-            "name": "Quantum Solutions"
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1665827229,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "13725",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9359",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9979382324",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ADBA",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
+        }
+    },
+    {
+        "id": "ADHISIVAN ",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1671933846,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "15431",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "10985",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9629885539",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ADHISIVAN ",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 664000000
+        }
+    },
+    {
+        "id": "ADHITHYAN",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1689523473,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "18992",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "14431",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7358191692",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ADHITHYAN",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        }
+    },
+    {
+        "id": "ADVANCEDKING",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1669229800,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "14648",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "10255",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7777989303",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ADVANCEDKING",
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "sandipkumarm@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 140000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 140000000
+        }
+    },
+    {
+        "id": "AFRIDIAHAMED",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1672634368,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "15610",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "11156",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8667069857",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AFRIDIAHAMED",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        }
+    },
+    {
+        "id": "AFZAL",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1692065250,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "19626",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "15079",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9368284034",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AFZAL",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        }
+    },
+    {
+        "id": "AFZALHUSAIN_RAJPURA",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1694928131,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "20194",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "15635",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9328098960",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AFZALHUSAIN_RAJPURA",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 665000000
+        }
+    },
+    {
+        "id": "AGENTERPRISES",
+        "status_code": "1",
+        "portal_status": "UnBlocked",
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1690454328,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "19219",
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "city": "Meerut",
+            "pin_code": "250002",
+            "state": "Uttar Pradesh"
         },
         "category_list": [
-            "Electronics",
-            "Semiconductors"
+            "Electronic & Appliance",
+            "Home Appliances",
+            "Fashion & Style",
+            "Kitchen Appliances",
+            "Apparel",
+            "Shoes",
+            "Others"
         ],
-        "stage": "Negotiation",
-        "dispositionStatus": "Negotiating",
-        "participation_status": "Pending",
-        "remarks": "Negotiating terms",
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "",
+            "city": "Meerut",
+            "pin_code": "250002",
+            "state": "Uttar Pradesh"
+        },
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "user_id": "14676",
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9917555565",
+            "name": "Guddu",
+            "last_name": "Guddu",
+            "email": "guddubhayya2@gmail.com"
+        },
+        "username": "AGENTERPRISES",
+        "ebLot": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        }
+    },
+    {
+        "id": "AHDESHMUKH",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
         "created_at": {
-            "seconds": 1633073700,
-            "nanoseconds": 273645918
+            "_seconds": 1664870742,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "13538",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9174",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9028844744",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AHDESHMUKH",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        }
+    },
+    {
+        "id": "AIRCANTEEN",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1673622341,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "15926",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "11456",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9198153018",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AIRCANTEEN",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        }
+    },
+    {
+        "id": "AJAY",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1677854830,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "16644",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12136",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9034581771",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AJAY",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 666000000
+        }
+    },
+    {
+        "id": "AJIMSHA",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1665946578,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "13736",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9367",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7994852403",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AJIMSHA",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 667000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 667000000
+        }
+    },
+    {
+        "id": "AJITH",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1685735991,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "18022",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "13472",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8248930342",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AJITH",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 667000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 667000000
+        }
+    },
+    {
+        "id": "AJITHKUMAR ",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1667550328,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "14183",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9802",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9342008309",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AJITHKUMAR ",
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Demand Executive - Start Bidding": [
+            "nikhiljames@blubirch.com"
+        ],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 142000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 142000000
+        }
+    },
+    {
+        "id": "AJJUBHAI",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1685523044,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "17821",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "13273",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "6354639754",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AJJUBHAI",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 830000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 830000000
+        }
+    },
+    {
+        "id": "AKGROUP",
+        "grade_pref": [
+            ""
+        ],
+        "buyer_id": "15857",
+        "username": "AKGROUP",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1673354847,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "No.05, 2Nd Cross, Rajeshwari Nagar, Laggere, Bangalore, Bengaluru Urban, Karnataka",
+            "city": "Bangalore",
+            "pin_code": "560058",
+            "state": "Karnataka"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": "29CPXPA5418J1ZC",
+            "pan_card": "CPXPA5418J",
+            "name": "A K Group"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 923000000
+        },
+        "Regional Head": [
+            "akhileshsajwan@blubirch.com"
+        ],
+        "max_exposure_limit": 0,
+        "Demand Executive - Registration & Completion": [
+            "pavithran@blubirch.com"
+        ],
+        "billing": {},
+        "category_list": [],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "15857",
+        "Demand Executive - Start Bidding": [
+            "pavithran@blubirch.com"
+        ],
+        "user": {
+            "validated": true,
+            "email": "aksvkr@gmail.com",
+            "mobile": 7483506633,
+            "name": "Anuj",
+            "last_name": "Kumar S"
+        },
+        "min_lot_value": 0,
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 142000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 142000000
+        }
+    },
+    {
+        "id": "AKHIL",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1691057095,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "19379",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "14832",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9557902148",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AKHIL",
+        "last_view": {
+            "_seconds": 1709642108,
+            "_nanoseconds": 306015000
+        },
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 831000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 831000000
+        }
+    },
+    {
+        "id": "AKRAM",
+        "category_list": [
+            "Electronic & Appliance"
+        ],
+        "grade_pref": [],
+        "username": "AKRAM",
+        "status_code": "1",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": null,
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "max_lot_value": 0,
+        "business": {
+            "gstin": null,
+            "pan_card": null,
+            "name": "Aircool"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 940000000
+        },
+        "buyer_id": "18381",
+        "max_exposure_limit": 0,
+        "billing": {},
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "18381",
+        "user": {
+            "validated": true,
+            "mobile": 9958059915,
+            "name": "Mohd",
+            "last_name": "Akram",
+            "email": "akaircon786@gmail.com"
+        },
+        "min_lot_value": 0,
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "Demand Executive - Start Bidding": [
+            "chayasawant@blubirch.com"
+        ],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 143000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 143000000
+        }
+    },
+    {
+        "id": "AKRAM ",
+        "status_code": "3",
+        "grade_pref": [
+            ""
+        ],
+        "portal_status": "UnBlocked",
+        "ho": {
+            "country": "India",
+            "address": "T-335, PANJPIR,NEAR SURYA PETROL PUMP, Jangpura Extension, New Delhi, South East Delhi, Delhi, 110014",
+            "city": "Delhi",
+            "pin_code": "110014",
+            "state": "Delhi"
+        },
+        "created_at": {
+            "_seconds": 1686726092,
+            "_nanoseconds": 0
+        },
+        "buyer_id": "18381",
+        "tin_number": "",
+        "billing": {
+            "country": "India",
+            "address": "T-335, PANJPIR,NEAR SURYA PETROL PUMP, Jangpura Extension, New Delhi, South East Delhi, Delhi, 110014",
+            "city": "Delhi",
+            "pin_code": "110014",
+            "state": "Delhi"
+        },
+        "category_list": [
+            "",
+            "Electronic & Appliance"
+        ],
+        "cst_number": "",
+        "shipping": {
+            "country": "India",
+            "address": "T-335, PANJPIR,NEAR SURYA PETROL PUMP, Jangpura Extension, New Delhi, South East Delhi, Delhi, 110014",
+            "city": "Delhi",
+            "pin_code": "110014",
+            "state": "Delhi"
+        },
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "T-335, PANJPIR,NEAR SURYA PETROL PUMP, Jangpura Extension, New Delhi, South East Delhi, Delhi, 110014",
+            "city": "Delhi",
+            "pin_code": "110014",
+            "state": "Delhi"
+        },
+        "business": {
+            "name": null,
+            "gstin": "07AJVPA9528K1ZL",
+            "pan_card": "AJVPA9528K"
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "participation_status": "Completed",
+        "completed_at": {
+            "_seconds": 1686896775,
+            "_nanoseconds": 0
+        },
+        "user_id": "13825",
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "9958059915",
+            "name": "MOHD",
+            "last_name": "AKRAM",
+            "email": "akaircon786@gmail.com"
+        },
+        "username": "AKRAM ",
+        "ebLot": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 831000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 831000000
+        }
+    },
+    {
+        "id": "AKSHAYRAO_C",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1690335349,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "19183",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "14642",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8660707941",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AKSHAYRAO_C",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        }
+    },
+    {
+        "id": "ALEX",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1667791390,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "14241",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "9862",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9597645476",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ALEX",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        }
+    },
+    {
+        "id": "ALKESH",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1680369903,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "16963",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12436",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "7206339014",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ALKESH",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        }
+    },
+    {
+        "id": "ALTISHA_PLAST",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1683290525,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "17426",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "12890",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "9702522868",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "ALTISHA_PLAST",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 832000000
+        }
+    },
+    {
+        "id": "AMAM",
+        "buyer_id": "19664",
+        "username": "AMAM",
+        "status_code": "3",
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "tin_number": "",
+        "completed_at": {
+            "_seconds": 1692269459,
+            "_nanoseconds": 0
+        },
+        "cst_number": "",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "country": "India",
+            "address": "145/A, SUNDAR NAGAR, BHILAI, Durg, Chhattisgarh, 490023",
+            "city": "Durg",
+            "pin_code": "490023",
+            "state": "Chhattisgarh"
+        },
+        "reseller_status": "Complete",
+        "max_lot_value": 0,
+        "grade_pref": [],
+        "business": {
+            "gstin": "22APRPJ2640B1ZC",
+            "pan_card": "APRPJ2640B",
+            "name": "Miral Super Bazar"
+        },
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "ho": {},
+        "created_at": {
+            "_seconds": 1698401983,
+            "_nanoseconds": 952000000
+        },
+        "max_exposure_limit": 0,
+        "billing": {},
+        "category_list": [
+            "Electronic & Appliance",
+            "Home Appliances",
+            "Others"
+        ],
+        "participation_status": "In Active",
+        "shipping": {},
+        "bb_exposure_limit": 0,
+        "user_id": "19664",
+        "user": {
+            "validated": true,
+            "name": "Aman",
+            "email": "jainamam@gmail.com",
+            "mobile": 8109191777,
+            "last_name": "Jain"
+        },
+        "min_lot_value": 0,
+        
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "Demand Executive - Start Bidding": [
+            "chayasawant@blubirch.com"
+        ],
+        "execFound": true,
+        "numberFound": true,
+        "Regional Head": [],
+        "Floor Manager": [],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 245000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 245000000
+        }
+    },
+    {
+        "id": "AMAN",
+        "status_code": "1",
+        "business": {
+            "name": null,
+            "gstin": null,
+            "pan_card": null
+        },
+        "Demand Executive - Payment Collection": [
+            "Not Set"
+        ],
+        "portal_status": "UnBlocked",
+        "total_bid_cycles": 0,
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1657910358,
+            "_nanoseconds": 0
+        },
+        "total_lots_won": 0,
+        "buyer_id": "12363",
+        "Demand Executive - Registration & Completion": [
+            "Not Set"
+        ],
+        "tin_number": null,
+        "billing": {
+            "address": "",
+            "pin_code": null
+        },
+        "participation_status": "In Complete",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "user_id": "8027",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "company": {
+            "address": "",
+            "pin_code": null
+        },
+        "reseller_status": "New",
+        "user": {
+            "validated": true,
+            "mobile": "8101165701",
+            "name": null,
+            "last_name": null,
+            "email": null
+        },
+        "username": "AMAN",
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 833000000
+        },
+        "Demand Executive - Start Bidding": [
+            "ajithkumarjp@blubirch.com"
+        ],
+        "updatedAt": {
+            "_seconds": 1717757412,
+            "_nanoseconds": 833000000
+        }
+    },
+    {
+        "id": "AMBROSA",
+        "sub_status": "InComplete",
+        "portal_status": "UnBlocked",
+        "fse_status": "Not Validated",
+        "Demand Executive - Registration & Completion": [
+            "vidhyak@blubirch.com"
+        ],
+        "Regional Head": [],
+        "createdFrom": "Demand",
+        "business_id": "",
+        "Floor Manager": [],
+        "username": "AMBROSA",
+        "total_bid_cycles": 0,
+        "total_lots_won": 0,
+        "buyer_id": "21315",
+        "completed_at": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "user_id": "16682",
+        "last_bid_date": {
+            "_seconds": 0,
+            "_nanoseconds": 0
+        },
+        "max_lot_value": 0,
+        "grade_pref": [
+            "Brand New",
+            "Open Box",
+            "Very Good",
+            "Good",
+            "Acceptable"
+        ],
+        "business": {
+            "name": "AMBROSIA JANHIT BAJAR",
+            "attachment_list": [
+                {
+                    "type": "GST Certificate"
+                }
+            ],
+            "gstin": "09BQPPK9227F1ZD",
+            "pan_card": "BQPPK9227F"
+        },
+        "max_exposure_limit": 0,
+        "billing": {
+            "address": "HAMIRPUR POST, MOHAMMDABAD, MOHAMMDABAD, Farrukhabad, Uttar Pradesh, 206451",
+            "city": "Farrukkhabad",
+            "pin_code": "206451",
+            "state": "Uttar Pradesh"
+        },
+        "category_list": [
+            "Electronics and Appliances",
+            "Accessories Home Appliances",
+            "Air conditioner",
+            "Air Cooler",
+            "Television",
+            "Washing Machine"
+        ],
+        "pageValidation": "",
+        "preferred_location_list": [
+            "North",
+            "Uttar Pradesh",
+            "Farrukkhabad"
+        ],
+        "bb_exposure_limit": 0,
+        "min_lot_value": 0,
+        "status_code": "3",
+        "company": {
+            "country": "India",
+            "city": "",
+            "address": "HAMIRPUR POST, MOHAMMDABAD, MOHAMMDABAD, Farrukhabad, Uttar Pradesh, 206451",
+            "pin_code": "206451",
+            "state": "Uttar Pradesh"
+        },
+        "reseller_status": "Complete",
+        "user": {
+            "validated": true,
+            "mobile": "8707426548",
+            "name": "DHRUV",
+            "last_name": "KUMAR",
+            "pageValidation": {},
+            "email": "kumar.dhruv1958@gmail.com"
+        },
+        "formUpdateCount": 6,
+        "error": null,
+        "participation_status": "Completed",
+        "cst_number": null,
+        "shipping": {
+            "address": "",
+            "pin_code": null
+        },
+        "ho": {
+            "address": "",
+            "pin_code": null
+        },
+        "created_at": {
+            "_seconds": 1703571274,
+            "_nanoseconds": 531000000
+        },
+        "tin_number": null,
+        "Demand Executive - Payment Collection": [
+            "sunitav@blubirch.com"
+        ],
+        "execFound": true,
+        "numberFound": true,
+        "Demand Executive - Start Bidding": [
+            "monicagupta@blubirch.com"
+        ],
+        "Demand Head": [
+            "monicagupta@blubirch.com"
+        ],
+        "updated_at": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 246000000
+        },
+        "updatedAt": {
+            "_seconds": 1714030748,
+            "_nanoseconds": 246000000
         }
     }
 ]

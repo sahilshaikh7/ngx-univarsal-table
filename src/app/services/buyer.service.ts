@@ -8,10 +8,10 @@ import { Field } from './Field';
   providedIn: 'root',
 })
 export class BuyerService {
-  masterParticipationList = ['In Active', 'Active', 'New', 'Completed','In Completed'];
-  masterStageList = ['Open', 'junk',];
+  masterParticipationList = ['Inactive', 'Active', 'New', 'Completed','In Completed'];
+  masterStageList = ['Open', 'junk','Closed','Proposal'];
   buyerTableFields: Field[] = [
-    { field: 'id', header: 'Buyer ID', size:1, sizeP:1,sorting:true},
+    { field: 'username', header: 'Buyer ID', size:1, sizeP:1,sorting:true},
     { field: 'user.name', header: 'Buyer Name', size:1, sizeP:1 ,searchable:true,sorting:true},
     { field: 'business.name', header: 'Organization Name', size:1, sizeP:1 },
     { field: 'category_list', header: 'Array of Preferred Category Nodes', size:1, sizeP:1 },

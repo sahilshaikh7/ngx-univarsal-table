@@ -46,29 +46,29 @@ export class UniversalTableComponent {
     this.filteredRowData = [...this.rowData];
 
   }
-  applyFilter(event: any) {
+ async applyFilter(event: any) {
     console.log('Filter applied', event);
     console.log('gtColumn', this.gtColumnList);
     if (this.dataRenderingLocal) {
-      this.filteredRowData = this.filterService.rendering( this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
+      this.filteredRowData = await this.filterService.rendering( this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
     } else {
       this.filterApplied.emit(this.gtColumnList);
     }
 
   }
 
-  sortChanged(event: any) {
+async  sortChanged(event: any) {
     console.log('Sort changed', event);
     this.sortingObject = event;
     if (this.dataRenderingLocal) {
-      this.filteredRowData = this.filterService.rendering(this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
+      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
     } else {
       this.onSortChanged.emit(event);
     }
   }
-  applySearch(): void {
+async  applySearch(): Promise<void> {
     if (this.dataRenderingLocal) {
-      this.filteredRowData = this.filterService.rendering(this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
+      this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject ,this.gtColumnList, this.rowData);
     } else {
       this.onSearched.emit({ field: this.selectedFieldHeader, search: this.search });
     }

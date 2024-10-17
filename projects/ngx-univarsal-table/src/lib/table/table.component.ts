@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -15,6 +15,8 @@ import { UniversalPipe } from '../universal.pipe';
   styleUrl: './table.component.css'
 })
 export class TableComponent implements OnInit {
+  @ViewChild('mainTable', { static: false }) mainTable!: ElementRef;
+  @ViewChild('popover', { static: false }) popover!: ElementRef;
   @Input() gtColumnList: Field[] = [];
   @Input() rowData: any[] = [];
   @Input() itemPerPage: number = 10;
@@ -23,7 +25,7 @@ export class TableComponent implements OnInit {
   @Input() headerColor = "#fff";
   @Input() headerBg = "#0092F7";
   @Input() scrollable = true;
-  @Input() dataRenderingLocal: boolean = true; // New input for controlling sorting
+  @Input() dataRenderingLocal: boolean = true; 
 
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
@@ -31,13 +33,27 @@ export class TableComponent implements OnInit {
   sortField: string = '';
   sortDirection: boolean = false;
   selectAll: boolean = false;
-
-  resizingColumnIndex: number | null = null;
-  initialX: number = 0;
+  removedColumns: Field[] = [];
   initialWidth: number = 0;
+  isResizing = false;
+  currentColumnIndex: number | null = null;
+  draggedColumnIndex: number | null = null;
+  startX = 0;
+  activePopover: Field | null = null;
+  pinnedColumns: Field[] = [];
+  isPopoverLeftAligned: boolean = false;
   constructor() { }
   ngOnInit() {
+    this.gtColumnList = this.gtColumnList.map(field => ({
+      ...field,
+      size: field.size || 50 
+    }));
+    this.setBackgroundColor(this.headerBg,this.headerColor); 
+  }
 
+  setBackgroundColor(color1: string, color2:string) {
+    document.documentElement.style.setProperty('--bg-color', color1);
+    document.documentElement.style.setProperty('--color', color2);
   }
   ngOnChanges(changes: SimpleChanges): void {
     this.convertDot2Values();
@@ -76,37 +92,81 @@ export class TableComponent implements OnInit {
   }
 
   startResizeColumn(event: MouseEvent, columnIndex: number): void {
-    this.resizingColumnIndex = columnIndex;
-    this.initialX = event.pageX;
+    event.preventDefault();
+    this.isResizing = true;
+    this.currentColumnIndex = columnIndex;
+    this.startX = event.clientX;
     this.initialWidth = this.gtColumnList[columnIndex].size;
 
-    // Add listeners for mouse move and mouse up for resizing
-    window.addEventListener('mousemove', this.onMouseMove);
-    window.addEventListener('mouseup', this.onMouseUp);
+    document.addEventListener('mousemove', this.resizeColumn);
+    document.addEventListener('mouseup', this.stopResizeColumn);
   }
 
-  onMouseMove = (moveEvent: MouseEvent): void => {
-    if (this.resizingColumnIndex !== null) {
-      const deltaX = moveEvent.pageX - this.initialX;
-      const newWidth = this.initialWidth + deltaX;
+  resizeColumn = (event: MouseEvent): void => {
+    if (this.isResizing && this.currentColumnIndex !== null) {
+      const dx = event.clientX - this.startX;
+      const newWidth = this.initialWidth + dx;
 
-      // Ensure a minimum width to prevent columns from shrinking too much
       if (newWidth > 50) {
-        this.gtColumnList[this.resizingColumnIndex].size = newWidth;
-      }
+        this.gtColumnList[this.currentColumnIndex].size = newWidth;
 
-      // Prevent text selection during resize
-      moveEvent.preventDefault();
+        if (this.currentColumnIndex === this.gtColumnList.length - 1) {
+          this.mainTable.nativeElement.style.width = this.calculateTableWidth() + 'px';
+        }
+      }
     }
   };
 
-  onMouseUp = (): void => {
-    // Remove event listeners once resizing is done
-    this.resizingColumnIndex = null;
-    window.removeEventListener('mousemove', this.onMouseMove);
-    window.removeEventListener('mouseup', this.onMouseUp);
+  stopResizeColumn = (): void => {
+    this.isResizing = false;
+    this.currentColumnIndex = null;
+    document.removeEventListener('mousemove', this.resizeColumn);
+    document.removeEventListener('mouseup', this.stopResizeColumn);
   };
+
+  calculateTableWidth(): number {
+    return this.gtColumnList.reduce((totalWidth, column) => totalWidth + column.size, 0);
+  }
+ 
+  onDragStart(event: DragEvent, columnIndex: number): void {
+    this.draggedColumnIndex = columnIndex;
+    event.dataTransfer?.setData('text', columnIndex.toString());
+  }
+
+  onDragOver(event: DragEvent): void {
+    event.preventDefault();
+  }
+
+  onDrop(event: DragEvent, targetIndex: number): void {
+    event.preventDefault();
+    const sourceIndex = this.draggedColumnIndex;
+    this.draggedColumnIndex = null;
+
+    if (sourceIndex !== null && sourceIndex !== targetIndex) {
+      const movedColumn = this.gtColumnList[sourceIndex];
+      this.gtColumnList.splice(sourceIndex, 1);
+      this.gtColumnList.splice(targetIndex, 0, movedColumn);
+    }
+  }
+
+  removeColumn(column: Field): void {
+    this.activePopover = null
+    column.showColumn = false;
+    this.removedColumns.push(column);
+  }
+
+  restoreColumn(column: Field): void {
+    column.showColumn = true;
+    const index = this.removedColumns.indexOf(column);
+    if (index > -1) {
+      this.removedColumns.splice(index, 1);
+    }
+  }
+  togglePopover(header: Field): void {
+    this.activePopover = this.activePopover === header ? null : header;
+    const index = this.gtColumnList.findIndex(col => col === header);
+    this.isPopoverLeftAligned = index >= this.gtColumnList.length - 2;
+  }
  
   
-
 }

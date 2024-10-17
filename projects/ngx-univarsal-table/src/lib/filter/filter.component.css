@@ -157,9 +157,9 @@
     padding: 12px 5px;
     border-bottom: 1px solid #eaeaf4;
 }
-.dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container:last-child {
+/* .dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container:last-child {
     border-bottom: none;
-}
+} */
 
 .dialog-container .dialog-content .dialog-footer {
     display: flex;

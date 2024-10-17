@@ -1,56 +1,73 @@
 <div class="table-section">
-  <div id="table-scroll" class="table-scroll" [style.height]="tableHeight + 'px'" style="overflow-x: auto;">
+  <div *ngIf="removedColumns && removedColumns.length > 0">
+    <div class="removed-columns">
+      <span *ngFor="let col of removedColumns" class="removed-column">
+        {{ col.header }} <span class="material-icons" (click)="restoreColumn(col)">close</span>
+      </span>
+    </div>
+  </div>
+  <div id="table-scroll" class="table-scroll" [style.height]="tableHeight + 'px'">
     <table #mainTable id="main-table" class="table table-resizable">
+
       <thead class="fixed-header">
         <tr>
           <th *ngIf="showCheckBox" style="width: 25px;" [ngStyle]="{'color': headerColor, 'background': headerBg}">
             <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
           </th>
           <ng-container *ngFor="let header of gtColumnList; let i = index">
-            <th scope="col" [ngStyle]="{
+            <th *ngIf="header.showColumn" scope="col" [ngStyle]="{
                 'color': headerColor,
                 'background': headerBg,
                 'width': header.size + 'px',
-                'min-width': header.size + 'px'
-              }" class="resizable-column">
+                'min-width': header.size + 'px',
+              }" [class.sortable]="header.sorting" [class.sorting-active]="sortField === header.field"
+              class="resizable-column">
               <div class="headerSection">
-                {{ header.header }}
-                <span *ngIf="header.sorting" class="sorting-icons"
-                  (click)="header.sorting ? onSort(header.field) : null">
-                  <span class="material-icons activeSort"
-                    *ngIf="sortField === header.field && !sortDirection">arrow_downward</span>
-                  <span class="material-icons activeSort"
-                    *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
-                  <span class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
-                </span>
+                <span class="headerName" draggable="true" (dragstart)="onDragStart($event, i)"
+                  (dragover)="onDragOver($event)" (drop)="onDrop($event, i)">{{ header.header }}</span>
+                <div class="header-icon">
+                  <span *ngIf="header.sorting" class="sorting-icons"
+                    (click)="header.sorting ? onSort(header.field) : null">
+                    <span class="material-icons activeSort"
+                      *ngIf="sortField === header.field && !sortDirection">arrow_downward</span>
+                    <span class="material-icons activeSort"
+                      *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
+                    <span class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
+                  </span>
+                  <span class="material-icons three-dots" (click)="togglePopover(header)">more_vert</span>
+                  <ul class="popover" *ngIf="activePopover === header"
+                    [ngClass]="{'left-aligned': isPopoverLeftAligned}">
+                    <li (click)="removeColumn(header)">Remove Column</li>
+                  </ul>
+                </div>
               </div>
-              <!-- Resize handle -->
-              <span class="resize-handle" (mousedown)="startResizeColumn($event, i)"></span>
+              <div class="resize-handle" (mousedown)="startResizeColumn($event, i)"></div>
             </th>
           </ng-container>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
-          <td *ngIf="showCheckBox" style="width: 25px;">
+          <td *ngIf="showCheckBox" style="width: 25px;" class="checkbox">
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
-          <ng-container *ngFor="let column of gtColumnList">
-            <td [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
-              <span *ngIf="column.field2 && column.field1">
-                <span *ngIf="!row[column.field0]">-</span>
-                <span *ngIf="row[column.field0]">
-                  {{row[column.field0][column.field1][column.field2] | universal}}
+            <ng-container *ngFor="let column of gtColumnList">
+              <td [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}" *ngIf="column.showColumn">
+                <span *ngIf="column.field2 && column.field1">
+                  <span *ngIf="!row[column.field0]">-</span>
+                  <span class="contentBreak" *ngIf="row[column.field0]">
+                    {{row[column.field0][column.field1][column.field2] | universal}}
+                  </span>
                 </span>
-              </span>
-              <span *ngIf="column.field1 && !column.field2">
-                <span *ngIf="row[column.field0]">{{row[column.field0][column.field1] | universal}}</span>
-              </span>
-              <span *ngIf="!column.field1">
-                <span>{{row[column.field] | universal}}</span>
-              </span>
-            </td>
-          </ng-container>
+                <span *ngIf="column.field1 && !column.field2">
+                  <span class="contentBreak" *ngIf="row[column.field0]">{{row[column.field0][column.field1] |
+                    universal}}</span>
+                </span>
+                <span *ngIf="!column.field1">
+                  <span class="contentBreak">{{row[column.field] | universal}}</span>
+                </span>
+              </td>
+            </ng-container>
         </tr>
       </tbody>
     </table>

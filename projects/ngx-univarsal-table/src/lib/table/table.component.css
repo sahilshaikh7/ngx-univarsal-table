@@ -1,3 +1,4 @@
+
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -26,20 +27,21 @@ input[type=checkbox] {
   box-sizing: content-box;
   overflow: hidden;
   cursor: pointer;
+
   &:before {
     content: '';
     display: block;
     box-sizing: content-box;
-    width:  15px;
-    height:  15px;
+    width: 15px;
+    height: 15px;
     border: 2px solid #A2A3B4;
   }
-  
+
   &:checked:before {
-    border-color: #003C9E;
-    background-color: #003C9E;
+    border-color: #8fc9ff;
+    background-color: #8fc9ff;
   }
-  
+
   &:disabled:before {
     border-color: #A2A3B4;
     background-color: #A2A3B4;
@@ -53,22 +55,22 @@ input[type=checkbox] {
     top: 53%;
     left: 50%;
     transform-origin: 53% 50%;
-    background-color: #003C9E;
-    width:  16px;
-    height:  16px;
+    background-color: #8fc9ff;
+    width: 16px;
+    height: 16px;
     border-radius: 100vh;
     transform: translate(-53%, -50%) scale(0);
   }
 
- 
+
   &[type="checkbox"] {
     &:before {
-      border-radius:  3px;
+      border-radius: 3px;
     }
 
     &:after {
-      width:  10px;
-      height:  20px;
+      width: 10px;
+      height: 20px;
       border-radius: 0;
       transform: translate(-50%, -85%) scale(0) rotate(45deg);
       background-color: transparent;
@@ -91,29 +93,43 @@ input[type=checkbox] {
     opacity: 1;
     transform: translate(-50%, -85%) scale(0.9) rotate(45deg);
   }
-  
+
   100% {
     transform: translate(-50%, -85%) scale(0.8) rotate(45deg);
   }
 }
 
-.headerSection{
+.headerSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
 }
-.activeSort{
+
+.activeSort {
   background-color: #a0a3d11f;
   color: #009ce8;
   border-radius: 5px;
 }
-/* Hover effect for sorting icons */
-th.sortable:hover .sorting-icons {
+
+
+td span.contentBreak {
+  appearance: none;
+  border: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+th.sorting-active .sorting-icons {
   visibility: visible;
 }
 
-/* Sorting icons that are visible when sorted */
-th.sorting-active .sorting-icons {
+th:hover .sorting-icons {
   visibility: visible;
 }
 
@@ -130,21 +146,23 @@ th.sorting-active .sorting-icons {
 
 .table-section {
   border: 1px solid #EDEDF8;
-  border-radius: 10px 0px 0 0;
+  border-radius: 8px;
   overflow: hidden;
 }
 
 .table-scroll {
   overflow-x: auto;
+  overflow-y: auto;
 }
 
 .table {
-  width: auto; 
-  min-width: 100%; 
+  width: auto;
+  min-width: 100%;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: 8px;
   border-bottom: 1px solid #ddd;
   text-align: left;
@@ -154,18 +172,99 @@ th, td {
   position: relative;
   white-space: nowrap;
 }
+
 .resize-handle {
-  width: 10px;
+  width: 12px;
   height: 25px;
   cursor: e-resize;
   position: absolute;
   right: 5px;
   top: 10px;
-  background: transparent;
-  border-right: 2px solid blue;
+  border-right: 2px solid #cfcfcf;
 }
+
 .fixed-header {
   position: sticky;
   top: 0;
-  z-index: 2; 
+  z-index: 2;
+}
+
+.headerName[draggable="true"] {
+  cursor: grab;
+}
+
+.headerName[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+.removed-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.removed-column {
+  display: flex;
+  align-items: center;
+  background: var(--bg-color, #ffffff);
+  color: var(--color,#000);
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  padding: 8px 15px;
+  margin: 8px;
+  font-size: 14px;
+  line-height: 5px;
+  font-weight: 600;
+}
+
+.removed-column span {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.three-dots {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.header-icon {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  margin: 0px 8px;
+  position: relative;
+
+}
+
+ul.popover {
+  margin: 0;
+  list-style-type: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 0px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  top: 30px;
+  left: 0;
+  transform: translateX(0);
+  white-space: nowrap;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.popover li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.popover li:hover {
+  background-color: #f1f1f1;
+}
+
+.popover.left-aligned {
+  left: auto;
+  right: 0;
+  transform: translateX(-100);
 }

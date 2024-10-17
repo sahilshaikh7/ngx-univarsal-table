@@ -71,9 +71,8 @@
                                         (change)="selectAllClicked(col,  $event)" />
                                 </div>
 
-                                <div *ngFor="let item of col.selectedFilterList let index = index"
-                                    class="filter-item-container">
-                                    <div style="display: flex; justify-content: space-between;"
+                                <div *ngFor="let item of col.selectedFilterList let index = index" >
+                                    <div style="display: flex; justify-content: space-between;" class="filter-item-container"
                                         *ngIf="!this.search || item.item.toLowerCase().includes(this.search.toLowerCase())">
                                         <label style="width: 80%;" [for]="'id' + index">{{ item.item }}</label>
                                         <input type="checkbox" [id]="'id' + index" [(ngModel)]="item.checked" />

@@ -855,8 +855,10 @@
         "buyer_id": "20744",
         "tin_number": "",
         "category_list": [
-            "",
             "Electronic & Appliance",
+            "Electronic & Appliance",
+            "Home Appliances",
+            "Home Appliances",
             "Home Appliances",
             "Others"
         ],

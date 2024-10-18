@@ -2,24 +2,26 @@ import { Injectable } from '@angular/core';
 
 import buyerList from '../json-dump/buyer-dummy.json';
 import { Field } from './Field';
+import { BuyerRenderer } from './BuyerRenderer';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class BuyerService {
-  masterParticipationList = ['Inactive', 'Active', 'New', 'Completed','In Completed'];
+  masterParticipationList = ['In Active', 'Active', 'New', 'Completed','In Complete'];
   masterStageList = ['Open', 'junk','Closed','Proposal'];
   buyerTableFields: Field[] = [
-    { field: 'username', header: 'Buyer ID', size:50, sizeP:1,sorting:true ,showColumn:true},
+    { field: 'username', header: 'Buyer ID', size:50, sizeP:1,sorting:true ,showColumn:true, cellRenderer: BuyerRenderer},
     { field: 'user.name', header: 'Buyer Name', size:50, sizeP:1 ,searchable:true,sorting:true,showColumn:true},
     { field: 'business.name', header: 'Organization Name', size:50, sizeP:1 ,showColumn:true},
     { field: 'category_list', header: 'Array of Preferred Category Nodes', size:100, sizeP:1,showColumn:true },
     { field: 'stage', header: 'Stage', size:50, sizeP:0.5 ,filterList:this.masterStageList,sorting:true,searchable:true,showColumn:true},
     { field: 'dispositionStatus', header: 'Latest Disposition', size:50, sizeP:1,filterList:[] ,showColumn:true},
-    { field: 'participation_status', header: 'Buyer Status', size:50, sizeP:1 ,filterList:this.masterParticipationList,showColumn:true },
+    { field: 'participation_status', header: 'Buyer Status', size:50, sizeP:1 ,filterList:this.masterParticipationList,showColumn:true,cellRenderer: BuyerRenderer},
     { field: 'created_at', header: 'Created At', size:50, sizeP:1, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
     { field: 'updated_at', header: 'Updated At', size:50, sizeP:1, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
+    { field: 'phone-icon', header: '', size:50, sizeP:1,cellRenderer: BuyerRenderer, showColumn:true},
   ];
 
 

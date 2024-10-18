@@ -10,12 +10,12 @@
     <table #mainTable id="main-table" class="table table-resizable">
 
       <thead class="fixed-header">
-        <tr>
+        <tr  [ngStyle]="{'color': headerColor, 'background': headerBg}">
           <th *ngIf="showCheckBox" style="width: 25px;" [ngStyle]="{'color': headerColor, 'background': headerBg}">
             <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
           </th>
           <ng-container *ngFor="let header of gtColumnList; let i = index">
-            <th *ngIf="header.showColumn" scope="col" [ngStyle]="{
+            <th *ngIf="header.showColumn " scope="col" [ngStyle]="{
                 'color': headerColor,
                 'background': headerBg,
                 'width': header.size + 'px',
@@ -51,8 +51,18 @@
           <td *ngIf="showCheckBox" style="width: 25px;" class="checkbox">
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
-            <ng-container *ngFor="let column of gtColumnList">
-              <td [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}" *ngIf="column.showColumn">
+            <ng-container *ngFor="let column of gtColumnList" >
+              <td *ngIf="column.cellRenderer && column.showColumn"  [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
+                <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
+                  [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
+                </div>
+                <div *ngIf="!column.field2 && column.field1" [ngClass]="column.utClass"
+                  [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></div>
+                <div *ngIf="!column.field1" [ngClass]="column.utClass"
+                  [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
+                </div>
+              </td>
+              <td *ngIf="!column.cellRenderer && column.showColumn" [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
                 <span *ngIf="column.field2 && column.field1">
                   <span *ngIf="!row[column.field0]">-</span>
                   <span class="contentBreak" *ngIf="row[column.field0]">

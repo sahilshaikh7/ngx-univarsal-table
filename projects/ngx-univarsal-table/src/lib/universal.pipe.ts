@@ -60,20 +60,13 @@ export class UniversalPipe implements PipeTransform {
       if (value.seconds) {
         let newDate = new Date(value.seconds * 1000);
         return newDate.getDate() + "" + this.getMonthString("" + (newDate.getMonth() + 1)) + " " + this.withZero(newDate.getHours()) + ":" + this.withZero(newDate.getMinutes());
-      } if (value._seconds) {
+      }
+       if (value._seconds) {
         let newDate = new Date(value._seconds * 1000);
         return newDate.getDate() + "" + this.getMonthString("" + (newDate.getMonth() + 1)) + " " + this.withZero(newDate.getHours()) + ":" + this.withZero(newDate.getMinutes());
-      } else {
-        if (typeof value === 'string' || value instanceof String) {
-          value = new Date(value + "");
-        } else {
-          if (Number.isInteger(value)) {
-            value = new Date(value);
-          }
-
-        }
-        return value.getDate() + "/" + (value.getMonth() + 1) + "/" + value.getFullYear() + " & " + (value.getHours() % 12 || 12).toString().padStart(2, '0') + ":" + value.getMinutes().toString().padStart(2, '0') + " " + (value.getHours() >= 12 ? 'PM' : 'AM');
-      }
+      } 
+        // return value.getDate() + "/" + (value.getMonth() + 1) + "/" + value.getFullYear() + " & " + (value.getHours() % 12 || 12).toString().padStart(2, '0') + ":" + value.getMinutes().toString().padStart(2, '0') + " " + (value.getHours() >= 12 ? 'PM' : 'AM');
+      
     }
     else {
       return "-";

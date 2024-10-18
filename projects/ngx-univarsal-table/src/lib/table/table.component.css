@@ -167,7 +167,12 @@ td {
   border-bottom: 1px solid #ddd;
   text-align: left;
 }
-
+tr:hover{
+  background: #f5f5f5bd;
+}
+tr.selected-row{
+  background: #e1eefaa1;
+}
 .resizable-column {
   position: relative;
   white-space: nowrap;

@@ -17,7 +17,7 @@ export class BuyerService {
     { field: 'category_list', header: 'Array of Preferred Category Nodes', size:100, sizeP:1,showColumn:true },
     { field: 'stage', header: 'Stage', size:50, sizeP:0.5 ,filterList:this.masterStageList,sorting:true,searchable:true,showColumn:true},
     { field: 'dispositionStatus', header: 'Latest Disposition', size:50, sizeP:1,filterList:[] ,showColumn:true},
-    { field: 'participation_status', header: 'Buyer Status', size:50, sizeP:1 ,filterList:this.masterParticipationList,showColumn:true},
+    { field: 'participation_status', header: 'Buyer Status', size:50, sizeP:1 ,filterList:this.masterParticipationList,showColumn:true },
     { field: 'created_at', header: 'Created At', size:50, sizeP:1, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
     { field: 'updated_at', header: 'Updated At', size:50, sizeP:1, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
   ];

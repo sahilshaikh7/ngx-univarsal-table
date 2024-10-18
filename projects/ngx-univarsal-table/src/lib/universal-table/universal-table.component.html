@@ -1,23 +1,23 @@
 <div class="universal-table-section">
     <div class="upper-section">
-        <div style="display: flex;">
+        <div style="display: flex;  align-items: center;">
             <div class="search-bar">
                 <div class="select-section" (click)="openDropDown()" [ngClass]="{'open': dropdownOpen}">
                     <div class="selected-option">{{ selectedFieldHeader }}</div>
                     <span class="material-icons select-icon">keyboard_arrow_down</span>
                     <div class="dropdown-options">
-                      <div *ngFor="let column of gtColumnList">
-                        <div class="dropdown-option" 
-                             *ngIf="column.searchable" 
-                             [ngClass]="{'selected': column.header === selectedFieldHeader}"
-                             (click)="selectField(column, $event)">
-                          <span style="width: 95%;">{{ column.header }}</span>
-                          <span class="material-icons right-arrow" *ngIf="column.header === selectedFieldHeader">check_small</span>
+                        <div *ngFor="let column of gtColumnList">
+                            <div class="dropdown-option" *ngIf="column.searchable"
+                                [ngClass]="{'selected': column.header === selectedFieldHeader}"
+                                (click)="selectField(column, $event)">
+                                <span style="width: 95%;">{{ column.header }}</span>
+                                <span class="material-icons right-arrow"
+                                    *ngIf="column.header === selectedFieldHeader">check_small</span>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  
+                </div>
+
                 <div class="search-section">
                     <span class="material-icons search-icon">search</span>
                     <input type="search" placeholder="Search" class="search" [(ngModel)]="search"
@@ -28,6 +28,29 @@
             <div class="filter-section">
                 <lib-filter [mobileView]="mobileView" [columnList]="gtColumnList" [leftPosition]="leftPosition"
                     (filterApplied)="applyFilter($event)"></lib-filter>
+            </div>
+            <div style="position: relative;" *ngIf="showFiledBox">
+                <div class="field-btn" [ngClass]="{'field-btn-active': fieldPopup}" (click)="openField()">
+                    <span class="material-icons" style="font-size: 20px; margin-right: 10px;">filter_list</span>
+                    Fields
+                    <span class="material-icons arrow-rotate"
+                        [ngClass]="fieldPopup ? 'arrow-rotate-true' : 'arrow-rotate-false'">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+                <div class="dropdown-menu" *ngIf="fieldPopup">
+                    <ul class="sortable" [ngClass]="{'fieldHight': gtColumnList.length > 8}">
+                        <li class="list-item" *ngFor="let item of gtColumnList">
+                            <label class="field-label">{{ item.header }}</label>
+                            <input 
+                              type="checkbox" 
+                              class="field-checkbox" 
+                              [(ngModel)]="item.showColumn" 
+                              (change)="onCheckboxChange(item)" 
+                            />
+                          </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div>
@@ -42,9 +65,9 @@
     </div>
     <div class="table-section">
         <lib-table [headerBg]="headerBg" [scrollable]="scrollable" [headerColor]="headerColor"
-            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox"
+            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox"  [showFiledBox]="showFiledBox"
             [itemPerPage]="itemPerPage" [tableHeight]="tableHeight" [dataRenderingLocal]="dataRenderingLocal"
-            (onSortChanged)="sortChanged($event)">
+            (onChecked)="selectChecked($event)" (onSortChanged)="sortChanged($event)" [onFieldCheckboxChange]="onFieldCheckboxData">
         </lib-table>
     </div>
 </div>

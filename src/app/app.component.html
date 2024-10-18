@@ -10,6 +10,7 @@
     [headerBg]="'#e1eefa'"
     [headerColor]="'#1A1B35'"
     [showCheckBox]="true"
+    [showFiledBox]="true"
     [itemPerPage]="15"
     [tableHeight]="height"
     [scrollable]="false"
@@ -17,7 +18,8 @@
     [dataRenderingLocal]="true"
     (filterApplied)="applyFilter($event)"
     (onSortChanged)="onSortChanged($event)"
-    (onSearched)="onSearched($event)">
+    (onSearched)="onSearched($event)"
+    (onChecked)="onChecked($event)">
 </lib-universal-table>
 
 <!-- <lib-filter [mobileView]="true" [filterData]="filterData" (filterApplied)="applyFilter($event)"></lib-filter>

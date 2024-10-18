@@ -44,7 +44,11 @@ input[type='search']::placeholder {
     text-align: left;
     color: #A2A3B4;
 }
-
+input[type=checkbox] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
 .dropdown-options {
     position: absolute;
     top: 110%;
@@ -157,3 +161,98 @@ input[type='search']::placeholder {
     text-align: right;
 
 }
+
+
+/* fields */
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #EAEAF4;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #EAEAF4;
+    margin-top: 40px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #C7C8D7;
+}
+
+.arrow-rotate {
+    transition: transform 0.3s ease;
+}
+
+.arrow-rotate-true {
+    transform: rotate(180deg);
+}
+
+.arrow-rotate-false {
+    transform: rotate(0deg);
+}
+
+.field-btn {
+    color: #1A1B35;
+    border-radius: 10px;
+    border-color: #C7C8D7;
+    border-style: solid;
+    border-width: 1px;
+    padding: 8px 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 112px;
+    margin-left: 20px;
+}
+
+.field-btn-active {
+    color: #003C9E;
+    border-color: #003C9E;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    width: 250px;
+    margin-top: 8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 21%);
+    z-index: 200;
+    padding: 10px;
+  }
+  
+  .sortable {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+  .fieldHight{
+    max-height: 325px;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+    text-align: left;
+    padding: 10px 15px;
+    justify-content: space-between;
+  }
+  
+  .field-label{
+    width: 90%;
+  }

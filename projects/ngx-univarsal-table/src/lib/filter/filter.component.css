@@ -41,7 +41,6 @@
     justify-content: center;
     cursor: pointer;
     width: 112px;
-    margin-bottom: 5px;
 }
 
 .filter-btn-active {
@@ -54,6 +53,7 @@
 .dialog-container {
     position: absolute;
     left: 0;
+    margin-top: 10px;
 }
 
 .dialog-container input[type='checkbox'] {
@@ -157,9 +157,6 @@
     padding: 12px 5px;
     border-bottom: 1px solid #eaeaf4;
 }
-/* .dialog-container .dialog-content .dialog-body .filter-details-container .filtered-list-container .filter-item-container:last-child {
-    border-bottom: none;
-} */
 
 .dialog-container .dialog-content .dialog-footer {
     display: flex;
@@ -189,9 +186,7 @@
     text-align: center;
 }
 
-.form-group {
-    padding: 10px 0;
-  
+.form-group { 
     .input-container {
       position: relative;
       margin-bottom: 20px;

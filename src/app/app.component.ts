@@ -30,6 +30,9 @@ export class AppComponent {
     console.log("Sort data:", sortData);
   }
   onSearched(searchData) {
-    console.log("Sort data:", searchData);
+    console.log("search data:", searchData);
+  }
+  onChecked(checkedData) {
+    // console.log("check data:", checkedData);
   }
 }

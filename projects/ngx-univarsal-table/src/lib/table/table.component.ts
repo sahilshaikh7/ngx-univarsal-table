@@ -22,11 +22,12 @@ export class TableComponent implements OnInit {
   @Input() itemPerPage: number = 10;
   @Input() tableHeight: number = 150;
   @Input() showCheckBox: boolean = false;
+  @Input() showFiledBox: boolean = false;
   @Input() headerColor = "#fff";
   @Input() headerBg = "#0092F7";
   @Input() scrollable = true;
-  @Input() dataRenderingLocal: boolean = true; 
-
+  @Input() dataRenderingLocal: boolean = true;
+  @Input() onFieldCheckboxChange  :any;
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
   page: number = 1;
@@ -44,18 +45,27 @@ export class TableComponent implements OnInit {
   isPopoverLeftAligned: boolean = false;
   constructor() { }
   ngOnInit() {
+    
     this.gtColumnList = this.gtColumnList.map(field => ({
       ...field,
-      size: field.size || 50 
+      size: field.size || 50
     }));
-    this.setBackgroundColor(this.headerBg,this.headerColor); 
+    this.setBackgroundColor(this.headerBg, this.headerColor);
+   
   }
 
-  setBackgroundColor(color1: string, color2:string) {
+  setBackgroundColor(color1: string, color2: string) {
     document.documentElement.style.setProperty('--bg-color', color1);
     document.documentElement.style.setProperty('--color', color2);
   }
   ngOnChanges(changes: SimpleChanges): void {
+    if (changes['onFieldCheckboxChange'] && this.onFieldCheckboxChange) {
+      this.gtColumnList.forEach(col => {
+        if (col.field === this.onFieldCheckboxChange.field) {
+          col.showColumn = this.onFieldCheckboxChange.showColumn;
+        }
+      });
+    }
     this.convertDot2Values();
   }
   convertDot2Values() {
@@ -70,7 +80,7 @@ export class TableComponent implements OnInit {
     }
   }
   checkAll() {
-    for (let row of this.rowData) { 
+    for (let row of this.rowData) {
       row.checked = this.selectAll;
     }
     this.onCheckRow();
@@ -87,7 +97,7 @@ export class TableComponent implements OnInit {
       this.sortField = field;
       this.sortDirection = true;
     }
-    
+
     this.onSortChanged.emit({ field: this.sortField, direction: this.sortDirection });
   }
 
@@ -127,7 +137,7 @@ export class TableComponent implements OnInit {
   calculateTableWidth(): number {
     return this.gtColumnList.reduce((totalWidth, column) => totalWidth + column.size, 0);
   }
- 
+
   onDragStart(event: DragEvent, columnIndex: number): void {
     this.draggedColumnIndex = columnIndex;
     event.dataTransfer?.setData('text', columnIndex.toString());
@@ -151,6 +161,11 @@ export class TableComponent implements OnInit {
 
   removeColumn(column: Field): void {
     this.activePopover = null
+    this.gtColumnList.filter(col => {
+      if (col.field == column.field) {
+        col.showColumn = column.showColumn;
+      }
+    })
     column.showColumn = false;
     this.removedColumns.push(column);
   }
@@ -167,6 +182,6 @@ export class TableComponent implements OnInit {
     const index = this.gtColumnList.findIndex(col => col === header);
     this.isPopoverLeftAligned = index >= this.gtColumnList.length - 2;
   }
- 
-  
+
+
 }

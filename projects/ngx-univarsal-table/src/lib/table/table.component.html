@@ -34,8 +34,8 @@
                       *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
                     <span class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
                   </span>
-                  <span class="material-icons three-dots" (click)="togglePopover(header)">more_vert</span>
-                  <ul class="popover" *ngIf="activePopover === header"
+                  <span class="material-icons three-dots"  (click)="togglePopover(header)">more_vert</span>
+                  <ul class="popover" *ngIf="activePopover === header && !showFiledBox"
                     [ngClass]="{'left-aligned': isPopoverLeftAligned}">
                     <li (click)="removeColumn(header)">Remove Column</li>
                   </ul>
@@ -47,7 +47,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
+        <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }"  [ngClass]="{'selected-row': row.checked}">
           <td *ngIf="showCheckBox" style="width: 25px;" class="checkbox">
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges, ElementRef, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -27,8 +27,16 @@ export class FilterComponent {
   endDateFocused: boolean = false;
   startDateType: string = 'text';
   endDateType: string = 'text';
-  constructor() { }
-
+  constructor(private elementRef: ElementRef) { }
+  @HostListener('document:click', ['$event.target'])
+  public onClick(targetElement: HTMLElement) {
+    const clickedInside = this.elementRef.nativeElement.contains(targetElement);
+    console.log(clickedInside);
+    if (!clickedInside) {
+      this.filterOneTime = true;
+      this.filterPopup = false;
+    }
+  }
   ngOnInit() {
 
   }
@@ -69,14 +77,14 @@ export class FilterComponent {
       this.dateRange[this.activeDateField].end = '';
     }
     this.columnList.forEach(col => {
-      if(col.fieldType === 'date'){
+      if (col.fieldType === 'date') {
         col.selectedFilterList = [];
-      }else{
+      } else {
         col.selectedFilterList?.forEach((item: any) => {
           item.checked = false;
         });
       }
-     
+
     });
     this.search = '';
   }

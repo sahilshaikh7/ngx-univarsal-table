@@ -19,6 +19,7 @@ export class UniversalTableComponent {
   @Input() headerBg: string = '#826149';
   @Input() headerColor: string = '#fff';
   @Input() showCheckBox: boolean = false;
+  @Input() showFiledBox: boolean = false;
   @Input() itemPerPage: number = 15;
   @Input() tableHeight: number;
   @Input() scrollable: boolean = false;
@@ -28,6 +29,7 @@ export class UniversalTableComponent {
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
   @Output() onSearched = new EventEmitter<any>();
+  onFieldCheckboxData = {};
   filteredRowData: any[] = [];
   search: string = '';
   selectedField: {};
@@ -35,6 +37,7 @@ export class UniversalTableComponent {
   selectedFieldHeader: string = '';
   searchableColumns: any[] = [];
   dropdownOpen: boolean = false;
+  fieldPopup: boolean = false;
   constructor(private filterService: LocalFilterService) { }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -74,14 +77,22 @@ export class UniversalTableComponent {
     }
   }
   selectField(col: any, event: Event) {
-    event.stopPropagation(); // Prevent the click event from propagating to the parent element
-    this.dropdownOpen = false; // Close the dropdown after selecting an option
+    event.stopPropagation();
+    this.dropdownOpen = false; 
     this.selectedFieldHeader = col.header;
     this.selectedField = col.field;
   }
   
   openDropDown() {
-    this.dropdownOpen = !this.dropdownOpen; // Toggle the dropdown open state
+    this.dropdownOpen = !this.dropdownOpen; 
   }
-
+  selectChecked(event:any){
+    this.onChecked.emit(event);
+  }
+  openField(){
+    this.fieldPopup = !this.fieldPopup
+  }
+  onCheckboxChange(item){
+    this.onFieldCheckboxData = { ...item };
+  }
 }

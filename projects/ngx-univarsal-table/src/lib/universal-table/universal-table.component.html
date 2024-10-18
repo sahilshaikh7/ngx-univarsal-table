@@ -31,7 +31,9 @@
             </div>
             <div style="position: relative;" *ngIf="showFiledBox">
                 <div class="field-btn" [ngClass]="{'field-btn-active': fieldPopup}" (click)="openField()">
-                    <span class="material-icons" style="font-size: 20px; margin-right: 10px;">filter_list</span>
+                    <span class="material-icons" style="font-size: 20px; margin-right: 10px;"><span class="material-symbols-rounded">
+                        apps
+                        </span></span>
                     Fields
                     <span class="material-icons arrow-rotate"
                         [ngClass]="fieldPopup ? 'arrow-rotate-true' : 'arrow-rotate-false'">

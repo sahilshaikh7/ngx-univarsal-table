@@ -196,6 +196,7 @@ tr.selected-row{
 
 .headerName[draggable="true"] {
   cursor: grab;
+  padding-right: 15px;
 }
 
 .headerName[draggable="true"]:active {

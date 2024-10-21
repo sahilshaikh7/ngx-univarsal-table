@@ -12,17 +12,17 @@ export class BuyerService {
   masterParticipationList = ['In Active', 'Active', 'New', 'Completed','In Complete'];
   masterStageList = ['Open', 'junk','Closed','Proposal'];
   buyerTableFields: Field[] = [
-    { field: 'username', header: 'Buyer ID', size:50, sizeP:6,sorting:true ,showColumn:true, cellRenderer: BuyerRenderer},
-    { field: 'user.name', header: 'Buyer Name', size:50, sizeP:6 ,searchable:true,sorting:true,showColumn:true},
-    { field: 'business.name', header: 'Organization Name', size:50, sizeP:6 ,showColumn:true},
-    { field: 'category_list', header: 'Preferred Category', size:100, sizeP:6,showColumn:true },
-    { field: 'stage', header: 'Stage', size:50, sizeP:4 ,filterList:this.masterStageList,sorting:true,searchable:true,showColumn:true},
-    { field: 'dispositionStatus', header: 'Latest Disposition', size:50, sizeP:6,filterList:[] ,showColumn:true},
-    { field: 'participation_status', header: 'Buyer Status', size:50, sizeP:12 ,filterList:this.masterParticipationList,showColumn:true,cellRenderer: BuyerRenderer},
-    { field: 'created_at', header: 'Created At', size:50, sizeP:6, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
-    { field: 'updated_at', header: 'Updated At', size:50, sizeP:6, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
-    { field: 'phone-icon', header: '', size:50, sizeP:3,cellRenderer: BuyerRenderer, showColumn:true},
-    { field: 'three-dot-icon', header: '', size:50, sizeP:3,cellRenderer: BuyerRenderer, showColumn:true},
+    { field: 'username', header: 'Buyer ID', size:50, sizeP:100,sorting:true ,showColumn:true, cellRenderer: BuyerRenderer},
+    { field: 'user.name', header: 'Buyer Name', size:50, sizeP:50 ,searchable:true,sorting:true,showColumn:true},
+    { field: 'business.name', header: 'Organization Name', size:50, sizeP:50 ,showColumn:true},
+    { field: 'category_list', header: 'Preferred Category', size:100, sizeP:50,showColumn:true },
+    { field: 'stage', header: 'Stage', size:50, sizeP:40 ,filterList:this.masterStageList,sorting:true,searchable:true,showColumn:true},
+    { field: 'dispositionStatus', header: 'Latest Disposition', size:50, sizeP:60,filterList:[] ,showColumn:true},
+    { field: 'participation_status', header: 'Buyer Status', size:50, sizeP:100 ,filterList:this.masterParticipationList,showColumn:true,cellRenderer: BuyerRenderer},
+    { field: 'created_at', header: 'Created At', size:50, sizeP:50, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
+    { field: 'updated_at', header: 'Updated At', size:50, sizeP:50, fieldType:'date' ,filterList:[], sorting:true,showColumn:true},
+    { field: 'phone-icon', header: '', size:50, sizeP:40,cellRenderer: BuyerRenderer, showColumn:true},
+    { field: 'three-dot-icon', header: '', size:50, sizeP:40,cellRenderer: BuyerRenderer, showColumn:true},
   ];
 
 

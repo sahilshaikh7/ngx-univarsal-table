@@ -1,4 +1,3 @@
-import { UtilityTs } from './utilityTs';
 
 export function BuyerRenderer(field, value) {
     if (field == 'phone-icon') {

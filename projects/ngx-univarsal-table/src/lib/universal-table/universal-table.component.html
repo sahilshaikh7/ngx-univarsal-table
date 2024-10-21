@@ -31,8 +31,9 @@
             </div>
             <div style="position: relative;" *ngIf="showFiledBox">
                 <div class="field-btn" [ngClass]="{'field-btn-active': fieldPopup}" (click)="openField()">
-                    <span class="material-icons" style="font-size: 20px; margin-right: 10px;"><span class="material-symbols-rounded">
-                        apps
+                    <span class="material-icons" style="font-size: 20px; margin-right: 10px;"><span
+                            class="material-symbols-rounded">
+                            apps
                         </span></span>
                     Fields
                     <span class="material-icons arrow-rotate"
@@ -42,17 +43,13 @@
                 </div>
                 <div class="dropdown-menu" *ngIf="fieldPopup">
                     <ul class="sortable" [ngClass]="{'fieldHight': gtColumnList.length > 8}">
-                        <li  *ngFor="let item of gtColumnList">
+                        <li *ngFor="let item of gtColumnList">
                             <span class="list-item" *ngIf="item.header">
                                 <label class="field-label">{{ item.header }}</label>
-                                <input 
-                                type="checkbox" 
-                                class="field-checkbox" 
-                                [(ngModel)]="item.showColumn" 
-                                (change)="onCheckboxChange(item)" 
-                                />
+                                <input type="checkbox" class="field-checkbox" [(ngModel)]="item.showColumn"
+                                    (change)="onCheckboxChange(item)" />
                             </span>
-                          </li>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -67,11 +64,12 @@
             </div>
         </div>
     </div>
-    <div class="table-sections">
+    <div class="table-sections" >
         <lib-table [headerBg]="headerBg" [scrollable]="scrollable" [headerColor]="headerColor"
-            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox"  [showFiledBox]="showFiledBox"
-            [itemPerPage]="itemPerPage" [tableHeight]="tableHeight" [dataRenderingLocal]="dataRenderingLocal"
-            (onChecked)="selectChecked($event)" (onSortChanged)="sortChanged($event)" [onFieldCheckboxChange]="onFieldCheckboxData">
+            [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox"
+            [showFiledBox]="showFiledBox" [itemPerPage]="itemPerPage" [tableHeight]="tableHeight"
+            [dataRenderingLocal]="dataRenderingLocal" (onChecked)="selectChecked($event)"
+            (onSortChanged)="sortChanged($event)" [onFieldCheckboxChange]="onFieldCheckboxData">
         </lib-table>
     </div>
 </div>

@@ -69,15 +69,15 @@
               [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
               <span *ngIf="column.field2 && column.field1">
                 <span *ngIf="!row[column.field0]">-</span>
-                <span class="contentBreak" *ngIf="row[column.field0]">
+                <span class="contentBreak" *ngIf="row[column.field0]" [ngClass]="column.utClass">
                   {{row[column.field0][column.field1][column.field2] | universal}}
                 </span>
               </span>
-              <span *ngIf="column.field1 && !column.field2">
+              <span *ngIf="column.field1 && !column.field2" [ngClass]="column.utClass">
                 <span class="contentBreak" *ngIf="row[column.field0]">{{row[column.field0][column.field1] |
                   universal}}</span>
               </span>
-              <span *ngIf="!column.field1">
+              <span *ngIf="!column.field1" [ngClass]="column.utClass">
                 <span class="contentBreak">{{row[column.field] | universal}}</span>
               </span>
             </td>
@@ -94,8 +94,8 @@
       <div class="card" *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
         <div class="card-content" [ngStyle]="{'display': 'flex', 'flex-wrap': 'wrap'}">
           <div *ngFor="let column of gtColumnList" class="card-item"
-            [ngStyle]="{'flex': '0 0 ' + (column.sizeP * 8) + '%'}">
-            <label *ngIf="column.showColumn" class="card-label">{{ column.header }}</label>
+            [ngStyle]="{'flex': '0 0 ' + (column.sizeP) + '%'}">
+            <!-- <label *ngIf="column.showColumn" class="card-label">{{ column.header }}</label> -->
             <div class="card-value">
               <span *ngIf="column.cellRenderer && column.showColumn">
                 <span *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
@@ -109,16 +109,16 @@
               </span>
               <div *ngIf="!column.cellRenderer && column.showColumn" >
                 <span *ngIf="column.field2 && column.field1">
-                  <span *ngIf="!row[column.field0]">-</span>
-                  <span class="contentBreak" *ngIf="row[column.field0]">
+                  <!-- <span *ngIf="!row[column.field0]">-</span> -->
+                  <span class="contentBreak" *ngIf="row[column.field0]" [ngClass]="column.utClass">
                     {{row[column.field0][column.field1][column.field2] | universal}}
                   </span>
                 </span>
-                <span *ngIf="column.field1 && !column.field2">
+                <span *ngIf="column.field1 && !column.field2" [ngClass]="column.utClass">
                   <span class="contentBreak" *ngIf="row[column.field0]">{{row[column.field0][column.field1] |
                     universal}}</span>
                 </span>
-                <span *ngIf="!column.field1">
+                <span *ngIf="!column.field1" [ngClass]="column.utClass">
                   <span class="contentBreak">{{row[column.field] | universal}}</span>
                 </span>
               </div>

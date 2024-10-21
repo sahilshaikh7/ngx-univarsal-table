@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-family: sans-serif;
+  
 }
 
 ::-webkit-scrollbar-track {
@@ -304,12 +305,10 @@ ul.popover {
 .card-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; 
+  background: #a37e7e;
 }
 
 .card-item {
-  background: #f9f9f9;
-  border-radius: 4px;
   padding: 8px;
   box-sizing: border-box;
 }
@@ -322,6 +321,8 @@ ul.popover {
 }
 
 .card-value {
-  color: #666;
+  color: #fff;
   font-size: 14px;
+
 }
+

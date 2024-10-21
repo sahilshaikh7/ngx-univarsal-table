@@ -69,7 +69,7 @@ export class UniversalPipe implements PipeTransform {
       
     }
     else {
-      return "-";
+      return "";
     }
 
 

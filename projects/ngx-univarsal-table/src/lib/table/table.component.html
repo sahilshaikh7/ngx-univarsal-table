@@ -34,14 +34,14 @@
                       *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
                     <span class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
                   </span>
-                  <span class="material-icons three-dots"  (click)="togglePopover(header)">more_vert</span>
+                  <span class="material-icons three-dots" *ngIf="header.header" (click)="togglePopover(header)">more_vert</span>
                   <ul class="popover" *ngIf="activePopover === header && !showFiledBox"
                     [ngClass]="{'left-aligned': isPopoverLeftAligned}">
                     <li (click)="removeColumn(header)">Remove Column</li>
                   </ul>
                 </div>
               </div>
-              <div class="resize-handle" (mousedown)="startResizeColumn($event, i)"></div>
+              <div class="resize-handle" *ngIf="header.header" (mousedown)="startResizeColumn($event, i)"></div>
             </th>
           </ng-container>
         </tr>
@@ -52,7 +52,7 @@
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
             <ng-container *ngFor="let column of gtColumnList" >
-              <td *ngIf="column.cellRenderer && column.showColumn"  [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
+              <td *ngIf="column.cellRenderer && column.showColumn" [ngClass]="{'fixed-column':column.header.length == 0}" [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
                 <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
                   [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
                 </div>
@@ -62,7 +62,7 @@
                   [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
                 </div>
               </td>
-              <td *ngIf="!column.cellRenderer && column.showColumn" [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
+              <td *ngIf="!column.cellRenderer && column.showColumn" [ngClass]="{'fixed-column':column.header.length == 0}" [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
                 <span *ngIf="column.field2 && column.field1">
                   <span *ngIf="!row[column.field0]">-</span>
                   <span class="contentBreak" *ngIf="row[column.field0]">

@@ -42,14 +42,16 @@
                 </div>
                 <div class="dropdown-menu" *ngIf="fieldPopup">
                     <ul class="sortable" [ngClass]="{'fieldHight': gtColumnList.length > 8}">
-                        <li class="list-item" *ngFor="let item of gtColumnList">
-                            <label class="field-label">{{ item.header }}</label>
-                            <input 
-                              type="checkbox" 
-                              class="field-checkbox" 
-                              [(ngModel)]="item.showColumn" 
-                              (change)="onCheckboxChange(item)" 
-                            />
+                        <li  *ngFor="let item of gtColumnList">
+                            <span class="list-item" *ngIf="item.header">
+                                <label class="field-label">{{ item.header }}</label>
+                                <input 
+                                type="checkbox" 
+                                class="field-checkbox" 
+                                [(ngModel)]="item.showColumn" 
+                                (change)="onCheckboxChange(item)" 
+                                />
+                            </span>
                           </li>
                     </ul>
                 </div>

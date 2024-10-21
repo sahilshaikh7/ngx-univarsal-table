@@ -1,4 +1,4 @@
-<div class="table-section">
+<div *ngIf="isDesktopView; else mobileView" class="table-section">
   <div *ngIf="removedColumns && removedColumns.length > 0">
     <div class="removed-columns">
       <span *ngFor="let col of removedColumns" class="removed-column">
@@ -10,7 +10,7 @@
     <table #mainTable id="main-table" class="table table-resizable">
 
       <thead class="fixed-header">
-        <tr  [ngStyle]="{'color': headerColor, 'background': headerBg}">
+        <tr [ngStyle]="{'color': headerColor, 'background': headerBg}">
           <th *ngIf="showCheckBox" style="width: 25px;" [ngStyle]="{'color': headerColor, 'background': headerBg}">
             <input type="checkbox" (change)="checkAll()" [(ngModel)]="selectAll">
           </th>
@@ -34,7 +34,8 @@
                       *ngIf="sortField === header.field && sortDirection">arrow_upward</span>
                     <span class="material-icons" *ngIf="sortField !== header.field">arrow_downward</span>
                   </span>
-                  <span class="material-icons three-dots" *ngIf="header.header" (click)="togglePopover(header)">more_vert</span>
+                  <span class="material-icons three-dots" *ngIf="header.header"
+                    (click)="togglePopover(header)">more_vert</span>
                   <ul class="popover" *ngIf="activePopover === header && !showFiledBox"
                     [ngClass]="{'left-aligned': isPopoverLeftAligned}">
                     <li (click)="removeColumn(header)">Remove Column</li>
@@ -47,22 +48,66 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }"  [ngClass]="{'selected-row': row.checked}">
+        <tr *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }"
+          [ngClass]="{'selected-row': row.checked}">
           <td *ngIf="showCheckBox" style="width: 25px;" class="checkbox">
             <input type="checkbox" [(ngModel)]="row.checked" (change)="onCheckRow()">
           </td>
-            <ng-container *ngFor="let column of gtColumnList" >
-              <td *ngIf="column.cellRenderer && column.showColumn" [ngClass]="{'fixed-column':column.header.length == 0}" [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
-                <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
+          <ng-container *ngFor="let column of gtColumnList">
+            <td *ngIf="column.cellRenderer && column.showColumn" [ngClass]="{'fixed-column':column.header.length == 0}"
+              [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
+              <div *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
+                [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
+              </div>
+              <div *ngIf="!column.field2 && column.field1" [ngClass]="column.utClass"
+                [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></div>
+              <div *ngIf="!column.field1" [ngClass]="column.utClass"
+                [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
+              </div>
+            </td>
+            <td *ngIf="!column.cellRenderer && column.showColumn" [ngClass]="{'fixed-column':column.header.length == 0}"
+              [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
+              <span *ngIf="column.field2 && column.field1">
+                <span *ngIf="!row[column.field0]">-</span>
+                <span class="contentBreak" *ngIf="row[column.field0]">
+                  {{row[column.field0][column.field1][column.field2] | universal}}
+                </span>
+              </span>
+              <span *ngIf="column.field1 && !column.field2">
+                <span class="contentBreak" *ngIf="row[column.field0]">{{row[column.field0][column.field1] |
+                  universal}}</span>
+              </span>
+              <span *ngIf="!column.field1">
+                <span class="contentBreak">{{row[column.field] | universal}}</span>
+              </span>
+            </td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
+<ng-template #mobileView>
+  <div class="mobile-view">
+    <div class="card-section">
+      <div class="card" *ngFor="let row of rowData | paginate: { itemsPerPage: itemPerPage, currentPage: page }">
+        <div class="card-content" [ngStyle]="{'display': 'flex', 'flex-wrap': 'wrap'}">
+          <div *ngFor="let column of gtColumnList" class="card-item"
+            [ngStyle]="{'flex': '0 0 ' + (column.sizeP * 8) + '%'}">
+            <label *ngIf="column.showColumn" class="card-label">{{ column.header }}</label>
+            <div class="card-value">
+              <span *ngIf="column.cellRenderer && column.showColumn">
+                <span *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
                   [innerHTML]="row[column.field0][column.field1][column.field2] | rendererUt:column.field:column.cellRenderer">
-                </div>
-                <div *ngIf="!column.field2 && column.field1" [ngClass]="column.utClass"
-                  [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></div>
-                <div *ngIf="!column.field1" [ngClass]="column.utClass"
+                </span>
+                <span *ngIf="!column.field2 && column.field1" [ngClass]="column.utClass"
+                  [innerHTML]="row[column.field0][column.field1] | rendererUt:column.field:column.cellRenderer"></span>
+                <span *ngIf="!column.field1" [ngClass]="column.utClass"
                   [innerHTML]="row[column.field] | rendererUt:column.field:column.cellRenderer">
-                </div>
-              </td>
-              <td *ngIf="!column.cellRenderer && column.showColumn" [ngClass]="{'fixed-column':column.header.length == 0}" [ngStyle]="{'width': column.size + 'px', 'min-width': column.size + 'px'}">
+                </span>
+              </span>
+              <div *ngIf="!column.cellRenderer && column.showColumn" >
                 <span *ngIf="column.field2 && column.field1">
                   <span *ngIf="!row[column.field0]">-</span>
                   <span class="contentBreak" *ngIf="row[column.field0]">
@@ -76,11 +121,12 @@
                 <span *ngIf="!column.field1">
                   <span class="contentBreak">{{row[column.field] | universal}}</span>
                 </span>
-              </td>
-            </ng-container>
-        </tr>
-      </tbody>
-    </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <pagination-controls (pageChange)="page = $event"></pagination-controls>
-</div>
+</ng-template>

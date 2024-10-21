@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -43,9 +43,10 @@ export class TableComponent implements OnInit {
   activePopover: Field | null = null;
   pinnedColumns: Field[] = [];
   isPopoverLeftAligned: boolean = false;
+  isDesktopView: boolean = true;
   constructor() { }
   ngOnInit() {
-    
+    this.checkView();
     this.gtColumnList = this.gtColumnList.map(field => ({
       ...field,
       size: field.size || 50
@@ -53,7 +54,15 @@ export class TableComponent implements OnInit {
     this.setBackgroundColor(this.headerBg, this.headerColor);
    
   }
-
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkView();
+  }
+  checkView() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    this.isDesktopView = width > height; 
+  }
   setBackgroundColor(color1: string, color2: string) {
     document.documentElement.style.setProperty('--bg-color', color1);
     document.documentElement.style.setProperty('--color', color2);

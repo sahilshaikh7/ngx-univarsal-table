@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class UniversalTableComponent {
   @Input() mobileView: boolean = false;
+  @Input() pagination: boolean = true;
   @Input() leftPosition: string = '0px';
   @Input() rowData: any[] = [];
   @Input() headerBg: string = '#826149';

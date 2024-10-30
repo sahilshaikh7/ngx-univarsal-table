@@ -15,6 +15,7 @@
     [scrollable]="false"
     [gtColumnList]="buyerService.buyerTableFields"
     [dataRenderingLocal]="true"
+    [pagination]="false"
     (filterApplied)="applyFilter($event)"
     (onSortChanged)="onSortChanged($event)"
     (onSearched)="onSearched($event)"

@@ -22,6 +22,7 @@ export class TableComponent implements OnInit {
   @Input() itemPerPage: number = 10;
   @Input() tableHeight: number = 150;
   @Input() showCheckBox: boolean = false;
+  @Input() pagination: boolean = true;
   @Input() showFiledBox: boolean = false;
   @Input() headerColor = "#fff";
   @Input() headerBg = "#0092F7";
@@ -30,6 +31,7 @@ export class TableComponent implements OnInit {
   @Input() onFieldCheckboxChange  :any;
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
+  @Output() onLoadMore = new EventEmitter<any>();
   page: number = 1;
   sortField: string = '';
   sortDirection: boolean = false;
@@ -191,6 +193,9 @@ export class TableComponent implements OnInit {
     const index = this.gtColumnList.findIndex(col => col === header);
     this.isPopoverLeftAligned = index >= this.gtColumnList.length - 2;
   }
-
+  clickLoadMore(){
+    const lastBuyer = this.rowData.slice(-1)[0];  // Last user in rowData array
+    this.onLoadMore.emit(lastBuyer);
+  }
 
 }

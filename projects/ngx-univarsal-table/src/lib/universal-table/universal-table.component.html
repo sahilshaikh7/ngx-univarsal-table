@@ -68,7 +68,7 @@
         <lib-table [headerBg]="headerBg" [scrollable]="scrollable" [headerColor]="headerColor"
             [gtColumnList]="gtColumnList" [rowData]="filteredRowData" [showCheckBox]="showCheckBox"
             [showFiledBox]="showFiledBox" [itemPerPage]="itemPerPage" [tableHeight]="tableHeight"
-            [dataRenderingLocal]="dataRenderingLocal" (onChecked)="selectChecked($event)"
+            [dataRenderingLocal]="dataRenderingLocal" (onChecked)="selectChecked($event)" [pagination]="pagination"
             (onSortChanged)="sortChanged($event)" [onFieldCheckboxChange]="onFieldCheckboxData">
         </lib-table>
     </div>

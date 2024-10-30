@@ -86,7 +86,8 @@
       </tbody>
     </table>
   </div>
-  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  <pagination-controls *ngIf="pagination" (pageChange)="page = $event"></pagination-controls>
+  <button *ngIf="!pagination" class="load-more-btn" (click)="clickLoadMore()" >Load More</button>
 </div>
 <ng-template #mobileView>
   <div class="mobile-view">

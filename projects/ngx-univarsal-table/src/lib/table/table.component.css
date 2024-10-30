@@ -326,3 +326,12 @@ ul.popover {
 
 }
 
+.load-more-btn{
+  padding: 12px 18px;
+  background: var(--bg-color, #ffffff);
+  color: var(--color,#000);
+  border: none;
+  border-radius: 8px;
+  margin: 10px 20px;
+  cursor: pointer;
+}

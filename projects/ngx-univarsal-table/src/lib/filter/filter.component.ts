@@ -27,6 +27,7 @@ export class FilterComponent {
   endDateFocused: boolean = false;
   startDateType: string = 'text';
   endDateType: string = 'text';
+  isDesktopView: boolean = true;
   constructor(private elementRef: ElementRef) { }
   @HostListener('document:click', ['$event.target'])
   public onClick(targetElement: HTMLElement) {
@@ -37,7 +38,20 @@ export class FilterComponent {
     }
   }
   ngOnInit() {
-
+    this.checkView();
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkView();
+  }
+  checkView() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    if(width > height){
+      this.isDesktopView = true
+    } else{
+      this.isDesktopView = false
+    }
   }
   openFilter() {
     if (this.filterOneTime) {

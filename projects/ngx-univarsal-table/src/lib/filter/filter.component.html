@@ -1,15 +1,17 @@
-<div class="filter-btn" [ngClass]="{'filter-btn-active': filterPopup}" (click)="openFilter()">
+<div class="filter-btn" *ngIf="isDesktopView" [ngClass]="{'filter-btn-active': filterPopup}" (click)="openFilter()">
     <span class="material-icons" style="font-size: 20px; margin-right: 10px;">filter_list</span>
-    Filters
+    <span>Filters</span>
     <span class="material-icons arrow-rotate" [ngClass]="filterPopup ? 'arrow-rotate-true' : 'arrow-rotate-false'">
         keyboard_arrow_down
     </span>
 </div>
-
-<div class="dialog-container" [style.left]="leftPosition" *ngIf="filterPopup">
-    <div class="dialog-content">
+<div *ngIf="!isDesktopView" [ngClass]="{'filter-mobile-btn-active': filterPopup}" (click)="openFilter()">
+    <span class="material-icons" style="font-size: 30px; margin-right: 10px;">filter_list</span>
+</div>
+<div [ngClass]="!isDesktopView ? 'modal' : 'dialog-container'" *ngIf="filterPopup">
+    <div class="dialog-content"  [ngStyle]="!isDesktopView ? {'height': '100vh', 'width': '100%','border-radius':'0px'} : {}">
         <div class="dialog-body">
-            <div class="filter-list-container">
+            <div class="filter-list-container" [ngStyle]="!isDesktopView ? {'height': 'calc(100vh - 100px)'} : {}">
                 <ul class="filter-list">
                     <span *ngFor="let item of columnList">
                         <li *ngIf="item.filterList" (click)="addFiltered(item)"
@@ -24,7 +26,7 @@
                 </ul>
             </div>
 
-            <div class="filter-details-container">
+            <div class="filter-details-container" >
                 <div *ngFor="let col of columnList">
                     <div *ngIf="col.selectedFilter">
                         <div *ngIf="col?.fieldType === 'date'">
@@ -64,15 +66,17 @@
                                     class="search-input" />
                             </div>
 
-                            <div class="filtered-list-container">
+                            <div class="filtered-list-container" [ngStyle]="!isDesktopView ? {'height': 'calc(100vh - 190px)'} : {}">
                                 <div class="select-all-container">
-                                    <label for="select_all_checkbox">Select all ({{ col.filterList.length }})</label>
+                                    <label for="select_all_checkbox">Select all ({{ col.filterList.length
+                                        }})</label>
                                     <input type="checkbox" id="select_all_checkbox"
                                         (change)="selectAllClicked(col,  $event)" />
                                 </div>
 
-                                <div *ngFor="let item of col.selectedFilterList let index = index" >
-                                    <div style="display: flex; justify-content: space-between;" class="filter-item-container"
+                                <div *ngFor="let item of col.selectedFilterList let index = index">
+                                    <div style="display: flex; justify-content: space-between;"
+                                        class="filter-item-container"
                                         *ngIf="!this.search || item.item.toLowerCase().includes(this.search.toLowerCase())">
                                         <label style="width: 80%;" [for]="'id' + index">{{ item.item }}</label>
                                         <input type="checkbox" [id]="'id' + index" [(ngModel)]="item.checked" />

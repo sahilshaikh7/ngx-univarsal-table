@@ -217,7 +217,9 @@ input[type=checkbox] {
     border-style: solid;
     border-width: 1px;
 }
-
+.field-mobile-btn-active{
+    color: #003C9E;
+}
 .dropdown-menu {
     position: absolute;
     left: 0;

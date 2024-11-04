@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, SimpleChanges } from '@angular/core';
 import { FilterComponent } from '../filter/filter.component';
 import { TableComponent } from '../table/table.component';
 import { FormsModule } from '@angular/forms';
@@ -30,6 +30,7 @@ export class UniversalTableComponent {
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
   @Output() onSearched = new EventEmitter<any>();
+  @Output() onLoadMore = new EventEmitter<any>();
   onFieldCheckboxData = {};
   filteredRowData: any[] = [];
   search: string = '';
@@ -39,6 +40,7 @@ export class UniversalTableComponent {
   searchableColumns: any[] = [];
   dropdownOpen: boolean = false;
   fieldPopup: boolean = false;
+  isDesktopView: boolean = true;
   constructor(private filterService: LocalFilterService) { }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -48,7 +50,21 @@ export class UniversalTableComponent {
       this.selectedField = this.searchableColumns[0].field;
     }
     this.filteredRowData = [...this.rowData];
+    this.checkView();
 
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkView();
+  }
+  checkView() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    if(width > height){
+      this.isDesktopView = true
+    } else{
+      this.isDesktopView = false
+    }
   }
   async applyFilter(event: any) {
     console.log('Filter applied', event);
@@ -95,5 +111,8 @@ export class UniversalTableComponent {
   }
   onCheckboxChange(item){
     this.onFieldCheckboxData = { ...item };
+  }
+  loadMore(event){
+    this.onLoadMore.emit(event)
   }
 }

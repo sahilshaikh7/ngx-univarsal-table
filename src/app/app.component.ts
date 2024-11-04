@@ -35,4 +35,7 @@ export class AppComponent {
   onChecked(checkedData) {
     // console.log("check data:", checkedData);
   }
+  loadMore(event){
+    console.log(event)
+  }
 }

@@ -326,12 +326,22 @@ ul.popover {
 
 }
 
-.load-more-btn{
-  padding: 12px 18px;
-  background: var(--bg-color, #ffffff);
-  color: var(--color,#000);
-  border: none;
-  border-radius: 8px;
-  margin: 10px 20px;
-  cursor: pointer;
+#loading {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px 0;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #000000;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
 }

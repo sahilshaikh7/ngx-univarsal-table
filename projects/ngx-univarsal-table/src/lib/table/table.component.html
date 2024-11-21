@@ -6,7 +6,7 @@
       </span>
     </div>
   </div>
-  <div id="table-scroll" class="table-scroll" [style.height]="tableHeight + 'px'">
+  <div #tableScroll id="table-scroll" class="table-scroll" [style.height]="tableHeight + 'px'" (scroll)="onScroll($event)">
     <table #mainTable id="main-table" class="table table-resizable">
 
       <thead class="fixed-header">
@@ -84,10 +84,13 @@
           </ng-container>
         </tr>
       </tbody>
+
     </table>
+    <div *ngIf="isLoading" style="text-align: center;">
+      <span id="loading"></span>
+    </div>
   </div>
   <pagination-controls *ngIf="pagination" (pageChange)="page = $event"></pagination-controls>
-  <button *ngIf="!pagination" class="load-more-btn" (click)="clickLoadMore()" >Load More</button>
 </div>
 <ng-template #mobileView>
   <div class="mobile-view">
@@ -128,6 +131,9 @@
         </div>
       </div>
     </div>
+    <div *ngIf="isLoading" style="text-align: center;">
+      <span id="loading"></span>
+    </div>
   </div>
-  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  <pagination-controls  *ngIf="pagination"(pageChange)="page = $event"></pagination-controls>
 </ng-template>

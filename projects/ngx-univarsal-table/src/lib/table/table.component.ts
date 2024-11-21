@@ -16,6 +16,7 @@ import { UniversalPipe } from '../universal.pipe';
 })
 export class TableComponent implements OnInit {
   @ViewChild('mainTable', { static: false }) mainTable!: ElementRef;
+  @ViewChild('tableScroll', { static: false }) tableScroll!: ElementRef;
   @ViewChild('popover', { static: false }) popover!: ElementRef;
   @Input() gtColumnList: Field[] = [];
   @Input() rowData: any[] = [];
@@ -28,7 +29,7 @@ export class TableComponent implements OnInit {
   @Input() headerBg = "#0092F7";
   @Input() scrollable = true;
   @Input() dataRenderingLocal: boolean = true;
-  @Input() onFieldCheckboxChange  :any;
+  @Input() onFieldCheckboxChange: any;
   @Output() onSortChanged = new EventEmitter<{ field: string, direction: boolean }>();
   @Output() onChecked = new EventEmitter<any>();
   @Output() onLoadMore = new EventEmitter<any>();
@@ -46,6 +47,8 @@ export class TableComponent implements OnInit {
   pinnedColumns: Field[] = [];
   isPopoverLeftAligned: boolean = false;
   isDesktopView: boolean = true;
+  isLoading: boolean = false;
+  private lastScrollTop: number = 0;
   constructor() { }
   ngOnInit() {
     this.checkView();
@@ -54,8 +57,36 @@ export class TableComponent implements OnInit {
       size: field.size || 50
     }));
     this.setBackgroundColor(this.headerBg, this.headerColor);
-   
   }
+  
+  @HostListener('scroll', ['$event'])
+  onScroll(event: any) {
+    if (!this.pagination) {
+
+      const scrollTop = event.target.scrollTop;
+      const scrollHeight = event.target.scrollHeight;
+      const clientHeight = event.target.clientHeight;
+      const scrollPosition = scrollTop + clientHeight;
+
+      if (scrollPosition / scrollHeight >= 0.8 && scrollTop > this.lastScrollTop && !this.isLoading) {
+        this.isLoading = true;
+        this.loadMoreData();
+      }
+
+      this.lastScrollTop = scrollTop;
+    }
+
+  }
+
+  loadMoreData() {
+    const lastRow = this.rowData.slice(-1)[0];
+    this.onLoadMore.emit(lastRow);
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.checkView();
@@ -63,7 +94,7 @@ export class TableComponent implements OnInit {
   checkView() {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    this.isDesktopView = width > height; 
+    this.isDesktopView = width > height;
   }
   setBackgroundColor(color1: string, color2: string) {
     document.documentElement.style.setProperty('--bg-color', color1);
@@ -193,7 +224,8 @@ export class TableComponent implements OnInit {
     const index = this.gtColumnList.findIndex(col => col === header);
     this.isPopoverLeftAligned = index >= this.gtColumnList.length - 2;
   }
-  clickLoadMore(){
+  clickLoadMore() {
+    this.isLoading = true;
     const lastBuyer = this.rowData.slice(-1)[0];  // Last user in rowData array
     this.onLoadMore.emit(lastBuyer);
   }

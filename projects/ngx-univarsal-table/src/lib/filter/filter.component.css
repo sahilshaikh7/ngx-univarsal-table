@@ -83,6 +83,8 @@
     flex: 1.2;
     border-right: 1px solid #eaeaf4;
     height: 280px;
+    overflow-y: auto;
+
 }
 
  .dialog-content .dialog-body .filter-list-container .filter-list {

@@ -90,7 +90,7 @@ export class UniversalTableComponent {
     if (this.dataRenderingLocal) {
       this.filteredRowData = await this.filterService.rendering(this.search, this.selectedField, this.sortingObject, this.gtColumnList, this.rowData);
     } else {
-      this.onSearched.emit({ field: this.selectedFieldHeader, search: this.search });
+      this.onSearched.emit({ field: this.selectedField, search: this.search });
     }
   }
   selectField(col: any, event: Event) {

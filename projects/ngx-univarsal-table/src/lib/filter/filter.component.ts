@@ -47,9 +47,9 @@ export class FilterComponent {
   checkView() {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    if(width > height){
+    if (width > height) {
       this.isDesktopView = true
-    } else{
+    } else {
       this.isDesktopView = false
     }
   }
@@ -109,6 +109,7 @@ export class FilterComponent {
     this.activeNavButton = selectedColumn.header;
     selectedColumn.selectedFilter = true;
     if (selectedColumn.fieldType === 'date') {
+      selectedColumn.selectedFilter = true;
       this.setActiveDateField(selectedColumn.field);
     }
   }

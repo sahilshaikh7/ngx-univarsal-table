@@ -266,3 +266,25 @@ input[type=checkbox] {
 .field-label {
     width: 90%;
 }
+
+@media (max-width: 768px) {
+    .selected-option {
+        font-size: 10px !important;
+        color: #1A1B35;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+    .select-section {   
+        border-right: 1px solid #A2A3B4;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 5px 0px 5px;
+        cursor: pointer;
+        position: relative;
+        width: 80px
+    }
+}

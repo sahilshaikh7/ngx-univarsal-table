@@ -297,32 +297,34 @@ ul.popover {
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 16px;
-  padding: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-content {
   display: flex;
   flex-wrap: wrap;
-  background: #a37e7e;
+  background: white;
 }
 
 .card-item {
   padding: 8px;
   box-sizing: border-box;
+  
 }
 
 .card-label {
   font-weight: bold;
+  font-size: 10px;
   margin-bottom: 4px;
   display: block;
-  color: #333;
+  color: gray;
 }
 
 .card-value {
-  color: #fff;
-  font-size: 14px;
+  color: black;
+  font-size: 12px;
 
 }
 

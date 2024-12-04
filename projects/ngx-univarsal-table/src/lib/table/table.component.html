@@ -99,7 +99,7 @@
         <div class="card-content" [ngStyle]="{'display': 'flex', 'flex-wrap': 'wrap'}">
           <div *ngFor="let column of gtColumnList" class="card-item"
             [ngStyle]="{'flex': '0 0 ' + (column.sizeP) + '%'}">
-            <!-- <label *ngIf="column.showColumn" class="card-label">{{ column.header }}</label> -->
+            <label *ngIf="column.showColumn" class="card-label">{{ column.header }}</label>
             <div class="card-value">
               <span *ngIf="column.cellRenderer && column.showColumn">
                 <span *ngIf="column.field2 && column.field1" [ngClass]="column.utClass"
